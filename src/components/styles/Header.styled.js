@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export let StyledHeader = styled.header`
-    background-color: aqua;
+    background-color: rgb(255, 255, 255, 0.3);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 30px;
+    margin: 10px 0;
+    border-radius: 10px;
 
     label, input{
         display: block;
