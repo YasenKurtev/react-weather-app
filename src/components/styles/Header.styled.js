@@ -12,12 +12,22 @@ export let StyledHeader = styled.header`
         display: block;
     }
 
+    h1{
+        color: #f9fafa;
+    }
+
     input{
         width: 100%;
         height: 30px;
         font-size: 18px;
         border-radius: 10px;
-        border: 0;
+        border: 2px solid transparent;
+        outline: none;
+        transition: 0.5s;
+    }
+
+    input:focus{
+        border: 2px solid black;
     }
 
     form{
@@ -27,7 +37,7 @@ export let StyledHeader = styled.header`
         heigth: 100px;
     }
 
-    button{
+    .search-btn{
         cursor: pointer;
         background-color: transparent;
         border: 0;
@@ -36,12 +46,28 @@ export let StyledHeader = styled.header`
         width: 40px
     }
 
-    i{
-        font-size: 18px;
-        color: grey
+    .clear-btn{
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        margin-left: -80px;
+        width: 40px
     }
 
-    div{
+    .clear-btn i:hover{
+        color: red;
+    }
+
+    .search-btn i:hover{
+        color: green;
+    }
+
+    i{
+        font-size: 18px;
+        color: grey;
+    }
+
+    .logo{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -50,6 +76,50 @@ export let StyledHeader = styled.header`
 
     img{
         width: 60px;
+    }
+
+    .theme-selector{
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .theme-selector p{
+        color: #f9fafa;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .theme-buttons{
+        display:flex;
+        justify-content: space-around;
+    }
+
+    .theme-btn{
+        cursor: pointer;
+        border: 0;
+        padding: 6px;
+        border-radius: 50px;
+        transition: transform 0.2s;
+    }
+
+    .theme-btn:hover{
+        transform: scale(1.2);
+    }
+
+    .location-btn{
+        color: #f9fafa;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 6px;
+        border:0;
+        transition: transform 0.2s;
+        background-color: transparent;
+    }
+
+    .location-btn:hover{
+        transform: scale(1.1);
     }
 
     @media (max-width: 768px){
