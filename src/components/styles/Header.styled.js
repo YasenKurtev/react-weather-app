@@ -7,7 +7,6 @@ export let StyledHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    margin: 10px 0;
     border-radius: 10px;
 
     label, input{

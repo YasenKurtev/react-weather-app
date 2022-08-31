@@ -1,4 +1,3 @@
-import Container from "./styles/Container.styles";
 import { StyledHeader } from "./styles/Header.styled";
 
 let Header = () => {
@@ -10,7 +9,7 @@ let Header = () => {
             </div>
             <div className="location">
                 <button className="location-btn">
-                <i class="fa-solid fa-location-dot"></i> Get location
+                <i className="fa-solid fa-location-dot"></i> Get location
                 </button>
             </div>
             <form>
@@ -25,11 +24,11 @@ let Header = () => {
             <div className="theme-selector">
                 <p>Dark mode</p>
                 <div className="theme-buttons">
-                    <button className="theme-btn">
+                    <button className="theme-btn" type="radio">
                         <i className="fas fa-moon"></i>
                     </button>
-                    <button className="theme-btn">
-                        <i class="fa-solid fa-sun"></i>
+                    <button className="theme-btn" type="radio">
+                        <i className="fa-solid fa-sun"></i>
                     </button>
                 </div>
             </div>
