@@ -7,7 +7,7 @@ let TodayCard = () => {
 
             <div className="weather-info">
                 <h1>Plovdiv</h1>
-                <p className="temp">22</p>
+                <p className="temp">22°</p>
                 <p className="condition">Rain</p>
             </div>
             <div className="low-high">

@@ -1,6 +1,7 @@
 import { StyledMain } from "./styles/Main.styled"
 import TodayCard from "./TodayCard"
 import Map from "./Map"
+import MiniCard from "./MiniCard"
 
 let Main = () => {
     return (
@@ -9,7 +10,15 @@ let Main = () => {
                 <TodayCard></TodayCard>
                 <Map></Map>
             </section>
-
+            <section className="weekly-forecast">
+                <MiniCard></MiniCard>
+                <MiniCard></MiniCard>
+                <MiniCard></MiniCard>
+                <MiniCard></MiniCard>
+                <MiniCard></MiniCard>
+                <MiniCard></MiniCard>
+                <MiniCard></MiniCard>
+            </section>
         </StyledMain>
     )
 }
