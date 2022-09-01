@@ -3,6 +3,7 @@ import TodayCard from "./TodayCard"
 import Map from "./Map"
 import MiniCard from "./MiniCard"
 import Details from "./Details"
+import DailyCard from "./DailyCard"
 
 let Main = () => {
     return (
@@ -17,13 +18,18 @@ let Main = () => {
             <section className="daily-forecast">
                 <p className="daily-title">Daily forecast</p>
                 <div className="daily-container">
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
+                    <DailyCard></DailyCard>
                 </div>
             </section>
             <section className="weekly-forecast">
