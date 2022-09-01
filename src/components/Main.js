@@ -14,6 +14,18 @@ let Main = () => {
             <section className="weather-details">
                 <Details></Details>
             </section>
+            <section className="daily-forecast">
+                <p className="daily-title">Daily forecast</p>
+                <div className="daily-container">
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                </div>
+            </section>
             <section className="weekly-forecast">
                 <p className="weekly-title">7-day forecast</p>
                 <div className="weekly-container">

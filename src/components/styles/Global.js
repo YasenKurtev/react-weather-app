@@ -10,7 +10,7 @@ body, html{
 }
 
 body{
-    margin-top: 10px;
+    margin-top: 20px;
     overflow: hidden;
 }
 `
