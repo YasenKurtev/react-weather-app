@@ -38,6 +38,7 @@ gap: 10px;
 }
 
 h1{
+    font-size: 40px;
     margin:0;
 }
 

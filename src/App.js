@@ -13,7 +13,7 @@ function App() {
       <Container>
         <Header />
         <Main />
-        <Footer></Footer>
+        <Footer />
       </Container>
     </>
   );

@@ -15,13 +15,16 @@ let Main = () => {
                 <Details></Details>
             </section>
             <section className="weekly-forecast">
-                <MiniCard></MiniCard>
-                <MiniCard></MiniCard>
-                <MiniCard></MiniCard>
-                <MiniCard></MiniCard>
-                <MiniCard></MiniCard>
-                <MiniCard></MiniCard>
-                <MiniCard></MiniCard>
+                <p className="weekly-title">7-day forecast</p>
+                <div className="weekly-container">
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                    <MiniCard></MiniCard>
+                </div>
             </section>
         </StyledMain>
     )
