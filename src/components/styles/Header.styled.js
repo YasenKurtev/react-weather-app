@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export let StyledHeader = styled.header`
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: rgb(0, 0, 0, 0.3);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +34,6 @@ export let StyledHeader = styled.header`
     form{
         display:flex;
         width:300px;
-        padding: 20px;
         heigth: 100px;
     }
 
@@ -63,7 +62,12 @@ export let StyledHeader = styled.header`
         color: green;
     }
 
-    i{
+    form i{
+        font-size: 20px;
+        color: grey;
+    }
+
+    .theme-selector i{
         font-size: 18px;
         color: grey;
     }
@@ -97,6 +101,7 @@ export let StyledHeader = styled.header`
     }
 
     .theme-btn{
+        background-color: #abb2b9;
         cursor: pointer;
         border: 0;
         padding: 6px;
@@ -104,8 +109,13 @@ export let StyledHeader = styled.header`
         transition: transform 0.2s;
     }
 
+    .theme-btn i{
+        color: #2c3e50;
+    }
+
     .theme-btn:hover{
         transform: scale(1.2);
+        background-color: white;
     }
 
     .location-btn{
@@ -115,12 +125,58 @@ export let StyledHeader = styled.header`
         font-weight: 600;
         padding: 6px;
         border:0;
-        transition: transform 0.2s;
+        transition: transform;
         background-color: transparent;
     }
 
     .location-btn:hover{
         transform: scale(1.1);
+    }
+
+    .location-btn i{
+        font-size: 23px;
+        color:  #2c3e50;
+    }
+
+    .location-btn p{
+        margin: 0;
+    }
+
+    .units-buttons{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .units-selector{
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .units-selector p{
+        margin: 0;
+        text-align: center;
+        color: #f9fafa;
+        font-weight: 600;
+    }
+
+    .units-buttons button{
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+        color: #2c3e50;
+        padding-top: 6px;
+        padding-bottom: 0;
+        margin: 0;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .units-buttons button:hover{
+        color: white;
+        padding-top: 0;
+        border-bottom: 2px solid #2c3e50;
     }
 
     @media (max-width: 768px){

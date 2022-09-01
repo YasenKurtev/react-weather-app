@@ -9,7 +9,7 @@ let Header = () => {
             </div>
             <div className="location">
                 <button className="location-btn">
-                <i className="fa-solid fa-location-dot"></i> Get location
+                    <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
                 </button>
             </div>
             <form>
@@ -21,6 +21,14 @@ let Header = () => {
                     <i className="fa-solid fa-circle-xmark"></i>
                 </button>
             </form>
+            <div className="units-selector">
+                <p>Units</p>
+                <div className="units-buttons">
+                    <button>C</button>
+                    <p>|</p>
+                    <button>F</button>
+                </div>
+            </div>
             <div className="theme-selector">
                 <p>Dark mode</p>
                 <div className="theme-buttons">
