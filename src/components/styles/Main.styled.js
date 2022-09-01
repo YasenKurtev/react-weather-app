@@ -15,4 +15,8 @@ export let StyledMain = styled.main`
         display: flex;
         gap: 10px;
     }
+
+    .weather-details{
+        padding-top: 10px;
+    }
 `

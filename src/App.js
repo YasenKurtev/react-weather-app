@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Container from './components/styles/Container.styles';
 import GlobalStyles from './components/styles/Global';
 import Main from './components/Main';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Container>
         <Header />
         <Main />
+        <Footer></Footer>
       </Container>
     </>
   );
