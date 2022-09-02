@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export let StyledHeader = styled.header`
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255, 0.3);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -144,14 +144,12 @@ export let StyledHeader = styled.header`
 
     .units-buttons{
         display: flex;
-        gap: 5px;
         align-items: center;
     }
 
     .units-selector{
         display:flex;
         flex-direction: column;
-        gap: 5px;
     }
 
     .units-selector p{
@@ -166,17 +164,13 @@ export let StyledHeader = styled.header`
         font-size: 20px;
         font-weight: 600;
         color: #2c3e50;
-        padding-top: 6px;
-        padding-bottom: 0;
-        margin: 0;
         border: 0;
         background-color: transparent;
+        padding: 6px;
     }
 
     .units-buttons button:hover{
         color: white;
-        padding-top: 0;
-        border-bottom: 2px solid #2c3e50;
     }
 
     @media (max-width: 768px){

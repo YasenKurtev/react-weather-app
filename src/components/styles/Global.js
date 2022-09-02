@@ -6,12 +6,11 @@ let GlobalStyles = createGlobalStyle`
 body, html{
     background-image: linear-gradient(to bottom right, rgb( 192, 57, 43 ), rgb( 241, 196, 15 ));
     font-family: 'Poppins', sans-serif;
-    height: 100%;
+    min-height: 100%;
 }
 
 body{
     margin-top: 20px;
-    overflow: hidden;
 }
 `
 

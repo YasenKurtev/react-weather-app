@@ -1,6 +1,29 @@
+import { useState } from "react";
 import { StyledHeader } from "./styles/Header.styled";
 
 let Header = () => {
+    let [location, setLocation] = useState({ latitude: 0, longitude: 0 })
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            console.log('Not supported');
+        }
+    }
+
+    function showPosition(position) {
+        setLocation(state => {
+            state.latitude = position.coords.latitude;
+            state.longitude = position.coords.longitude;
+            console.log(state);
+        })
+    }
+
+    function showError(error) {
+        console.log('error');
+    }
+
     return (
         <StyledHeader>
             <div className="logo">
@@ -8,7 +31,7 @@ let Header = () => {
                 <h1>WeatherApp</h1>
             </div>
             <div className="location">
-                <button className="location-btn">
+                <button className="location-btn" onClick={getLocation}>
                     <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
                 </button>
             </div>
@@ -24,9 +47,8 @@ let Header = () => {
             <div className="units-selector">
                 <p>Units</p>
                 <div className="units-buttons">
-                    <button>C</button>
-                    <p>|</p>
-                    <button>F</button>
+                    <button>C°</button>
+                    <button>F°</button>
                 </div>
             </div>
             <div className="theme-selector">

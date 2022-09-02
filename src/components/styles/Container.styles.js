@@ -9,7 +9,8 @@ let Container = styled.div`
     padding: 0;
 
     footer{
-        margin-top: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 `
 
