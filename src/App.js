@@ -5,8 +5,11 @@ import Container from './components/styles/Container.styles';
 import GlobalStyles from './components/styles/Global';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
+import getCoordinates from './hooks/useCoordinates';
 
 function App() {
+
   return (
     <>
       <GlobalStyles />

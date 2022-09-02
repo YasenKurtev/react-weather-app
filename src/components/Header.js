@@ -2,7 +2,18 @@ import { useState } from "react";
 import { StyledHeader } from "./styles/Header.styled";
 
 let Header = () => {
-    let [location, setLocation] = useState({ latitude: 0, longitude: 0 })
+    let [location, setLocation] = useState({ latitude: 0, longitude: 0 });
+    let [searchInput, setSearchInput] = useState('');
+
+    let onSearchSubmit = (e) => {
+        e.preventDefault();
+        console.log(searchInput);
+    }
+
+    let onChangeHandler = (e) => {
+        setSearchInput(state => state = e.target.value)
+        console.log(searchInput);
+    }
 
     function getLocation() {
         if (navigator.geolocation) {
@@ -35,14 +46,12 @@ let Header = () => {
                     <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
                 </button>
             </div>
-            <form>
-                <input type="text" id="search" placeholder="Search for a city..."></input>
+            <form onSubmit={onSearchSubmit}>
+                <input type="text" id="search" placeholder="Search for a city..." value={searchInput} onChange={onChangeHandler}></input>
                 <button className="search-btn" type="submit">
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <button className="clear-btn">
-                    <i className="fa-solid fa-circle-xmark"></i>
-                </button>
+
             </form>
             <div className="units-selector">
                 <p>Units</p>
