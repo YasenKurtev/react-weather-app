@@ -5,13 +5,19 @@ import MiniCard from "./MiniCard"
 import Details from "./Details"
 import DailyCard from "./DailyCard"
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
+import { StyledLoading } from "./styles/Loading.styled"
 
 let Main = () => {
     let [data, isLoading] = useFetchDailyWeather('Plovdiv');
 
-    if(isLoading){
+    if (isLoading) {
         return (
-            <p>Loading...</p>
+            <StyledLoading>
+                <div className="lds-dual-ring">
+
+                </div>
+                <p>Fetching weather data...</p>
+            </StyledLoading>
         )
     }
 
