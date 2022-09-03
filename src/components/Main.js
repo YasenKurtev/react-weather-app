@@ -4,12 +4,21 @@ import Map from "./Map"
 import MiniCard from "./MiniCard"
 import Details from "./Details"
 import DailyCard from "./DailyCard"
+import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 
 let Main = () => {
+    let [data, isLoading] = useFetchDailyWeather('Plovdiv');
+
+    if(isLoading){
+        return (
+            <p>Loading...</p>
+        )
+    }
+
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard></TodayCard>
+                <TodayCard data={data}></TodayCard>
                 <Map></Map>
             </section>
             <section className="weather-details">
