@@ -29,10 +29,10 @@ let Main = () => {
         <StyledMain>
             <section className="today-map">
                 <TodayCard data={data}></TodayCard>
-                <Map></Map>
+                <Map coords={data.coords}></Map>
             </section>
             <section className="weather-details">
-                <Details></Details>
+                <Details data={data}></Details>
             </section>
             <section className="daily-forecast">
                 <p className="daily-title">Daily forecast</p>
