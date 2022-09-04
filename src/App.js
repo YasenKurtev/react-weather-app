@@ -1,12 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Container from './components/styles/Container.styles';
 import GlobalStyles from './components/styles/Global';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import { useEffect } from 'react';
-import getCoordinates from './hooks/useCoordinates';
+import { SettingsProvider } from './components/contexts/settingsContext';
 
 function App() {
 
@@ -15,7 +13,9 @@ function App() {
       <GlobalStyles />
       <Container>
         <Header />
-        <Main />
+        <SettingsProvider>
+          <Main />
+        </SettingsProvider>
         <Footer />
       </Container>
     </>

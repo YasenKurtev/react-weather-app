@@ -6,9 +6,13 @@ import Details from "./Details"
 import DailyCard from "./DailyCard"
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import { StyledLoading } from "./styles/Loading.styled"
+import { useContext, useState } from "react"
+import { SettingsContext } from "./contexts/settingsContext"
 
 let Main = () => {
-    let [data, isLoading] = useFetchDailyWeather('Plovdiv');
+    let { defaultCity } = useContext(SettingsContext);
+
+    let [data, isLoading] = useFetchDailyWeather(defaultCity);
 
     if (isLoading) {
         return (
