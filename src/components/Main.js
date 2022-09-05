@@ -31,7 +31,8 @@ let Main = ({ coords }) => {
         )
     }
 
-    let hourlyData = weeklyData.list.slice(1, 9);
+    let hoursData = weeklyData.list.slice(1, 9);
+    let daysData = weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12");
 
     return (
         <StyledMain>
@@ -45,19 +46,13 @@ let Main = ({ coords }) => {
             <section className="daily-forecast">
                 <p className="daily-title">Daily forecast</p>
                 <div className="daily-container">
-                    {hourlyData.map(x => <DailyCard data={x}></DailyCard>)}
+                    {hoursData.map(x => <DailyCard data={x}></DailyCard>)}
                 </div>
             </section>
             <section className="weekly-forecast">
-                <p className="weekly-title">7-day forecast</p>
+                <p className="weekly-title">5-day forecast</p>
                 <div className="weekly-container">
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
-                    <MiniCard></MiniCard>
+                    {daysData.map(x => <MiniCard data={x}></MiniCard>)}
                 </div>
             </section>
         </StyledMain>

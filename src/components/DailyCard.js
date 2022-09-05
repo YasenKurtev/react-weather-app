@@ -1,6 +1,7 @@
 import { StyledDailyCard } from "./styles/DailyCard.styled"
 
-let DailyCard = ({data}) => {
+let DailyCard = ({ data }) => {
+
     return (
         <StyledDailyCard>
             <p>{data.dt_txt.split(' ')[1].slice(0, 5)}</p>

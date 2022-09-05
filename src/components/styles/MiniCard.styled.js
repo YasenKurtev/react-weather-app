@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export let StyledMiniCard = styled.div`
 color: #f9fafa;
-    width: 12%;
+    width: 18%;
     background-color: rgb(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 10px;
