@@ -8,11 +8,18 @@ import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import { StyledLoading } from "./styles/Loading.styled"
 import { useContext, useState } from "react"
 import { SettingsContext } from "./contexts/settingsContext"
+import useFetchCoordinatesWeather from "../hooks/useFetchCoordinates"
 
-let Main = () => {
+let Main = ({ coords }) => {
     let { defaultCity } = useContext(SettingsContext);
 
-    let [data, isLoading] = useFetchDailyWeather(defaultCity);
+    if (coords.lat !== 0 && coords.lon !== 0) {
+        defaultCity = null;
+    }
+
+    let [data, isLoading] = useFetchDailyWeather(defaultCity, coords.lat, coords.lon);
+
+    console.log(isLoading);
 
     if (isLoading) {
         return (

@@ -5,16 +5,18 @@ import GlobalStyles from './components/styles/Global';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import { SettingsProvider } from './components/contexts/settingsContext';
+import { useState } from 'react';
 
 function App() {
+  let [coords, setCoords] = useState({ lat: 0, lon: 0 });
 
   return (
     <>
       <GlobalStyles />
       <Container>
-        <Header />
+        <Header setCoords={setCoords} />
         <SettingsProvider>
-          <Main />
+          <Main coords={coords} />
         </SettingsProvider>
         <Footer />
       </Container>

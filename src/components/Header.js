@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { StyledHeader } from "./styles/Header.styled";
 
-let Header = () => {
-    let [location, setLocation] = useState({ latitude: 0, longitude: 0 });
+let Header = ({ setCoords }) => {
     let [searchInput, setSearchInput] = useState('');
 
     let onSearchSubmit = (e) => {
@@ -24,11 +23,7 @@ let Header = () => {
     }
 
     function showPosition(position) {
-        setLocation(state => {
-            state.latitude = position.coords.latitude;
-            state.longitude = position.coords.longitude;
-            console.log(state);
-        })
+        setCoords({ lat: position.coords.latitude, lon: position.coords.longitude })
     }
 
     function showError(error) {

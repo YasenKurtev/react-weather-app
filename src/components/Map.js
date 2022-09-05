@@ -21,7 +21,7 @@ let Map = ({ coordinates }) => {
             center: [coords.lng, coords.lat],
             zoom: 11
         });
-    });
+    }, [coords]);
 
     return (
         <StyledMap>
