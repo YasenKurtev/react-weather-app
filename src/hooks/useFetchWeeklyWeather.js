@@ -3,7 +3,7 @@ import { MAIN_URL, WEATHER_ACCESS_KEY } from "../api/api";
 
 export default function useFetchWeeklyWeather(cityName, lat, lon) {
     let [weeklyData, setweeklyData] = useState({});
-    let [isLoading, setLoading] = useState(true);
+    let [isLoadingWeekly, setLoading] = useState(true);
 
     useEffect(() => {
         if (cityName !== null) {
@@ -27,7 +27,7 @@ export default function useFetchWeeklyWeather(cityName, lat, lon) {
                     }, 1000);
                 });
         }
-    }, [cityName])
+    }, [cityName, lat, lon])
 
-    return [weeklyData];
+    return [weeklyData, isLoadingWeekly];
 }

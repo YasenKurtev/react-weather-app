@@ -3,7 +3,7 @@ import { MAIN_URL, WEATHER_ACCESS_KEY } from "../api/api";
 
 export default function useFetchDailyWeather(cityName, lat, lon) {
     let [dailyData, setDailyData] = useState({});
-    let [isLoading, setLoading] = useState(true);
+    let [isLoadingDaily, setLoading] = useState(true);
 
     useEffect(() => {
         if (cityName !== null) {
@@ -27,7 +27,7 @@ export default function useFetchDailyWeather(cityName, lat, lon) {
                     }, 1000);
                 });
         }
-    }, [cityName])
+    }, [cityName, lat, lon])
 
-    return [dailyData, isLoading];
+    return [dailyData, isLoadingDaily];
 }

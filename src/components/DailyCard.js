@@ -1,12 +1,12 @@
 import { StyledDailyCard } from "./styles/DailyCard.styled"
 
-let DailyCard = () => {
+let DailyCard = ({data}) => {
     return (
         <StyledDailyCard>
-            <p>12:00</p>
+            <p>{data.dt_txt.split(' ')[1].slice(0, 5)}</p>
             <div className="weather-info">
                 <img src="/images/1163661.png" alt="logo"></img>
-                <p>15°</p>
+                <p>{Math.round(data.main.temp)}°</p>
             </div>
         </StyledDailyCard>
     )

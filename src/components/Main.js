@@ -17,12 +17,10 @@ let Main = ({ coords }) => {
         defaultCity = null;
     }
 
-    let [dailyData, isLoading] = useFetchDailyWeather(defaultCity, coords.lat, coords.lon);
-    let [weeklyData] = useFetchWeeklyWeather(defaultCity, coords.lat, coords.lon);
+    let [dailyData, isLoadingDaily] = useFetchDailyWeather(defaultCity, coords.lat, coords.lon);
+    let [weeklyData, isLoadingWeekly] = useFetchWeeklyWeather(defaultCity, coords.lat, coords.lon);
 
-    console.log(weeklyData);
-
-    if (isLoading) {
+    if (isLoadingDaily || isLoadingWeekly) {
         return (
             <StyledLoading>
                 <div className="lds-dual-ring">
@@ -32,6 +30,8 @@ let Main = ({ coords }) => {
             </StyledLoading>
         )
     }
+
+    let hourlyData = weeklyData.list.slice(1, 9);
 
     return (
         <StyledMain>
@@ -45,14 +45,7 @@ let Main = ({ coords }) => {
             <section className="daily-forecast">
                 <p className="daily-title">Daily forecast</p>
                 <div className="daily-container">
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
+                    {hourlyData.map(x => <DailyCard data={x}></DailyCard>)}
                 </div>
             </section>
             <section className="weekly-forecast">
