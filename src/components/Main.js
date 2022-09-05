@@ -5,10 +5,10 @@ import MiniCard from "./MiniCard"
 import Details from "./Details"
 import DailyCard from "./DailyCard"
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
+import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
 import { StyledLoading } from "./styles/Loading.styled"
 import { useContext, useState } from "react"
 import { SettingsContext } from "./contexts/settingsContext"
-import useFetchCoordinatesWeather from "../hooks/useFetchCoordinates"
 
 let Main = ({ coords }) => {
     let { defaultCity } = useContext(SettingsContext);
@@ -17,9 +17,10 @@ let Main = ({ coords }) => {
         defaultCity = null;
     }
 
-    let [data, isLoading] = useFetchDailyWeather(defaultCity, coords.lat, coords.lon);
+    let [dailyData, isLoading] = useFetchDailyWeather(defaultCity, coords.lat, coords.lon);
+    let [weeklyData] = useFetchWeeklyWeather(defaultCity, coords.lat, coords.lon);
 
-    console.log(isLoading);
+    console.log(weeklyData);
 
     if (isLoading) {
         return (
@@ -35,11 +36,11 @@ let Main = ({ coords }) => {
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard data={data}></TodayCard>
-                <Map coordinates={data.coord}></Map>
+                <TodayCard dailyData={dailyData}></TodayCard>
+                <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">
-                <Details data={data}></Details>
+                <Details dailyData={dailyData}></Details>
             </section>
             <section className="daily-forecast">
                 <p className="daily-title">Daily forecast</p>
