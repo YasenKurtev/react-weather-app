@@ -53,10 +53,6 @@ let Main = ({ coords }) => {
                     <DailyCard></DailyCard>
                     <DailyCard></DailyCard>
                     <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
-                    <DailyCard></DailyCard>
                 </div>
             </section>
             <section className="weekly-forecast">
