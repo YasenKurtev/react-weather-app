@@ -1,7 +1,7 @@
+import days from "../utils/daysOfWeek";
 import { StyledMiniCard } from "./styles/MiniCard.styled"
 
 let MiniCard = ({ data }) => {
-    let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     let currentDate = new Date(`${data.dt_txt}`);
     let dayOfWeek = days[currentDate.getDay()];
 
