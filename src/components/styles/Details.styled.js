@@ -9,20 +9,29 @@ export let StyledDetails = styled.div`
     padding: 10px;
 
 p{
-    text-align: center;
     margin: 0;
-    padding: 5px;
     font-size: 17px;
     font-weight: 600;
+}
+
+i{
+    color: #2c3e50;
 }
 
 .stats{
     background-color: rgb(0, 0, 0, 0.3);
     border-radius: 10px;
+    text-align: center;
+    padding: 2px;
+    margin-top: 5px;
 }
 
-div{
-    width: 10%;
+.details-card{
+    width: 12%;
 }
 
+.details-title{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
 `
