@@ -4,10 +4,11 @@ import { useState } from "react";
 export let SettingsContext = createContext();
 
 export let SettingsProvider = ({ children }) => {
-    let [defaultCity, setDefaultCity] = useState(JSON.parse(localStorage.getItem('defaultCity')));
+    let [defaultCity, setDefaultCity] = useState(localStorage.getItem('defaultCity'));
 
-    if(defaultCity === null){
+    if (defaultCity === null) {
         setDefaultCity(state => state = 'Plovdiv');
+        localStorage.setItem('defaultCity', 'Plovdiv');
     }
 
     return (

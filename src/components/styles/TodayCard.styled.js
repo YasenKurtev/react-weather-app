@@ -46,15 +46,28 @@ img{
     width: 100px;
 }
 
-.default-city{
+.default-city-btn{
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    font-size: 14px;
     font-weight: 600;
     color: #2c3e50;
 }
 
-.default-city:hover{
+.default-city-btn:hover{
     text-decoration: underline;
+}
+
+.default-city{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.default-city-div{
+    display: flex;
+    gap: 5px;
 }
 `
