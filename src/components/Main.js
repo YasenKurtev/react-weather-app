@@ -34,6 +34,9 @@ let Main = ({ coords }) => {
     let hoursData = weeklyData.list.slice(1, 10);
     let daysData = weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12");
 
+    let sunrise = new Date((1662414500 + 10800) * 1000)
+    console.log(sunrise);
+
     return (
         <StyledMain>
             <section className="today-map">

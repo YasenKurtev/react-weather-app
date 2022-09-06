@@ -45,4 +45,16 @@ h1{
 img{
     width: 100px;
 }
+
+.default-city{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.default-city:hover{
+    text-decoration: underline;
+}
 `

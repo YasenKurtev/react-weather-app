@@ -4,6 +4,10 @@ import { StyledTodayCard } from "./styles/TodayCard.styled";
 import { MAIN_URL, WEATHER_ACCESS_KEY } from "../api/api";
 
 let TodayCard = ({ dailyData }) => {
+    let addDefaultCity = () => {
+        localStorage.setItem('defaultCity', JSON.stringify(dailyData.name))
+    }
+
     return (
         <StyledTodayCard>
             <img src="/images/1163661.png" alt="logo"></img>
@@ -17,6 +21,7 @@ let TodayCard = ({ dailyData }) => {
                 <p>L: {Math.round(dailyData.coord.lat)}</p>
                 <p>H: {Math.round(dailyData.coord.lon)}</p>
             </div>
+            <button className="default-city" onClick={addDefaultCity}>Set as default city</button>
         </StyledTodayCard>
     )
 }
