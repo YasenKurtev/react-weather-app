@@ -7,8 +7,8 @@ export let SettingsProvider = ({ children }) => {
     let [defaultCity, setDefaultCity] = useState(localStorage.getItem('defaultCity'));
 
     if (defaultCity === null) {
-        setDefaultCity(state => state = 'Plovdiv');
-        localStorage.setItem('defaultCity', 'Plovdiv');
+        setDefaultCity(state => state = 'Berlin');
+        localStorage.setItem('defaultCity', 'Berlin');
     }
 
     return (

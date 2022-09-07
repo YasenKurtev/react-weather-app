@@ -7,14 +7,18 @@ import DailyCard from "./DailyCard"
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
 import { StyledLoading } from "./styles/Loading.styled"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { SettingsContext } from "./contexts/settingsContext"
 
-let Main = ({ coords }) => {
+let Main = ({ data, setData }) => {
     let { defaultCity } = useContext(SettingsContext);
-
-    if (coords.lat !== 0 && coords.lon !== 0) {
+    let coords = { lat: 0, lon: 0 };
+    if (typeof data === 'string') {
+        defaultCity = data;
+    }
+    if (typeof data === 'object') {
         defaultCity = null;
+        coords = data;
     }
 
     let [dailyData, isLoadingDaily] = useFetchDailyWeather(defaultCity, coords.lat, coords.lon);

@@ -8,15 +8,15 @@ import { SettingsProvider } from './components/contexts/settingsContext';
 import { useState } from 'react';
 
 function App() {
-  let [coords, setCoords] = useState({ lat: 0, lon: 0 });
+  let [data, setData] = useState();
 
   return (
     <>
       <GlobalStyles />
       <Container>
-        <Header setCoords={setCoords} />
+        <Header data={data} setData={setData} />
         <SettingsProvider>
-          <Main coords={coords} />
+          <Main data={data} setData={setData} />
         </SettingsProvider>
         <Footer />
       </Container>
