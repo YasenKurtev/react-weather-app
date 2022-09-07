@@ -57,12 +57,16 @@ let Header = ({ data, setData }) => {
             <div className="theme-selector">
                 <p>Dark mode</p>
                 <div className="theme-buttons">
-                    <button className="theme-btn" type="radio">
-                        <i className="fas fa-moon"></i>
-                    </button>
-                    <button className="theme-btn" type="radio">
+
+                    <label>
+                        <input type="radio" name="test" value="small" defaultChecked/>
                         <i className="fa-solid fa-sun"></i>
-                    </button>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="test" value="big" />
+                        <i className="fas fa-moon"></i>
+                    </label>
                 </div>
             </div>
         </StyledHeader>

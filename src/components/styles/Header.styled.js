@@ -173,6 +173,34 @@ export let StyledHeader = styled.header`
         color: white;
     }
 
+    /* HIDE RADIO */
+    [type=radio] { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* IMAGE STYLES */
+    [type=radio] + i {
+        font-size: 25px;
+        cursor: pointer;
+        padding: 3px;
+        color: #2c3e50;
+        transition: transform 0.2s;
+    }
+
+    [type=radio] + i:hover {
+        transform: scale(1.2);
+    }
+
+    /* CHECKED STYLES */
+        [type=radio]:checked + i {
+        background-color: white;
+        border-radius: 50px;
+        padding: 3px;
+    }
+
     @media (max-width: 768px){
         flex-direction: column;
     }
