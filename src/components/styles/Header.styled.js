@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export let StyledHeader = styled.header`
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: ${props => props.theme.backgroundColor};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
