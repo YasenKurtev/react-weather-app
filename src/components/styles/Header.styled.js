@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export let StyledHeader = styled.header`
     background-color: ${props => props.theme.backgroundColor};
+    color: ${props => props.theme.textColor};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,10 +12,6 @@ export let StyledHeader = styled.header`
 
     label, input{
         display: block;
-    }
-
-    h1{
-        color: #f9fafa;
     }
 
     input{
@@ -28,7 +25,7 @@ export let StyledHeader = styled.header`
     }
 
     input:focus{
-        border: 2px solid black;
+        border: 2px solid ${props => props.theme.iconColor};
     }
 
     form{
@@ -90,7 +87,6 @@ export let StyledHeader = styled.header`
     }
 
     .theme-selector p{
-        color: #f9fafa;
         font-weight: 600;
         margin: 0;
     }
@@ -110,7 +106,7 @@ export let StyledHeader = styled.header`
     }
 
     .theme-btn i{
-        color: #2c3e50;
+        color: ${props => props.theme.iconColor};
     }
 
     .theme-btn:hover{
@@ -135,7 +131,7 @@ export let StyledHeader = styled.header`
 
     .location-btn i{
         font-size: 23px;
-        color:  #2c3e50;
+        color:  ${props => props.theme.iconColor};
     }
 
     .location-btn p{
@@ -155,7 +151,6 @@ export let StyledHeader = styled.header`
     .units-selector p{
         margin: 0;
         text-align: center;
-        color: #f9fafa;
         font-weight: 600;
     }
 

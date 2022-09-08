@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export let StyledDetails = styled.div`
-    background-color: rgb(255, 255, 255, 0.3);
-    color: #f9fafa;
+    background-color: ${props => props.theme.backgroundColor};
+    color: ${props => props.theme.textColor};
     display:flex;
     justify-content: space-around;
     border-radius: 10px;
@@ -15,7 +15,7 @@ p{
 }
 
 i{
-    color: #2c3e50;
+    color: ${props => props.theme.iconColor};
 }
 
 .stats{

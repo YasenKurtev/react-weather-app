@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export let StyledMain = styled.main`
+color: ${props => props.theme.textColor};
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -25,7 +26,6 @@ export let StyledMain = styled.main`
         margin: 0;
         padding-top: 20px;
         text-align: center;
-        color: #f9fafa;
         font-size: 25px;
         font-weight: 600;
     }
@@ -40,7 +40,6 @@ export let StyledMain = styled.main`
         margin: 0;
         padding-top: 20px;
         text-align: center;
-        color: #f9fafa;
         font-size: 25px;
         font-weight: 600;
     }

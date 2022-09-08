@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export let StyledDailyCard = styled.div`
-color: #f9fafa;
+    color: ${props => props.theme.textColor};
     width: 12%;
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: ${props => props.theme.backgroundColor};
     border-radius: 10px;
     padding: 10px 0;
     display: flex;

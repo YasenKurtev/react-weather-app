@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export let StyledTodayCard = styled.div`
-color: #f9fafa;
+color: ${props => props.theme.textColor};
 width: 30%;
-background-color: rgb(255, 255, 255, 0.3);
+background-color: ${props => props.theme.backgroundColor};
 border-radius: 10px;
 padding: 10px;
 display: flex;
@@ -63,7 +63,7 @@ img{
     margin: 0;
     font-size: 14px;
     font-weight: 600;
-    color: #2c3e50;
+    color: ${props => props.theme.defaultCityColor};
 }
 
 .default-city-div{
