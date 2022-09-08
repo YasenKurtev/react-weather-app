@@ -1,20 +1,14 @@
-import { useContext, useEffect, useState } from "react";
-import useFetchDailyWeather from "../hooks/useFetchDailyWeather";
+import { useContext } from "react";
 import { StyledTodayCard } from "./styles/TodayCard.styled";
-import { MAIN_URL, WEATHER_ACCESS_KEY } from "../api/api";
 import { SettingsContext } from "./contexts/settingsContext";
+import unitsConverter from "../utils/unitsConverter";
 
-let TodayCard = ({ dailyData }) => {
+let TodayCard = ({ dailyData, units }) => {
     let { defaultCity, setDefaultCity } = useContext(SettingsContext);
 
     let addDefaultCity = () => {
         localStorage.setItem('defaultCity', dailyData.name);
         setDefaultCity(state => state = dailyData.name)
-    }
-
-    let removeDefaultCity = () => {
-        setDefaultCity(state => state = 'Plovdiv');
-        localStorage.removeItem('defaultCity');
     }
 
     return (
@@ -23,7 +17,7 @@ let TodayCard = ({ dailyData }) => {
 
             <div className="weather-info">
                 <h1>{dailyData.name}</h1>
-                <p className="temp">{Math.round(dailyData.main.temp)}°</p>
+                <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>
                 <p className="condition">{dailyData.weather[0].main}</p>
             </div>
             <div className="low-high">

@@ -9,10 +9,12 @@ import { useContext, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { themeLight, themeDark } from "./utils/themes"
 import useTheme from './hooks/useThemeHook';
+import useUnits from './hooks/useUnitsHook';
 
 function App() {
   let [data, setData] = useState();
   let [theme, changeTheme] = useTheme();
+  let [units, changeUnits] = useUnits();
 
   return (
     <>
@@ -20,8 +22,8 @@ function App() {
         <ThemeProvider theme={theme === 'light' ? themeLight : themeDark}>
           <GlobalStyles />
           <Container>
-            <Header data={data} setData={setData} theme={theme} changeTheme={changeTheme} />
-            <Main data={data} setData={setData} />
+            <Header data={data} setData={setData} theme={theme} changeTheme={changeTheme} units={units} changeUnits={changeUnits} />
+            <Main data={data} setData={setData} units={units} />
             <Footer />
           </Container>
         </ThemeProvider>

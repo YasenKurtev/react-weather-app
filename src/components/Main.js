@@ -10,12 +10,14 @@ import { StyledLoading } from "./styles/Loading.styled"
 import { useContext, useEffect, useState } from "react"
 import { SettingsContext } from "./contexts/settingsContext"
 
-let Main = ({ data, setData }) => {
+let Main = ({ data, setData, units }) => {
     let { defaultCity } = useContext(SettingsContext);
     let coords = { lat: 0, lon: 0 };
+
     if (typeof data === 'string') {
         defaultCity = data;
     }
+    
     if (typeof data === 'object') {
         defaultCity = null;
         coords = data;
@@ -44,7 +46,7 @@ let Main = ({ data, setData }) => {
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard dailyData={dailyData}></TodayCard>
+                <TodayCard dailyData={dailyData} units={units}></TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">

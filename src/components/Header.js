@@ -1,7 +1,8 @@
 import { useState } from "react";
+import useUnits from "../hooks/useUnitsHook";
 import { StyledHeader } from "./styles/Header.styled";
 
-let Header = ({ data, setData, theme, changeTheme }) => {
+let Header = ({ data, setData, theme, changeTheme, units, changeUnits }) => {
     let [searchInput, setSearchInput] = useState('');
 
     let onSearchSubmit = (e) => {
@@ -51,12 +52,12 @@ let Header = ({ data, setData, theme, changeTheme }) => {
                 <p>Units</p>
                 <div className="units-buttons">
                     <label>
-                        <input type="radio" name="test" value="small" />
+                        <input type="radio" name="test" value="small" checked={units === 'celsius' ? true : false} onClick={() => changeUnits('celsius')}/>
                         <p>C°</p>
                     </label>
 
                     <label>
-                        <input type="radio" name="test" value="big" />
+                        <input type="radio" name="test" value="big" checked={units === 'fahrenheit' ? true : false} onClick={() => changeUnits('fahrenheit')}/>
                         <p>F°</p>
                     </label>
                 </div>

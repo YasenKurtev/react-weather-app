@@ -7,7 +7,7 @@ export default function useFetchWeeklyWeather(cityName, lat, lon) {
 
     useEffect(() => {
         if (cityName !== null) {
-            fetch(`${MAIN_URL}/forecast?q=${cityName}&appid=${WEATHER_ACCESS_KEY}&units=metric`)
+            fetch(`${MAIN_URL}/forecast?q=${cityName}&appid=${WEATHER_ACCESS_KEY}`)
                 .then(res => res.json())
                 .then(result => {
                     setLoading(true);
@@ -17,7 +17,7 @@ export default function useFetchWeeklyWeather(cityName, lat, lon) {
                     }, 1000);
                 });
         } else {
-            fetch(`${MAIN_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_ACCESS_KEY}&units=metric`)
+            fetch(`${MAIN_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_ACCESS_KEY}`)
                 .then(res => res.json())
                 .then(result => {
                     setLoading(true);

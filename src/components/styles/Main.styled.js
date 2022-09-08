@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export let StyledMain = styled.main`
-color: ${props => props.theme.textColor};
+    color: ${props => props.theme.textColor};
     display: flex;
     flex-direction: column;
     height: 100%;
