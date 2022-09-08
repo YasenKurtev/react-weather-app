@@ -9,6 +9,7 @@ import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
 import { StyledLoading } from "./styles/Loading.styled"
 import { useContext, useEffect, useState } from "react"
 import { SettingsContext } from "./contexts/settingsContext"
+import useDate from "../hooks/useDateHook"
 
 let Main = ({ data, setData, units }) => {
     let { defaultCity } = useContext(SettingsContext);
@@ -17,7 +18,7 @@ let Main = ({ data, setData, units }) => {
     if (typeof data === 'string') {
         defaultCity = data;
     }
-    
+
     if (typeof data === 'object') {
         defaultCity = null;
         coords = data;
@@ -39,9 +40,8 @@ let Main = ({ data, setData, units }) => {
 
     let hoursData = weeklyData.list.slice(1, 10);
     let daysData = weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12");
-
-    let sunrise = new Date((1662414500 + 10800) * 1000)
-    console.log(sunrise);
+    let time = new Date((1662667421 + 36000 - 10800) * 1000);
+    console.log(time);
 
     return (
         <StyledMain>

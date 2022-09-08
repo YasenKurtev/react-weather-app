@@ -1,3 +1,4 @@
+import timeConverter from "../utils/timeConverter"
 import unitsConverter from "../utils/unitsConverter"
 import { StyledDetails } from "./styles/Details.styled"
 
@@ -44,14 +45,14 @@ let Details = ({ dailyData, units }) => {
                     <i class="fa-solid fa-arrow-up"></i>
                     <p>Sunrise</p>
                 </div>
-                <p className="stats">{dailyData.sys.sunrise}</p>
+                <p className="stats">{timeConverter(dailyData.sys.sunrise, dailyData.timezone)}</p>
             </div>
             <div className="details-card">
                 <div className="details-title">
                     <i class="fa-solid fa-arrow-down"></i>
                     <p>Sunset</p>
                 </div>
-                <p className="stats">{dailyData.sys.sunset}</p>
+                <p className="stats">{timeConverter(dailyData.sys.sunset, dailyData.timezone)}</p>
             </div>
         </StyledDetails>
     )
