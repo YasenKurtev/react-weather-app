@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { StyledHeader } from "./styles/Header.styled";
 
-let Header = ({ data, setData, changeTheme }) => {
+let Header = ({ data, setData, theme, changeTheme }) => {
     let [searchInput, setSearchInput] = useState('');
 
     let onSearchSubmit = (e) => {
@@ -59,12 +59,12 @@ let Header = ({ data, setData, changeTheme }) => {
                 <div className="theme-buttons">
 
                     <label>
-                        <input type="radio" name="test" value="small" onClick={() => changeTheme('light')} />
+                        <input type="radio" name="test" value="small" checked={theme === 'light' ? true : false} onClick={() => changeTheme('light')} />
                         <i className="fa-solid fa-sun"></i>
                     </label>
 
                     <label>
-                        <input type="radio" name="test" value="big" onClick={() => changeTheme('ok')} />
+                        <input type="radio" name="test" value="big" checked={theme === 'dark' ? true : false} onClick={() => changeTheme('dark')} />
                         <i className="fas fa-moon"></i>
                     </label>
                 </div>
