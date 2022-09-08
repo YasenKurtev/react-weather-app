@@ -1,6 +1,7 @@
+import unitsConverter from "../utils/unitsConverter"
 import { StyledDetails } from "./styles/Details.styled"
 
-let Details = ({ dailyData }) => {
+let Details = ({ dailyData, units }) => {
     return (
         <StyledDetails>
             <div className="details-card">
@@ -8,7 +9,7 @@ let Details = ({ dailyData }) => {
                     <i class="fa-solid fa-temperature-half"></i>
                     <p>Feels like</p>
                 </div>
-                <p className="stats">{Math.round(dailyData.main.feels_like)}°</p>
+                <p className="stats">{unitsConverter(dailyData.main.temp, units)}°</p>
             </div>
             <div className="details-card">
                 <div className="details-title">

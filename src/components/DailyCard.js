@@ -1,13 +1,14 @@
+import unitsConverter from "../utils/unitsConverter"
 import { StyledDailyCard } from "./styles/DailyCard.styled"
 
-let DailyCard = ({ data }) => {
+let DailyCard = ({ data, units }) => {
 
     return (
         <StyledDailyCard>
             <p>{data.dt_txt.split(' ')[1].slice(0, 5)}</p>
             <div className="weather-info">
                 <img src="/images/1163661.png" alt="logo"></img>
-                <p>{Math.round(data.main.temp)}°</p>
+                <p>{unitsConverter(data.main.temp, units)}°</p>
             </div>
         </StyledDailyCard>
     )

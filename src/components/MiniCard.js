@@ -1,7 +1,8 @@
 import days from "../utils/daysOfWeek";
+import unitsConverter from "../utils/unitsConverter";
 import { StyledMiniCard } from "./styles/MiniCard.styled"
 
-let MiniCard = ({ data }) => {
+let MiniCard = ({ data, units }) => {
     let currentDate = new Date(`${data.dt_txt}`);
     let dayOfWeek = days[currentDate.getDay()];
 
@@ -10,7 +11,7 @@ let MiniCard = ({ data }) => {
             <p>{dayOfWeek}</p>
             <div className="weather-info">
                 <img src="/images/1163661.png" alt="logo"></img>
-                <p>{Math.round(data.main.temp)}°</p>
+                <p>{unitsConverter(data.main.temp, units)}°</p>
             </div>
         </StyledMiniCard>
     )

@@ -50,18 +50,18 @@ let Main = ({ data, setData, units }) => {
                 <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">
-                <Details dailyData={dailyData}></Details>
+                <Details dailyData={dailyData} units={units}></Details>
             </section>
             <section className="daily-forecast">
                 <p className="daily-title">24-hour forecast</p>
                 <div className="daily-container">
-                    {hoursData.map(x => <DailyCard data={x}></DailyCard>)}
+                    {hoursData.map(x => <DailyCard data={x} units={units}></DailyCard>)}
                 </div>
             </section>
             <section className="weekly-forecast">
                 <p className="weekly-title">5-day forecast</p>
                 <div className="weekly-container">
-                    {daysData.map(x => <MiniCard data={x}></MiniCard>)}
+                    {daysData.map(x => <MiniCard data={x} units={units}></MiniCard>)}
                 </div>
             </section>
         </StyledMain>
