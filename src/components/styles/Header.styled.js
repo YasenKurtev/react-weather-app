@@ -140,7 +140,8 @@ export let StyledHeader = styled.header`
 
     .units-buttons{
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
     }
 
     .units-selector{
@@ -152,20 +153,6 @@ export let StyledHeader = styled.header`
         margin: 0;
         text-align: center;
         font-weight: 600;
-    }
-
-    .units-buttons button{
-        cursor: pointer;
-        font-size: 20px;
-        font-weight: 600;
-        color: #2c3e50;
-        border: 0;
-        background-color: transparent;
-        padding: 6px;
-    }
-
-    .units-buttons button:hover{
-        color: white;
     }
 
     /* HIDE RADIO */
@@ -194,6 +181,24 @@ export let StyledHeader = styled.header`
         background-color: white;
         border-radius: 50px;
         padding: 3px;
+    }
+
+    /* IMAGE STYLES */
+    [type=radio] + p {
+        font-size: 25px;
+        cursor: pointer;
+        padding: 3px;
+        color: #2c3e50;
+        transition: transform 0.2s;
+    }
+
+    [type=radio] + p:hover {
+        transform: scale(1.2);
+    }
+
+    /* CHECKED STYLES */
+        [type=radio]:checked + p {
+        color: white;
     }
 
     @media (max-width: 768px){

@@ -50,8 +50,15 @@ let Header = ({ data, setData, theme, changeTheme }) => {
             <div className="units-selector">
                 <p>Units</p>
                 <div className="units-buttons">
-                    <button>C°</button>
-                    <button>F°</button>
+                    <label>
+                        <input type="radio" name="test" value="small" />
+                        <p>C°</p>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="test" value="big" />
+                        <p>F°</p>
+                    </label>
                 </div>
             </div>
             <div className="theme-selector">
@@ -59,12 +66,12 @@ let Header = ({ data, setData, theme, changeTheme }) => {
                 <div className="theme-buttons">
 
                     <label>
-                        <input type="radio" name="test" value="small" checked={theme === 'light' ? true : false} onClick={() => changeTheme('light')} />
+                        <input type="radio" name="theme" value="small" checked={theme === 'light' ? true : false} onClick={() => changeTheme('light')} />
                         <i className="fa-solid fa-sun"></i>
                     </label>
 
                     <label>
-                        <input type="radio" name="test" value="big" checked={theme === 'dark' ? true : false} onClick={() => changeTheme('dark')} />
+                        <input type="radio" name="theme" value="big" checked={theme === 'dark' ? true : false} onClick={() => changeTheme('dark')} />
                         <i className="fas fa-moon"></i>
                     </label>
                 </div>
