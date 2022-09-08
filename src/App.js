@@ -8,18 +8,19 @@ import { SettingsContext, SettingsProvider } from './components/contexts/setting
 import { useContext, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { themeLight, themeDark } from "./utils/themes"
+import useTheme from './hooks/useThemeHook';
 
 function App() {
   let [data, setData] = useState();
-  console.log(localStorage.getItem('defaultTheme'));
+  let [theme, changeTheme] = useTheme();
 
   return (
     <>
       <SettingsProvider>
-        <ThemeProvider theme={localStorage.getItem('defaultTheme') === 'light' ? themeLight : themeDark}>
+        <ThemeProvider theme={theme === 'light' ? themeLight : themeDark}>
           <GlobalStyles />
           <Container>
-            <Header data={data} setData={setData} />
+            <Header data={data} setData={setData} theme={theme} changeTheme={changeTheme} />
             <Main data={data} setData={setData} />
             <Footer />
           </Container>
