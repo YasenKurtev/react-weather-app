@@ -8,6 +8,7 @@ import { StyledLoading } from "./styles/Loading.styled"
 import useDefaultCity from '../hooks/useDefaultCityHook';
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
+import getLocalTime from "../utils/getLocalTime"
 
 let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
@@ -35,10 +36,13 @@ let Main = ({ props }) => {
         )
     }
 
+    let localTime = getLocalTime(dailyData.timezone);
+    console.log(localTime);
+
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard dailyData={dailyData} defaultCity={defaultCity} changeDefaultCity={changeDefaultCity} units={props.units}></TodayCard>
+                <TodayCard dailyData={dailyData} defaultCity={defaultCity} changeDefaultCity={changeDefaultCity} units={props.units} localTime={localTime}></TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">

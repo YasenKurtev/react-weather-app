@@ -5,6 +5,7 @@ export default function getLocalTime(offset) {
     let utc = localTime + localOffset;
     let city = utc + (1000 * -offset);
     let result = new Date(city);
+    let formatResult = result.getHours() + ":" + result.getMinutes();
 
-    return result;
+    return formatResult;
 }

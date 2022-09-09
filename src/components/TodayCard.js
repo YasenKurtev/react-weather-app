@@ -1,11 +1,16 @@
 import { StyledTodayCard } from "./styles/TodayCard.styled";
 import unitsConverter from "../utils/unitsConverter";
+import { dayIcons, nightIcons } from "../utils/images"
+import timeConverter from "../utils/timeConverter"
 
-let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units }) => {
+let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime }) => {
 
     return (
         <StyledTodayCard>
-            <img src="/images/1163661.png" alt="logo"></img>
+            <img src={localTime.split(":")[0] < timeConverter(dailyData.sys.sunset, dailyData.timezone).split(":")[0]
+                ? dayIcons[dailyData.weather[0].id]
+                : nightIcons[dailyData.weather[0].id]}
+                alt="logo"></img>
             <div className="weather-info">
                 <h1>{dailyData.name}</h1>
                 <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>
