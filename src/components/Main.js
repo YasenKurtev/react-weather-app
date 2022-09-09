@@ -4,24 +4,22 @@ import Map from "./Map"
 import MiniCard from "./MiniCard"
 import Details from "./Details"
 import DailyCard from "./DailyCard"
+import { StyledLoading } from "./styles/Loading.styled"
+import useDefaultCity from '../hooks/useDefaultCityHook';
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
-import { StyledLoading } from "./styles/Loading.styled"
-import { useContext, useEffect, useState } from "react"
-import { SettingsContext } from "./contexts/settingsContext"
-import useDefaultCity from "../hooks/useDefaultCityHook"
 
-let Main = ({ data, setData, units }) => {
+let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
     let city = defaultCity;
     let coords = { lat: 0, lon: 0 };
 
-    if (typeof data === 'string') {
-        city = data;
+    if (typeof props.data === 'string') {
+        city = props.data;
     }
 
-    if (typeof data === 'object') {
-        coords = data;
+    if (typeof props.data === 'object') {
+        coords = props.data;
         city = null;
     }
 
@@ -31,36 +29,31 @@ let Main = ({ data, setData, units }) => {
     if (isLoadingDaily || isLoadingWeekly) {
         return (
             <StyledLoading>
-                <div className="lds-dual-ring">
-
-                </div>
+                <div className="lds-dual-ring"></div>
                 <p>Fetching weather data...</p>
             </StyledLoading>
         )
     }
 
-    let hoursData = weeklyData.list.slice(1, 10);
-    let daysData = weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12");
-
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard dailyData={dailyData} defaultCity={defaultCity} changeDefaultCity={changeDefaultCity} units={units}></TodayCard>
+                <TodayCard dailyData={dailyData} defaultCity={defaultCity} changeDefaultCity={changeDefaultCity} units={props.units}></TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">
-                <Details dailyData={dailyData} units={units}></Details>
+                <Details dailyData={dailyData} units={props.units}></Details>
             </section>
             <section className="daily-forecast">
                 <p className="daily-title">24-hour forecast</p>
                 <div className="daily-container">
-                    {hoursData.map(x => <DailyCard data={x} units={units}></DailyCard>)}
+                    {weeklyData.list.slice(1, 10).map(x => <DailyCard data={x} units={props.units}></DailyCard>)}
                 </div>
             </section>
             <section className="weekly-forecast">
                 <p className="weekly-title">5-day forecast</p>
                 <div className="weekly-container">
-                    {daysData.map(x => <MiniCard data={x} units={units}></MiniCard>)}
+                    {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map(x => <MiniCard data={x} units={props.units}></MiniCard>)}
                 </div>
             </section>
         </StyledMain>

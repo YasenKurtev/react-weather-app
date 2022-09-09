@@ -1,13 +1,12 @@
 import { useState } from "react";
-import useUnits from "../hooks/useUnitsHook";
 import { StyledHeader } from "./styles/Header.styled";
 
-let Header = ({ data, setData, theme, changeTheme, units, changeUnits }) => {
+let Header = ({ props }) => {
     let [searchInput, setSearchInput] = useState('');
 
     let onSearchSubmit = (e) => {
         e.preventDefault();
-        setData(searchInput);
+        props.setData(searchInput);
     }
 
     let onChangeHandler = (e) => {
@@ -23,7 +22,7 @@ let Header = ({ data, setData, theme, changeTheme, units, changeUnits }) => {
     }
 
     function showPosition(position) {
-        setData({ lat: position.coords.latitude, lon: position.coords.longitude });
+        props.setData({ lat: position.coords.latitude, lon: position.coords.longitude });
     }
 
     function showError(error) {
@@ -52,12 +51,12 @@ let Header = ({ data, setData, theme, changeTheme, units, changeUnits }) => {
                 <p>Units</p>
                 <div className="units-buttons">
                     <label>
-                        <input type="radio" name="test" value="small" checked={units === 'celsius' ? true : false} onClick={() => changeUnits('celsius')}/>
+                        <input type="radio" name="test" value="small" checked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')}/>
                         <p>C°</p>
                     </label>
 
                     <label>
-                        <input type="radio" name="test" value="big" checked={units === 'fahrenheit' ? true : false} onClick={() => changeUnits('fahrenheit')}/>
+                        <input type="radio" name="test" value="big" checked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')}/>
                         <p>F°</p>
                     </label>
                 </div>
@@ -67,12 +66,12 @@ let Header = ({ data, setData, theme, changeTheme, units, changeUnits }) => {
                 <div className="theme-buttons">
 
                     <label>
-                        <input type="radio" name="theme" value="small" checked={theme === 'light' ? true : false} onClick={() => changeTheme('light')} />
+                        <input type="radio" name="theme" value="small" checked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
                         <i className="fa-solid fa-sun"></i>
                     </label>
 
                     <label>
-                        <input type="radio" name="theme" value="big" checked={theme === 'dark' ? true : false} onClick={() => changeTheme('dark')} />
+                        <input type="radio" name="theme" value="big" checked={props.theme === 'dark' ? true : false} onClick={() => props.changeTheme('dark')} />
                         <i className="fas fa-moon"></i>
                     </label>
                 </div>

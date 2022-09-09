@@ -1,6 +1,6 @@
 import { StyledMap } from "./styles/Map.styled"
 import mapboxgl from "mapbox-gl";
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 
 mapboxgl.accessToken = "pk.eyJ1IjoieWFzZW4xMCIsImEiOiJjbDdqbDFvMzIwdGNhM3ZycDhwMjYyZ2ZuIn0.flthnfiYxf8XRCrTEOVAbw"
 
@@ -21,7 +21,7 @@ let Map = ({ coordinates }) => {
             center: [coords.lng, coords.lat],
             zoom: 11
         });
-    }, [coords]);
+    }, [coords.lat, coords.lng]);
 
     return (
         <StyledMap>

@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { StyledTodayCard } from "./styles/TodayCard.styled";
-import { SettingsContext } from "./contexts/settingsContext";
 import unitsConverter from "../utils/unitsConverter";
 
 let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units }) => {
@@ -8,7 +6,6 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units }) => {
     return (
         <StyledTodayCard>
             <img src="/images/1163661.png" alt="logo"></img>
-
             <div className="weather-info">
                 <h1>{dailyData.name}</h1>
                 <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>
