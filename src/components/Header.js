@@ -32,7 +32,7 @@ let Header = ({ props }) => {
     return (
         <StyledHeader>
             <div className="logo">
-                <img src="/images/1163661.png" alt="logo"></img>
+                <img src="/images/few-clouds.png" alt="logo"></img>
                 <h1>WeatherApp</h1>
             </div>
             <div className="location">
