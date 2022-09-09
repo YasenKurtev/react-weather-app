@@ -3,13 +3,7 @@ import { StyledTodayCard } from "./styles/TodayCard.styled";
 import { SettingsContext } from "./contexts/settingsContext";
 import unitsConverter from "../utils/unitsConverter";
 
-let TodayCard = ({ dailyData, units }) => {
-    let { defaultCity, setDefaultCity } = useContext(SettingsContext);
-
-    let addDefaultCity = () => {
-        localStorage.setItem('defaultCity', dailyData.name);
-        setDefaultCity(state => state = dailyData.name)
-    }
+let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units }) => {
 
     return (
         <StyledTodayCard>
@@ -29,7 +23,7 @@ let TodayCard = ({ dailyData, units }) => {
                     <i className="fa-solid fa-house"></i>
                     <p className="default-city">This is your default city</p>
                 </div>
-                : <button className="default-city-btn" onClick={addDefaultCity}>Set as default city</button>}
+                : <button className="default-city-btn" onClick={() => changeDefaultCity(dailyData.name)}>Set as default city</button>}
         </StyledTodayCard>
     )
 }

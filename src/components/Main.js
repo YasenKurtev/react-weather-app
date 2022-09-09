@@ -9,23 +9,24 @@ import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
 import { StyledLoading } from "./styles/Loading.styled"
 import { useContext, useEffect, useState } from "react"
 import { SettingsContext } from "./contexts/settingsContext"
-import useDate from "../hooks/useDateHook"
+import useDefaultCity from "../hooks/useDefaultCityHook"
 
 let Main = ({ data, setData, units }) => {
-    let { defaultCity } = useContext(SettingsContext);
+    let [defaultCity, changeDefaultCity] = useDefaultCity();
+    let city = defaultCity;
     let coords = { lat: 0, lon: 0 };
 
     if (typeof data === 'string') {
-        defaultCity = data;
+        city = data;
     }
 
     if (typeof data === 'object') {
-        defaultCity = null;
         coords = data;
+        city = null;
     }
 
-    let [dailyData, isLoadingDaily] = useFetchDailyWeather(defaultCity, coords.lat, coords.lon);
-    let [weeklyData, isLoadingWeekly] = useFetchWeeklyWeather(defaultCity, coords.lat, coords.lon);
+    let [dailyData, isLoadingDaily] = useFetchDailyWeather(city, coords.lat, coords.lon);
+    let [weeklyData, isLoadingWeekly] = useFetchWeeklyWeather(city, coords.lat, coords.lon);
 
     if (isLoadingDaily || isLoadingWeekly) {
         return (
@@ -40,13 +41,11 @@ let Main = ({ data, setData, units }) => {
 
     let hoursData = weeklyData.list.slice(1, 10);
     let daysData = weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12");
-    let time = new Date((1662667421 + 36000 - 10800) * 1000);
-    console.log(time);
 
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard dailyData={dailyData} units={units}></TodayCard>
+                <TodayCard dailyData={dailyData} defaultCity={defaultCity} changeDefaultCity={changeDefaultCity} units={units}></TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">
