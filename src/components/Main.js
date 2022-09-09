@@ -1,7 +1,7 @@
 import { StyledMain } from "./styles/Main.styled"
 import TodayCard from "./TodayCard"
 import Map from "./Map"
-import MiniCard from "./MiniCard"
+import MiniCard from "./WeeklyCard"
 import Details from "./Details"
 import DailyCard from "./DailyCard"
 import { StyledLoading } from "./styles/Loading.styled"
@@ -71,7 +71,11 @@ let Main = ({ props }) => {
             <section className="weekly-forecast">
                 <p className="weekly-title">5-day forecast</p>
                 <div className="weekly-container">
-                    {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map(x => <MiniCard data={x} units={props.units}></MiniCard>)}
+                    {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map(x =>
+                        <MiniCard
+                            data={x}
+                            units={props.units}>
+                        </MiniCard>)}
                 </div>
             </section>
         </StyledMain>

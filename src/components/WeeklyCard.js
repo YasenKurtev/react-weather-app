@@ -1,20 +1,22 @@
 import days from "../utils/daysOfWeek";
 import unitsConverter from "../utils/unitsConverter";
-import { StyledMiniCard } from "./styles/MiniCard.styled"
+import { StyledWeeklyCard } from "./styles/WeeklyCard.styled"
+import { dayIcons } from "../utils/images"
 
-let MiniCard = ({ data, units }) => {
+let WeeklyCard = ({ data, units }) => {
     let currentDate = new Date(`${data.dt_txt}`);
     let dayOfWeek = days[currentDate.getDay()];
 
     return (
-        <StyledMiniCard>
+        <StyledWeeklyCard>
             <p>{dayOfWeek}</p>
             <div className="weather-info">
-                <img src="/images/1163661.png" alt="logo"></img>
+                <img src={dayIcons[data.weather[0].id]} alt="logo">
+                </img>
                 <p>{unitsConverter(data.main.temp, units)}°</p>
             </div>
-        </StyledMiniCard>
+        </StyledWeeklyCard>
     )
 }
 
-export default MiniCard
+export default WeeklyCard

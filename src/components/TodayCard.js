@@ -1,7 +1,6 @@
 import { StyledTodayCard } from "./styles/TodayCard.styled";
 import unitsConverter from "../utils/unitsConverter";
 import { dayIcons, nightIcons } from "../utils/images"
-import timeConverter from "../utils/timeConverter"
 
 let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset }) => {
 

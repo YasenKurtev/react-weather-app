@@ -1,7 +1,6 @@
 import unitsConverter from "../utils/unitsConverter"
 import { StyledDailyCard } from "./styles/DailyCard.styled"
 import { dayIcons, nightIcons } from "../utils/images"
-import timeConverter from "../utils/timeConverter"
 
 let DailyCard = ({ data, units, sunrise, sunset }) => {
 
