@@ -9,6 +9,7 @@ import useDefaultCity from '../hooks/useDefaultCityHook';
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
 import getLocalTime from "../utils/getLocalTime"
+import timeConverter from "../utils/timeConverter"
 
 let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
@@ -37,12 +38,19 @@ let Main = ({ props }) => {
     }
 
     let localTime = getLocalTime(dailyData.timezone);
-    console.log(localTime);
 
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard dailyData={dailyData} defaultCity={defaultCity} changeDefaultCity={changeDefaultCity} units={props.units} localTime={localTime}></TodayCard>
+                <TodayCard
+                    dailyData={dailyData}
+                    defaultCity={defaultCity}
+                    changeDefaultCity={changeDefaultCity}
+                    units={props.units}
+                    localTime={localTime}
+                    sunrise={timeConverter(dailyData.sys.sunrise, dailyData.timezone)}
+                    sunset={timeConverter(dailyData.sys.sunset, dailyData.timezone)}>
+                </TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">
@@ -51,7 +59,13 @@ let Main = ({ props }) => {
             <section className="daily-forecast">
                 <p className="daily-title">24-hour forecast</p>
                 <div className="daily-container">
-                    {weeklyData.list.slice(1, 10).map(x => <DailyCard data={x} units={props.units}></DailyCard>)}
+                    {weeklyData.list.slice(1, 10).map(x =>
+                        <DailyCard
+                            data={x}
+                            units={props.units}
+                            sunrise={timeConverter(dailyData.sys.sunrise, dailyData.timezone)}
+                            sunset={timeConverter(dailyData.sys.sunset, dailyData.timezone)}>
+                        </DailyCard>)}
                 </div>
             </section>
             <section className="weekly-forecast">
