@@ -17,7 +17,7 @@ function App() {
 
     return (
         <ThemeProvider theme={theme === 'light' ? themeLight : themeDark}>
-            <GlobalStyles />
+            <GlobalStyles theme={theme === 'light' ? themeLight : themeDark}/>
             <Container>
                 <Header props={{ data, setData, theme, changeTheme, units, changeUnits }} />
                 <Main props={{ data, units }} />
