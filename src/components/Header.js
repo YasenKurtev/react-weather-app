@@ -42,21 +42,23 @@ let Header = ({ props }) => {
             </div>
             <form onSubmit={onSearchSubmit}>
                 <input type="text" id="search" placeholder="Search for a city..." value={searchInput} onChange={onChangeHandler}></input>
+                <button className="clear-btn" type="submit">
+                    <i class="fa-solid fa-x"></i>
+                </button>
                 <button className="search-btn" type="submit">
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
-
             </form>
             <div className="units-selector">
                 <p>Units</p>
                 <div className="units-buttons">
                     <label>
-                        <input type="radio" name="test" value="small" checked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')}/>
+                        <input type="radio" name="test" value="small" checked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
                         <p>C°</p>
                     </label>
 
                     <label>
-                        <input type="radio" name="test" value="big" checked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')}/>
+                        <input type="radio" name="test" value="big" checked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
                         <p>F°</p>
                     </label>
                 </div>
