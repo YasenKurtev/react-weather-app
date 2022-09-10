@@ -18,8 +18,8 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                 <p className="condition">{dailyData.weather[0].main}</p>
             </div>
             <div className="low-high">
-                <p>L: {Math.round(dailyData.coord.lat)}</p>
-                <p>H: {Math.round(dailyData.coord.lon)}</p>
+                <p>L: {unitsConverter(dailyData.main.temp_min, units)}°</p>
+                <p>H: {unitsConverter(dailyData.main.temp_max, units)}°</p>
             </div>
             {defaultCity === dailyData.name
                 ? <div className="default-city-div">

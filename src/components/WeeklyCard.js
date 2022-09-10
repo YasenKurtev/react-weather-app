@@ -11,8 +11,7 @@ let WeeklyCard = ({ data, units }) => {
         <StyledWeeklyCard>
             <p>{dayOfWeek}</p>
             <div className="weather-info">
-                <img src={dayIcons[data.weather[0].id]} alt="logo">
-                </img>
+                <img src={dayIcons[data.weather[0].id]} alt="logo"></img>
                 <p>{unitsConverter(data.main.temp, units)}°</p>
             </div>
         </StyledWeeklyCard>

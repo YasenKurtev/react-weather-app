@@ -71,4 +71,16 @@ export let StyledMain = styled.main`
         font-weight: 600;
         border-bottom: 2px solid ${props => props.theme.textColor};
     }
+
+    .daily-time-container{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .weekly-day-container{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
     `
