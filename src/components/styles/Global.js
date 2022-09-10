@@ -8,10 +8,6 @@ body, html{
     font-family: 'Poppins', sans-serif;
     min-height: 100%;
 }
-
-body{
-    margin-top: 20px;
-}
 `
 
 export default GlobalStyles

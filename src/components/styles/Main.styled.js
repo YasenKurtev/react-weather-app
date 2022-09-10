@@ -5,6 +5,7 @@ export let StyledMain = styled.main`
     display: flex;
     flex-direction: column;
     height: 100%;
+    flex: 1;
 
     .today-map{
         display: flex;

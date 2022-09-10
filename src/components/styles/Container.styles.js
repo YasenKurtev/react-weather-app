@@ -5,13 +5,9 @@ let Container = styled.div`
     flex-direction: column;
     width: 1000px;
     max-width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 0;
-
-    footer{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
 `
 
 export default Container
