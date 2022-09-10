@@ -4,7 +4,7 @@ export let StyledLoading = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-padding-top: 20px;
+margin: auto;
 gap: 20px;
 
 p{
