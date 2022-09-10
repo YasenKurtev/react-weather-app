@@ -119,28 +119,25 @@ export let StyledHeader = styled.header`
         display: flex;
         align-items: center;
         gap: 5px;
-        color: #f9fafa;
         cursor: pointer;
+        color: ${props => props.theme.textColor};
         font-size: 15px;
         font-weight: 600;
         padding: 6px;
         border:0;
-        transition: transform;
         background-color: transparent;
-    }
-
-    .location-btn:hover{
-        transform: scale(1.1);
     }
 
     .location-btn i{
         font-size: 18px;
-        color: ${props => props.theme.iconsColor};
     }
 
     .location-btn p{
         margin: 0;
-        color: ${props => props.theme.textColor};
+    }
+
+    .location-btn:hover{
+        color: ${props => props.theme.selectedIconBackgroundColor};
     }
 
     .units-buttons{
