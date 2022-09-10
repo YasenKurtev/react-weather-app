@@ -43,9 +43,12 @@ let Header = ({ props }) => {
                 <img src="/images/few-clouds.png" alt="logo"></img>
                 <h1>WeatherApp</h1>
             </div>
-            <div className="location">
+            <div className="location-cities">
                 <button className="location-btn" onClick={getLocation}>
                     <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
+                </button>
+                <button className="location-btn" onClick={getLocation}>
+                    <i class="fa-solid fa-bars"></i> <p>My cities</p>
                 </button>
             </div>
             <form onSubmit={onSearchSubmit}>

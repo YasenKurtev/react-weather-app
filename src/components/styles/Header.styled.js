@@ -109,7 +109,15 @@ export let StyledHeader = styled.header`
         background-color: white;
     }
 
+    .location-cities{
+        display: flex;
+        flex-direction: column;
+    }
+
     .location-btn{
+        display: flex;
+        align-items: center;
+        gap: 5px;
         color: #f9fafa;
         cursor: pointer;
         font-size: 15px;
@@ -125,7 +133,7 @@ export let StyledHeader = styled.header`
     }
 
     .location-btn i{
-        font-size: 23px;
+        font-size: 18px;
     }
 
     .location-btn p{
