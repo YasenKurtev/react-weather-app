@@ -6,8 +6,9 @@ let Header = ({ props }) => {
 
     let onSearchSubmit = (e) => {
         e.preventDefault();
-        if(searchInput.length !== 0){
+        if (searchInput.length !== 0) {
             props.setData(searchInput);
+            setSearchInput(state => state = '');
         }
     }
 

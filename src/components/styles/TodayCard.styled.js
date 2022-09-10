@@ -52,7 +52,7 @@ img{
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
-    color: #2c3e50;
+    color: ${props => props.theme.defaultCityColor};
 }
 
 .default-city-btn:hover{

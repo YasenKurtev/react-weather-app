@@ -24,9 +24,12 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
             {defaultCity === dailyData.name
                 ? <div className="default-city-div">
                     <i className="fa-solid fa-house"></i>
-                    <p className="default-city">This is your default city</p>
+                    <p className="default-city"><i>This is your default city</i></p>
                 </div>
-                : <button className="default-city-btn" onClick={() => changeDefaultCity(dailyData.name)}>Set as default city</button>}
+                : <div className="default-city-div">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                    <button className="default-city-btn" onClick={() => changeDefaultCity(dailyData.name)}><i>Set as default city</i></button>
+                </div>}
         </StyledTodayCard>
     )
 }
