@@ -11,6 +11,7 @@ import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
 import getLocalTime from "../utils/getLocalTime"
 import timeConverter from "../utils/timeConverter"
 import getLocalDate from "../utils/getLocalDate"
+import Loading from "./Loading"
 
 let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
@@ -31,10 +32,11 @@ let Main = ({ props }) => {
 
     if (isLoadingDaily || isLoadingWeekly) {
         return (
-            <StyledLoading>
-                <div className="lds-dual-ring"></div>
-                <p>Fetching weather data...</p>
-            </StyledLoading>
+            <StyledMain>
+                <StyledLoading>
+                    <Loading></Loading>
+                </StyledLoading>
+            </StyledMain>
         )
     }
 
