@@ -18,7 +18,8 @@ export let StyledHeader = styled.header`
         width: 100%;
         height: 30px;
         font-size: 18px;
-        border-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         border: 2px solid transparent;
         outline: none;
         transition: 0.5s;
@@ -30,17 +31,19 @@ export let StyledHeader = styled.header`
 
     form{
         display:flex;
-        width:300px;
-        heigth: 100px;
+        width: 30%;
     }
 
     .search-btn{
         cursor: pointer;
-        background-color: transparent;
+        background-color: white;
         border: 0;
-        border-left: 1px solid grey;
-        margin-left: -40px;
-        width: 40px
+        border-left: 2px solid grey;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin: 0;
+        width: 15%;
+        transition: transform 0.2s;
     }
 
     .clear-btn{
@@ -56,7 +59,7 @@ export let StyledHeader = styled.header`
     }
 
     .search-btn i:hover{
-        color: green;
+        transform: scale(1.2);
     }
 
     form i{
@@ -122,7 +125,6 @@ export let StyledHeader = styled.header`
 
     .location-btn i{
         font-size: 23px;
-        color:  ${props => props.theme.iconColor};
     }
 
     .location-btn p{
