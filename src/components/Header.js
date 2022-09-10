@@ -9,6 +9,10 @@ let Header = ({ props }) => {
         props.setData(searchInput);
     }
 
+    let onSearchReset = (e) => {
+        e.preventDefault();
+    }
+
     let onChangeHandler = (e) => {
         setSearchInput(state => state = e.target.value);
     }
@@ -40,9 +44,9 @@ let Header = ({ props }) => {
                     <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
                 </button>
             </div>
-            <form onSubmit={onSearchSubmit}>
+            <form onSubmit={onSearchSubmit} onReset={onSearchReset}>
                 <input type="text" id="search" placeholder="Search for a city..." value={searchInput} onChange={onChangeHandler}></input>
-                <button className="clear-btn" type="submit">
+                <button className="clear-btn" type="reset">
                     <i class="fa-solid fa-x"></i>
                 </button>
                 <button className="search-btn" type="submit">

@@ -3,9 +3,15 @@ export default function getLocalTime(offset) {
     let localTime = date.getTime();
     let localOffset = date.getTimezoneOffset() * 60000;
     let utc = localTime + localOffset;
-    let city = utc + (1000 * -offset);
+    let city = utc + (1000 * +offset);
     let result = new Date(city);
-    let formatResult = result.getHours() + ":" + result.getMinutes();
+    let hours = result.getHours();
+    let minutes = result.getMinutes();
+    console.log(minutes);
+    if (minutes <= 9) {
+        minutes = "0" + minutes;
+    }
+    let formatResult = hours + ":" + minutes;
 
     return formatResult;
 }

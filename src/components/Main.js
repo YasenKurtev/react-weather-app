@@ -38,6 +38,7 @@ let Main = ({ props }) => {
     }
 
     let localTime = getLocalTime(dailyData.timezone);
+    console.log(localTime);
 
     return (
         <StyledMain>
@@ -57,7 +58,11 @@ let Main = ({ props }) => {
                 <Details dailyData={dailyData} units={props.units}></Details>
             </section>
             <section className="daily-forecast">
-                <p className="daily-title">24-hour forecast</p>
+                <div className="daily-forecast-container">
+                    <p className="daily-title">24-hour forecast</p>
+                    <p className="daily-time"><i>Local time in {dailyData.name}:</i> {localTime}</p>
+                </div>
+
                 <div className="daily-container">
                     {weeklyData.list.slice(1, 10).map(x =>
                         <DailyCard
