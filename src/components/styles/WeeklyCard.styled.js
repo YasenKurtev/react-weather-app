@@ -8,6 +8,7 @@ color: ${props => props.theme.textColor};
     padding: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 
     p{
@@ -33,5 +34,9 @@ color: ${props => props.theme.textColor};
         justify-content: center;
         align-items: center;
         gap: 10px;
+        width: 80%;
+        padding: 4px 1px;
+        background-color: ${props => props.theme.cardsBackgroundColor};
+        border-radius: 10px;
     }
 `

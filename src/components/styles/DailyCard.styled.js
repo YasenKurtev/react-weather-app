@@ -8,6 +8,7 @@ export let StyledDailyCard = styled.div`
     padding: 10px 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
 
     p{
@@ -33,5 +34,9 @@ export let StyledDailyCard = styled.div`
         justify-content: center;
         align-items: center;
         gap: 5px;
+        width: 80%;
+        padding: 4px 1px;
+        background-color: ${props => props.theme.cardsBackgroundColor};
+        border-radius: 10px;
     }
 `

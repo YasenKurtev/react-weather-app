@@ -19,7 +19,7 @@ i{
 }
 
 .stats{
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: ${props => props.theme.cardsBackgroundColor};
     border-radius: 10px;
     text-align: center;
     padding: 2px;
