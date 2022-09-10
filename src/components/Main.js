@@ -10,6 +10,7 @@ import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import useFetchWeeklyWeather from "../hooks/useFetchWeeklyWeather"
 import getLocalTime from "../utils/getLocalTime"
 import timeConverter from "../utils/timeConverter"
+import getLocalDate from "../utils/getLocalDate"
 
 let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
@@ -38,7 +39,7 @@ let Main = ({ props }) => {
     }
 
     let localTime = getLocalTime(dailyData.timezone);
-    console.log(localTime);
+    let localDate = getLocalDate(dailyData.timezone);
 
     return (
         <StyledMain>
@@ -74,7 +75,11 @@ let Main = ({ props }) => {
                 </div>
             </section>
             <section className="weekly-forecast">
+                <div className="weekly-forecast-container">
                 <p className="weekly-title">5-day forecast</p>
+                <p className="weekly-day"><i>Current date in {dailyData.name}:</i> {localDate}</p>
+                </div>
+                
                 <div className="weekly-container">
                     {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map(x =>
                         <MiniCard

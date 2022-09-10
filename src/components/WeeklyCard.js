@@ -1,4 +1,4 @@
-import days from "../utils/daysOfWeek";
+import { days } from "../utils/daysOfWeek";
 import unitsConverter from "../utils/unitsConverter";
 import { StyledWeeklyCard } from "./styles/WeeklyCard.styled"
 import { dayIcons } from "../utils/images"

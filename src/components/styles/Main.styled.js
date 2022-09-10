@@ -18,14 +18,28 @@ export let StyledMain = styled.main`
         gap: 10px;
     }
 
+    .weekly-forecast-container{
+        padding-top:20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .weekly-day{
+        margin: 0;
+        font-size: 17px;
+        font-weight: 600;
+        border-bottom: 2px solid ${props => props.theme.textColor};
+    }
+
     .weather-details{
         padding-top: 20px;
     }
 
     .weekly-title{
         margin: 0;
-        padding-top: 20px;
-        text-align: center;
         font-size: 25px;
         font-weight: 600;
     }
@@ -53,8 +67,8 @@ export let StyledMain = styled.main`
 
     .daily-time{
         margin: 0;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
-        text-decoration: underline;
+        border-bottom: 2px solid ${props => props.theme.textColor};
     }
     `

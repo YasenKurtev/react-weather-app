@@ -1,4 +1,4 @@
-let days = [
+export let days = [
     'Monday',
     'Tuesday',
     'Wednesday',
@@ -8,4 +8,17 @@ let days = [
     'Sunday'
 ];
 
-export default days
+export let months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+]
