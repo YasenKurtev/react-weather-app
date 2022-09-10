@@ -64,11 +64,6 @@ export let StyledHeader = styled.header`
         color: grey;
     }
 
-    .theme-selector i{
-        font-size: 18px;
-        color: grey;
-    }
-
     .logo{
         display: flex;
         justify-content: space-between;
@@ -103,10 +98,6 @@ export let StyledHeader = styled.header`
         padding: 6px;
         border-radius: 50px;
         transition: transform 0.2s;
-    }
-
-    .theme-btn i{
-        color: ${props => props.theme.iconColor};
     }
 
     .theme-btn:hover{
@@ -168,7 +159,7 @@ export let StyledHeader = styled.header`
         font-size: 25px;
         cursor: pointer;
         padding: 3px;
-        color: #2c3e50;
+        color: ${props => props.theme.iconColor};
         transition: transform 0.2s;
     }
 
@@ -178,7 +169,7 @@ export let StyledHeader = styled.header`
 
     /* CHECKED STYLES */
         [type=radio]:checked + i {
-        background-color: white;
+        background-color: ${props => props.theme.selectedIconBackgroundColor};
         border-radius: 50px;
         padding: 3px;
     }
@@ -188,7 +179,7 @@ export let StyledHeader = styled.header`
         font-size: 25px;
         cursor: pointer;
         padding: 3px;
-        color: #2c3e50;
+        color: ${props => props.theme.unitsColor};
         transition: transform 0.2s;
     }
 
@@ -198,7 +189,7 @@ export let StyledHeader = styled.header`
 
     /* CHECKED STYLES */
         [type=radio]:checked + p {
-        color: white;
+        color: ${props => props.theme.selectedUnitsColor};
     }
 
     @media (max-width: 768px){
