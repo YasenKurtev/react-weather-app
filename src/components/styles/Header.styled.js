@@ -135,10 +135,12 @@ export let StyledHeader = styled.header`
 
     .location-btn i{
         font-size: 18px;
+        color: ${props => props.theme.iconsColor};
     }
 
     .location-btn p{
         margin: 0;
+        color: ${props => props.theme.textColor};
     }
 
     .units-buttons{
