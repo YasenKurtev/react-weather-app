@@ -5,12 +5,13 @@ export default function getLocalTime(offset) {
     let utc = localTime + localOffset;
     let city = utc + (1000 * +offset);
     let result = new Date(city);
-    console.log(result);
     let hours = result.getHours();
     let minutes = result.getMinutes();
-    console.log(minutes);
     if (minutes <= 9) {
         minutes = "0" + minutes;
+    }
+    if (hours <= 9) {
+        hours = "0" + hours;
     }
     let formatResult = hours + ":" + minutes;
 

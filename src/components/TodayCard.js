@@ -13,7 +13,7 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                 alt="logo">
             </img>
             {myCities.includes(dailyData.name)
-                ? <div className="add-button" onClick={() => addCity(dailyData.name)}>
+                ? <div className="add-button" onClick={() => removeCity(dailyData.name)}>
                     <i class="fa-solid fa-trash"></i>
                     <p>Remove</p>
                 </div>
