@@ -2,7 +2,7 @@ import { StyledTodayCard } from "./styles/TodayCard.styled";
 import unitsConverter from "../utils/unitsConverter";
 import { dayIcons, nightIcons } from "../utils/images"
 
-let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, addCity, removeCity }) => {
+let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
 
     return (
         <StyledTodayCard>
@@ -12,11 +12,15 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                 : nightIcons[dailyData.weather[0].id]}
                 alt="logo">
             </img>
-            <div className="add-button" onClick={() => addCity(dailyData.name)}>
-                <i class="fa-solid fa-plus"></i>
-                <p>Add</p>
-            </div>
-
+            {myCities.includes(dailyData.name)
+                ? <div className="add-button" onClick={() => addCity(dailyData.name)}>
+                    <i class="fa-solid fa-trash"></i>
+                    <p>Remove</p>
+                </div>
+                : <div className="add-button" onClick={() => addCity(dailyData.name)}>
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Add</p>
+                </div>}
             <div className="weather-info">
                 <h1>{dailyData.name}</h1>
                 <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>

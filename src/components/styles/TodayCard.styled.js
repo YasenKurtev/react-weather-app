@@ -83,12 +83,12 @@ img{
 
 .add-button p{
     margin: 0;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
 }
 
 .add-button i{
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .add-button:hover{
