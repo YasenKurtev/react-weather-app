@@ -9,8 +9,8 @@ export default function useMyCities() {
     }
 
     let addCity = (city) => {
-        setMyCities(state => state = state.push(city));
-        localStorage.setItem('myCities', myCities);
+        localStorage.setItem('myCities', [...myCities, city]);
+        setMyCities(state => state = [...state, city]);
     }
 
     let removeCity = (city) => {

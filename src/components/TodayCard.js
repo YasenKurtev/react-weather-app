@@ -2,7 +2,7 @@ import { StyledTodayCard } from "./styles/TodayCard.styled";
 import unitsConverter from "../utils/unitsConverter";
 import { dayIcons, nightIcons } from "../utils/images"
 
-let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset }) => {
+let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, addCity, removeCity }) => {
 
     return (
         <StyledTodayCard>
@@ -12,7 +12,7 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                 : nightIcons[dailyData.weather[0].id]}
                 alt="logo">
             </img>
-            <div className="add-button">
+            <div className="add-button" onClick={() => addCity(dailyData.name)}>
                 <i class="fa-solid fa-plus"></i>
                 <p>Add</p>
             </div>

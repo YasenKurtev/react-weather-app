@@ -55,7 +55,9 @@ let Main = ({ props }) => {
                     units={props.units}
                     localTime={localTime}
                     sunrise={timeConverter(dailyData.sys.sunrise, dailyData.timezone)}
-                    sunset={timeConverter(dailyData.sys.sunset, dailyData.timezone)}>
+                    sunset={timeConverter(dailyData.sys.sunset, dailyData.timezone)}
+                    addCity={addCity}
+                    removeCity={removeCity}>
                 </TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
