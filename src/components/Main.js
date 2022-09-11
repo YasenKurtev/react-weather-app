@@ -12,9 +12,11 @@ import getLocalTime from "../utils/getLocalTime"
 import timeConverter from "../utils/timeConverter"
 import getLocalDate from "../utils/getLocalDate"
 import Loading from "./Loading"
+import useMyCities from "../hooks/useMyCitiesHook"
 
 let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
+    let [myCities, addCity, removeCity] = useMyCities();
     let city = defaultCity;
     let coords = { lat: 0, lon: 0 };
 

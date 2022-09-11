@@ -12,6 +12,11 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                 : nightIcons[dailyData.weather[0].id]}
                 alt="logo">
             </img>
+            <div className="add-button">
+                <i class="fa-solid fa-plus"></i>
+                <p>Add</p>
+            </div>
+
             <div className="weather-info">
                 <h1>{dailyData.name}</h1>
                 <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>

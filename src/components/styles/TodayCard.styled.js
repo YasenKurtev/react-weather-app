@@ -10,6 +10,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 10px;
+position: relative;
 
 .weather-info{
     display: flex;
@@ -69,5 +70,30 @@ img{
 .default-city-div{
     display: flex;
     gap: 5px;
+}
+
+.add-button{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px;
+}
+
+.add-button p{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.add-button i{
+    font-size: 15px;
+}
+
+.add-button:hover{
+    background-color: ${props => props.theme.selectedIconBackgroundColor};
+    cursor: pointer;
+    border-radius: 5px;
 }
 `
