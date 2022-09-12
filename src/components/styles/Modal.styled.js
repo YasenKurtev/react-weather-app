@@ -39,7 +39,7 @@ export let StyledModal = styled.div`
 .title-container{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     margin-bottom: 15px;
     margin-top: 5px;
 }
@@ -74,5 +74,11 @@ i{
     font-weight: 600;
     margin: 0;
     padding: 40px 0;
+}
+
+.empty-list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 `
