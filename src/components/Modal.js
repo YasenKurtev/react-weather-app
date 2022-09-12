@@ -1,7 +1,11 @@
+import { useEffect } from "react";
+import useMyCities from "../hooks/useMyCitiesHook";
 import MyCitiesCard from "./MyCitiesCard";
 import { StyledModal } from "./styles/Modal.styled"
 
-let Modal = ({ open, setOpenModal }) => {
+let Modal = ({ open, setOpenModal, units }) => {
+    let [myCities, addCity, removeCity] = useMyCities();
+    
     if (!open) return null;
     return (
         <StyledModal>
@@ -16,12 +20,7 @@ let Modal = ({ open, setOpenModal }) => {
                     </div>
 
                     <div className="myCities-cards">
-                        <MyCitiesCard></MyCitiesCard>
-                        <MyCitiesCard></MyCitiesCard>
-                        <MyCitiesCard></MyCitiesCard>
-                        <MyCitiesCard></MyCitiesCard>
-                        <MyCitiesCard></MyCitiesCard>
-                        <MyCitiesCard></MyCitiesCard>
+                        {myCities.map((x, i) => <MyCitiesCard id={i} city={x} units={units}></MyCitiesCard>)}
                     </div>
 
                 </div>

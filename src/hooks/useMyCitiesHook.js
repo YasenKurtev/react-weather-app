@@ -8,14 +8,16 @@ export default function useMyCities() {
     }
 
     let addCity = (city) => {
-        setMyCities(state => state.length === 0 ? [city] : [...state, city]);
         localStorage.setItem('myCities', myCities.length === 0 ? JSON.stringify([city]) : JSON.stringify([...myCities, city]));
+        setMyCities(JSON.parse(localStorage.getItem('myCities')));
+        
+        console.log(myCities);
     }
 
     let removeCity = (city) => {
         setMyCities(state => state.length <= 1 ? state = [] : state = state.filter(x => x !== city));
         localStorage.setItem('myCities', myCities.length === 1 ? JSON.stringify([]) : JSON.stringify(myCities.filter(x => x !== city)));
-
+        console.log(myCities);
     }
 
     return [myCities, addCity, removeCity];
