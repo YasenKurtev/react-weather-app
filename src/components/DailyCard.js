@@ -8,7 +8,7 @@ let DailyCard = ({ data, units, sunrise, sunset }) => {
         <StyledDailyCard>
             <p>{data.dt_txt.split(' ')[1].slice(0, 5)}</p>
             <div className="weather-info">
-                <img src={data.dt_txt.split(' ')[1].slice(0, 5).split(":")[0] < sunset.split(":")[0]
+                <img src={data.dt_txt.split(' ')[1].slice(0, 5).split(":")[0] < sunset.split(":")[0] + 1
                     && data.dt_txt.split(' ')[1].slice(0, 5).split(":")[0] > sunrise.split(":")[0]
                     ? dayIcons[data.weather[0].id]
                     : nightIcons[data.weather[0].id]}

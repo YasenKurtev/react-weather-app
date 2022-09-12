@@ -6,7 +6,7 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
 
     return (
         <StyledTodayCard>
-            <img src={localTime.split(":")[0] < sunset.split(":")[0]
+            <img src={localTime.split(":")[0] < sunset.split(":")[0] + 1
                 && localTime.split(":")[0] > sunrise.split(":")[0]
                 ? dayIcons[dailyData.weather[0].id]
                 : nightIcons[dailyData.weather[0].id]}
