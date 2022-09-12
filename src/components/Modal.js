@@ -3,7 +3,7 @@ import useMyCities from "../hooks/useMyCitiesHook";
 import MyCitiesCard from "./MyCitiesCard";
 import { StyledModal } from "./styles/Modal.styled"
 
-let Modal = ({ open, setOpenModal, units, myCities }) => {
+let Modal = ({ open, setOpenModal, units, myCities, removeCity }) => {
 
     if (!open) return null;
     return (
@@ -19,7 +19,10 @@ let Modal = ({ open, setOpenModal, units, myCities }) => {
                     </div>
 
                     <div className="myCities-cards">
-                        {myCities.map((x, i) => <MyCitiesCard id={i} city={x} units={units}></MyCitiesCard>)}
+
+                        {myCities.length === 0
+                            ? <p className="no-cities"><i>There are currently no added cities.</i></p>
+                            : myCities.map((x, i) => <MyCitiesCard id={i} city={x} units={units} removeCity={removeCity}></MyCitiesCard>)}
                     </div>
 
                 </div>

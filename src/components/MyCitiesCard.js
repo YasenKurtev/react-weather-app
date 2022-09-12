@@ -5,7 +5,7 @@ import Loading from "./Loading";
 import { StyledLoading } from "./styles/Loading.styled";
 import { StyledMyCitiesCard } from "./styles/MyCitiesCard.styled"
 
-let MyCitiesCard = ({ city, units }) => {
+let MyCitiesCard = ({ city, units, removeCity }) => {
     let [dailyData, isLoadingDaily] = useFetchDailyWeather(city);
 
     if (isLoadingDaily) {
@@ -24,6 +24,10 @@ let MyCitiesCard = ({ city, units }) => {
             <div className="weather-info">
                 <img src={dayIcons[800]} alt="logo"></img>
                 <p>{unitsConverter(dailyData.main.temp, units)}°</p>
+            </div>
+            <div className="add-button" onClick={() => removeCity(dailyData.name)}>
+                <i class="fa-solid fa-trash"></i>
+                <p>Remove</p>
             </div>
         </StyledMyCitiesCard>
     )

@@ -39,4 +39,27 @@ color: ${props => props.theme.textColor};
         background-color: ${props => props.theme.cardsBackgroundColor};
         border-radius: 10px;
     }
+
+    .add-button{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px;
+    }
+    
+    .add-button p{
+        margin: 0;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    
+    .add-button i{
+        font-size: 13px;
+    }
+    
+    .add-button:hover{
+        background-color: ${props => props.theme.selectedIconBackgroundColor};
+        cursor: pointer;
+        border-radius: 5px;
+    }
 `

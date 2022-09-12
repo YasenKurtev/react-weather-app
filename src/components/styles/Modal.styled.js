@@ -68,4 +68,11 @@ i{
 .close-btn:hover{
     color: ${props => props.theme.selectedUnitsColor};
 }
+
+.no-cities{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    padding: 40px 0;
+}
 `
