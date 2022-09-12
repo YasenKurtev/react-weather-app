@@ -9,7 +9,7 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity }) => {
     return (
         <StyledModal>
             <div className="overlay" onClick={() => setOpenModal(false)}>
-                <div className="modal-container">
+                <div className="modal-container" onClick={(e) => e.stopPropagation()}>
                     <div className="title-container">
                         <i class="fa-solid fa-bars"></i>
                         <p>My Cities</p>
@@ -22,7 +22,7 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity }) => {
 
                         {myCities.length === 0
                             ? <p className="no-cities"><i>There are currently no added cities.</i></p>
-                            : myCities.map((x, i) => <MyCitiesCard id={i} city={x} units={units} removeCity={removeCity}></MyCitiesCard>)}
+                            : myCities.map((x, i) => <MyCitiesCard id={i} city={x} units={units} removeCity={removeCity} setOpenModal={setOpenModal}></MyCitiesCard>)}
                     </div>
 
                 </div>
