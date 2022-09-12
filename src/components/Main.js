@@ -16,7 +16,6 @@ import useMyCities from "../hooks/useMyCitiesHook"
 
 let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
-    let [myCities, addCity, removeCity] = useMyCities();
     let city = defaultCity;
     let coords = { lat: 0, lon: 0 };
 
@@ -56,9 +55,9 @@ let Main = ({ props }) => {
                     localTime={localTime}
                     sunrise={timeConverter(dailyData.sys.sunrise, dailyData.timezone)}
                     sunset={timeConverter(dailyData.sys.sunset, dailyData.timezone)}
-                    myCities={myCities}
-                    addCity={addCity}
-                    removeCity={removeCity}>
+                    myCities={props.myCities}
+                    addCity={props.addCity}
+                    removeCity={props.removeCity}>
                 </TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>

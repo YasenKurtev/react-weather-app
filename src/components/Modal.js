@@ -3,9 +3,8 @@ import useMyCities from "../hooks/useMyCitiesHook";
 import MyCitiesCard from "./MyCitiesCard";
 import { StyledModal } from "./styles/Modal.styled"
 
-let Modal = ({ open, setOpenModal, units }) => {
-    let [myCities, addCity, removeCity] = useMyCities();
-    
+let Modal = ({ open, setOpenModal, units, myCities }) => {
+
     if (!open) return null;
     return (
         <StyledModal>
