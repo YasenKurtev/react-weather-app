@@ -2,7 +2,9 @@ import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
 import { dayIcons } from "../utils/images"
 import unitsConverter from "../utils/unitsConverter";
 import Loading from "./Loading";
+import LoadingMini from "./LoadingMini";
 import { StyledLoading } from "./styles/Loading.styled";
+import { StyledLoadingMini } from "./styles/LoadingMini.styled";
 import { StyledMyCitiesCard } from "./styles/MyCitiesCard.styled"
 
 let MyCitiesCard = ({ city, units, removeCity, setOpenModal }) => {
@@ -15,11 +17,9 @@ let MyCitiesCard = ({ city, units, removeCity, setOpenModal }) => {
 
     if (isLoadingDaily) {
         return (
-            <StyledMyCitiesCard>
-                <StyledLoading>
-                    <Loading></Loading>
-                </StyledLoading>
-            </StyledMyCitiesCard>
+                <StyledLoadingMini>
+                    <LoadingMini></LoadingMini>
+                </StyledLoadingMini>
         )
     }
 
