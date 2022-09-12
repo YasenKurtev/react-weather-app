@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export let StyledMyCitiesCard = styled.div`
 color: ${props => props.theme.textColor};
-    width: 18%;
+    width: 15%;
     background-color: ${props => props.theme.backgroundColor};
     border-radius: 10px;
     padding: 10px;
@@ -10,7 +10,6 @@ color: ${props => props.theme.textColor};
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
 
     p{
         margin: 0;
@@ -35,7 +34,7 @@ color: ${props => props.theme.textColor};
         justify-content: center;
         align-items: center;
         gap: 10px;
-        width: 80%;
+        width: 100%;
         padding: 4px 1px;
         background-color: ${props => props.theme.cardsBackgroundColor};
         border-radius: 10px;

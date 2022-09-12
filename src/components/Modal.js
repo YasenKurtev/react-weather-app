@@ -10,9 +10,17 @@ let Modal = ({ open, setOpenModal }) => {
                     <div className="title-container">
                         <i class="fa-solid fa-bars"></i>
                         <p>My Cities</p>
+                        <button className="close-btn">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
                     </div>
 
                     <div className="myCities-cards">
+                        <MyCitiesCard></MyCitiesCard>
+                        <MyCitiesCard></MyCitiesCard>
+                        <MyCitiesCard></MyCitiesCard>
+                        <MyCitiesCard></MyCitiesCard>
+                        <MyCitiesCard></MyCitiesCard>
                         <MyCitiesCard></MyCitiesCard>
                     </div>
 

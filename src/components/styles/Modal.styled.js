@@ -9,7 +9,7 @@ export let StyledModal = styled.div`
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-container{
@@ -31,22 +31,41 @@ export let StyledModal = styled.div`
 .myCities-cards{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .title-container{
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
 }
 
 p{
     margin: 0;
     font-size: 25px;
     font-weight: 600;
+    color: ${props => props.theme.textColor};
 }
 
 i{
     font-size: 25px;
+    color: ${props => props.theme.iconColor};
+}
+
+.close-btn{
+    position: fixed;
+    right: 20px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    
+}
+
+.close-btn:hover{
+    color: ${props => props.theme.selectedUnitsColor};
 }
 `
