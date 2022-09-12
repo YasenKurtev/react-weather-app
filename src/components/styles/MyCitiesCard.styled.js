@@ -10,6 +10,7 @@ color: ${props => props.theme.textColor};
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin-top: 10px;
 
     p{
         margin: 0;

@@ -7,9 +7,16 @@ let Modal = ({ open, setOpenModal }) => {
         <StyledModal>
             <div className="overlay" onClick={() => setOpenModal(false)}>
                 <div className="modal-container">
-                <MyCitiesCard></MyCitiesCard>
+                    <div className="title-container">
+                        <i class="fa-solid fa-bars"></i>
+                        <p>My Cities</p>
+                    </div>
+
+                    <div className="myCities-cards">
+                        <MyCitiesCard></MyCitiesCard>
+                    </div>
+
                 </div>
-                
             </div>
         </StyledModal>
     )
