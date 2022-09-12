@@ -13,7 +13,7 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity }) => {
                     <div className="title-container">
                         <i class="fa-solid fa-bars"></i>
                         <p>My Cities</p>
-                        <button className="close-btn">
+                        <button className="close-btn" onClick={() => setOpenModal(false)}>
                             <i class="fa-solid fa-x"></i>
                         </button>
                     </div>
