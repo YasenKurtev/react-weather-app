@@ -1,3 +1,4 @@
+import MyCitiesCard from "./MyCitiesCard";
 import { StyledModal } from "./styles/Modal.styled"
 
 let Modal = ({ open, setOpenModal }) => {
@@ -6,7 +7,7 @@ let Modal = ({ open, setOpenModal }) => {
         <StyledModal>
             <div className="overlay" onClick={() => setOpenModal(false)}>
                 <div className="modal-container">
-                <p>Modal</p>
+                <MyCitiesCard></MyCitiesCard>
                 </div>
                 
             </div>

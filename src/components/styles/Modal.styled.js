@@ -13,6 +13,7 @@ export let StyledModal = styled.div`
 }
 
 .modal-container{
+    padding: 10px;
     max-width: 800px;
     width: 100%;
     position: fixed;
@@ -20,8 +21,8 @@ export let StyledModal = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.75);
+    background-image: ${props => props.theme.bodyBackgroundColor};;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
     border-radius: 10px;
 }
 `
