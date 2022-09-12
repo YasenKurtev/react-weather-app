@@ -1,8 +1,10 @@
 import { useState } from "react";
+import Modal from "./Modal";
 import { StyledHeader } from "./styles/Header.styled";
 
 let Header = ({ props }) => {
     let [searchInput, setSearchInput] = useState('');
+    let [openModal, setOpenModal] = useState(false);
 
     let onSearchSubmit = (e) => {
         e.preventDefault();
@@ -38,6 +40,7 @@ let Header = ({ props }) => {
     }
 
     return (
+
         <StyledHeader>
             <div className="logo">
                 <img src="/images/few-clouds.png" alt="logo"></img>
@@ -47,9 +50,10 @@ let Header = ({ props }) => {
                 <button className="location-btn" onClick={getLocation}>
                     <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
                 </button>
-                <button className="location-btn" onClick={getLocation}>
+                <button className="location-btn" onClick={() => setOpenModal(true)}>
                     <i class="fa-solid fa-bars"></i> <p>My cities</p>
                 </button>
+                <Modal open={openModal} setOpenModal={setOpenModal} />
             </div>
             <form onSubmit={onSearchSubmit}>
                 <input type="text" id="search" placeholder="Search for a city..." value={searchInput} onChange={onChangeHandler}></input>
@@ -90,6 +94,8 @@ let Header = ({ props }) => {
                 </div>
             </div>
         </StyledHeader>
+
+
     )
 }
 
