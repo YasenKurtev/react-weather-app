@@ -9,7 +9,7 @@ import { StyledLoading } from "./styles/Loading.styled";
 import { StyledLoadingMini } from "./styles/LoadingMini.styled";
 import { StyledMyCitiesCard } from "./styles/MyCitiesCard.styled"
 
-let MyCitiesCard = ({ city, units, removeCity, setOpenModal }) => {
+let MyCitiesCard = ({ city, units, removeCity, setOpenModal, id }) => {
     let [dailyData, isLoadingDaily] = useFetchDailyWeather(city);
 
     let removeCurrentCity = () => {
@@ -18,11 +18,14 @@ let MyCitiesCard = ({ city, units, removeCity, setOpenModal }) => {
     }
 
     if (isLoadingDaily) {
-        return (
-            <StyledLoadingMini>
-                <LoadingMini></LoadingMini>
-            </StyledLoadingMini>
-        )
+        if (id === 0) {
+            return (
+                <StyledLoadingMini>
+                    <LoadingMini></LoadingMini>
+                </StyledLoadingMini>
+            )
+        }
+        return null;
     }
 
     let localTime = getLocalTime(dailyData.timezone);
