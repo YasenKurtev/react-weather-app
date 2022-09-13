@@ -15,7 +15,6 @@ export default function useMyCities() {
     let removeCity = (city) => {
         setMyCities(state => state.length <= 1 ? state = [] : state = state.filter(x => x !== city));
         localStorage.setItem('myCities', myCities.length === 1 ? JSON.stringify([]) : JSON.stringify(myCities.filter(x => x !== city)));
-        console.log(localStorage.getItem('myCities'));
 
     }
 

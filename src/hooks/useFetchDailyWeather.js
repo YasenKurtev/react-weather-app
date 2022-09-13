@@ -3,7 +3,7 @@ import { MAIN_URL, WEATHER_ACCESS_KEY } from "../api/api";
 
 export default function useFetchDailyWeather(cityName, lat, lon) {
     let [dailyData, setDailyData] = useState({});
-    let [error, setError] = useState(false);
+    let [dailyError, setError] = useState(false);
     let [isLoadingDaily, setLoading] = useState(true);
 
     useEffect(() => {
@@ -11,6 +11,7 @@ export default function useFetchDailyWeather(cityName, lat, lon) {
             fetch(`${MAIN_URL}/weather?q=${cityName}&appid=${WEATHER_ACCESS_KEY}`)
                 .then(res => {
                     if (res.ok) {
+                        setError(false);
                         return res.json();
                     }
                     setError(true);
@@ -27,7 +28,13 @@ export default function useFetchDailyWeather(cityName, lat, lon) {
                 });
         } else {
             fetch(`${MAIN_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_ACCESS_KEY}`)
-                .then(res => res.json())
+                .then(res => {
+                    if (res.ok) {
+                        setError(false);
+                        return res.json();
+                    }
+                    setError(true);
+                })
                 .then(result => {
                     setLoading(true);
                     setTimeout(() => {
@@ -38,5 +45,5 @@ export default function useFetchDailyWeather(cityName, lat, lon) {
         }
     }, [cityName, lat, lon])
 
-    return [dailyData, isLoadingDaily, error];
+    return [dailyData, isLoadingDaily, dailyError];
 }

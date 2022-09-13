@@ -28,8 +28,11 @@ let Main = ({ props }) => {
         city = null;
     }
 
-    let [dailyData, isLoadingDaily, error] = useFetchDailyWeather(city, coords.lat, coords.lon);
-    let [weeklyData, isLoadingWeekly] = useFetchWeeklyWeather(city, coords.lat, coords.lon);
+    let [dailyData, isLoadingDaily, dailyError] = useFetchDailyWeather(city, coords.lat, coords.lon);
+    let [weeklyData, isLoadingWeekly, weeklyError] = useFetchWeeklyWeather(city, coords.lat, coords.lon);
+
+    console.log(dailyError);
+    console.log(weeklyError);
 
     if (isLoadingDaily || isLoadingWeekly) {
         return (
@@ -41,7 +44,7 @@ let Main = ({ props }) => {
         )
     }
 
-    if (error) {
+    if (dailyError || weeklyError) {
         return (
             <StyledMain>
                 <div className="error-container">

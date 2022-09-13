@@ -3,12 +3,19 @@ import { MAIN_URL, WEATHER_ACCESS_KEY } from "../api/api";
 
 export default function useFetchWeeklyWeather(cityName, lat, lon) {
     let [weeklyData, setweeklyData] = useState({});
+    let [weeklyError, setError] = useState(false);
     let [isLoadingWeekly, setLoading] = useState(true);
 
     useEffect(() => {
         if (cityName !== null) {
             fetch(`${MAIN_URL}/forecast?q=${cityName}&appid=${WEATHER_ACCESS_KEY}`)
-                .then(res => res.json())
+                .then(res => {
+                    if (res.ok) {
+                        setError(false);
+                        return res.json();
+                    }
+                    setError(true);
+                })
                 .then(result => {
                     setLoading(true);
                     setTimeout(() => {
@@ -18,7 +25,13 @@ export default function useFetchWeeklyWeather(cityName, lat, lon) {
                 });
         } else {
             fetch(`${MAIN_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_ACCESS_KEY}`)
-                .then(res => res.json())
+                .then(res => {
+                    if (res.ok) {
+                        setError(false);
+                        return res.json();
+                    }
+                    setError(true);
+                })
                 .then(result => {
                     setLoading(true);
                     setTimeout(() => {
@@ -29,5 +42,5 @@ export default function useFetchWeeklyWeather(cityName, lat, lon) {
         }
     }, [cityName, lat, lon])
 
-    return [weeklyData, isLoadingWeekly];
+    return [weeklyData, isLoadingWeekly, weeklyError];
 }
