@@ -29,5 +29,5 @@ export default function useFetchDailyWeather(cityName, lat, lon) {
         }
     }, [cityName, lat, lon])
 
-    return [dailyData, isLoadingDaily];
+    return [dailyData, isLoadingDaily, setLoading];
 }

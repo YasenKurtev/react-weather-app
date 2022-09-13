@@ -25,7 +25,7 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity }) => {
                                 <i class="fa-solid fa-ban"></i>
                                 <p className="no-cities"><i>There are currently no added cities.</i></p>
                             </div>
-                            : myCities.map((x, i) => <MyCitiesCard id={i} city={x} units={units} removeCity={removeCity} setOpenModal={setOpenModal}></MyCitiesCard>)}
+                            : myCities.map((x, i) => <MyCitiesCard key={x} index={i} city={x} units={units} removeCity={removeCity}></MyCitiesCard>)}
                     </div>
 
                 </div>

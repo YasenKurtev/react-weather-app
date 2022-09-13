@@ -9,16 +9,11 @@ import { StyledLoading } from "./styles/Loading.styled";
 import { StyledLoadingMini } from "./styles/LoadingMini.styled";
 import { StyledMyCitiesCard } from "./styles/MyCitiesCard.styled"
 
-let MyCitiesCard = ({ city, units, removeCity, setOpenModal, id }) => {
+let MyCitiesCard = ({ city, units, removeCity, index }) => {
     let [dailyData, isLoadingDaily] = useFetchDailyWeather(city);
 
-    let removeCurrentCity = () => {
-        removeCity(dailyData.name);
-        setOpenModal(true);
-    }
-
     if (isLoadingDaily) {
-        if (id === 0) {
+        if (index === 0) {
             return (
                 <StyledLoadingMini>
                     <LoadingMini></LoadingMini>
@@ -44,7 +39,7 @@ let MyCitiesCard = ({ city, units, removeCity, setOpenModal, id }) => {
                 </img>
                 <p>{unitsConverter(dailyData.main.temp, units)}°</p>
             </div>
-            <div className="add-button" onClick={() => removeCurrentCity()}>
+            <div className="add-button" onClick={() => removeCity(dailyData.name)}>
                 <i class="fa-solid fa-trash"></i>
                 <p>Remove</p>
             </div>
