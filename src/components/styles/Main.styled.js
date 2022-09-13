@@ -97,5 +97,11 @@ export let StyledMain = styled.main`
         flex-direction: column;
         align-items: center;
         margin: auto;
+        gap: 20px;
+    }
+
+    .error-container i{
+        font-size: 70px;
+
     }
     `
