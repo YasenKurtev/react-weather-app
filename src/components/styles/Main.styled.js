@@ -84,4 +84,18 @@ export let StyledMain = styled.main`
         align-items: center;
         gap: 10px;
     }
+
+    .error-message{
+        color: #f9fafa;
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .error-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
     `
