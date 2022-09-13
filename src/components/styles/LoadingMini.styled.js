@@ -11,7 +11,7 @@ p{
     color: ${props => props.theme.textColor};
     font-size: 20px;
     font-weight: 600;
-    padding-bottom: 5px;
+    margin: 0;
 }
 
 .lds-dual-ring {

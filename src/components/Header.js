@@ -56,7 +56,7 @@ let Header = ({ props }) => {
                 <Modal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity}/>
             </div>
             <form onSubmit={onSearchSubmit}>
-                <input type="text" id="search" placeholder="Search for a city..." value={searchInput} onChange={onChangeHandler}></input>
+                <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
                 <button className="clear-btn" type="reset" onClick={onSearchReset}>
                     <i class="fa-solid fa-x"></i>
                 </button>

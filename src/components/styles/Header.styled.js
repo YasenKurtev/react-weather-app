@@ -18,16 +18,16 @@ export let StyledHeader = styled.header`
     input{
         width: 100%;
         height: 30px;
-        font-size: 18px;
+        font-size: 16px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         border: 2px solid transparent;
         outline: none;
-        transition: 0.5s;
+        color: rgba(44, 62, 80, 1);
     }
 
-    input:focus{
-        border: 2px solid ${props => props.theme.iconColor};
+    form input:focus::placeholder{
+        color: rgba(44, 62, 80, 0.3);
     }
 
     form{

@@ -5,10 +5,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin: auto;
-gap: 20px;
+gap: 10px;
 
 p{
-    color: #f9fafa;
+    color: ${props => props.theme.textColor};
     font-size: 25px;
     font-weight: 600;
     margin: 0;
@@ -26,8 +26,8 @@ p{
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: #fff transparent #fff transparent;
+    border: 8px solid ${props => props.theme.textColor};
+    border-color: ${props => props.theme.textColor} transparent ${props => props.theme.textColor} transparent;
     animation: lds-dual-ring 1.2s linear infinite;
   }
   @keyframes lds-dual-ring {
