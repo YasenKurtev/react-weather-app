@@ -1,87 +1,89 @@
 import styled from "styled-components"
 
 export let StyledModal = styled.div`
+    .overlay{
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 
-.overlay{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+    .modal-container{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+        background-image: ${props => props.theme.bodyBackgroundColor};
+    }
 
-.modal-container{
-    padding: 10px;
-    max-width: 400px;
-    width: 100%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: ${props => props.theme.bodyBackgroundColor};;
-    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 10px;
-}
+    .title-container{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid ${props => props.theme.textColor};
+    }
 
-.myCities-cards{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+    p{
+        margin: 0;
+        font-size: 25px;
+        font-weight: 600;
+        color: ${props => props.theme.textColor};
+    }
 
-.title-container{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    width: 100%;
-    padding-bottom: 10px;
-    border-bottom: 3px solid ${props => props.theme.textColor};
-}
+    i{
+        font-size: 25px;
+        color: ${props => props.theme.iconColor};
+    }
 
-p{
-    margin: 0;
-    font-size: 25px;
-    font-weight: 600;
-    color: ${props => props.theme.textColor};
-}
+    .close-btn{
+        position: fixed;
+        right: 10px;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+    }
 
-i{
-    font-size: 25px;
-    color: ${props => props.theme.iconColor};
-}
+    .close-btn i{
+        color: ${props => props.theme.iconColor};
+    }
 
-.close-btn{
-    position: fixed;
-    right: 10px;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    
-}
+    .close-btn:hover{
+        color: ${props => props.theme.selectedUnitsColor};
+    }
 
-.close-btn:hover{
-    color: ${props => props.theme.selectedUnitsColor};
-}
+    .myCities-cards-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
 
-.no-cities{
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
-    padding: 40px 0;
-}
+    .empty-list-container{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-.empty-list{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    .no-cities{
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        padding: 40px 0;
+    }
 `

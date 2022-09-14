@@ -12,18 +12,16 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity }) => {
                 <div className="modal-container" onClick={(e) => e.stopPropagation()}>
                     <div className="title-container">
                         <i class="fa-solid fa-bars"></i>
-                        <p>My Cities</p>
+                        <p className="title"><i>My Cities</i></p>
                         <button className="close-btn" onClick={() => setOpenModal(false)}>
                             <i class="fa-solid fa-x"></i>
                         </button>
                     </div>
-
-                    <div className="myCities-cards">
-
+                    <div className="myCities-cards-container">
                         {myCities.length === 0
-                            ? <div className="empty-list">
+                            ? <div className="empty-list-container">
                                 <i class="fa-solid fa-ban"></i>
-                                <p className="no-cities"><i>There are currently no added cities.</i></p>
+                                <p className="no-cities"><i>No added cities</i></p>
                             </div>
                             : myCities.map((x, i) => <MyCitiesCard key={x} index={i} city={x} units={units} removeCity={removeCity}></MyCitiesCard>)}
                     </div>
