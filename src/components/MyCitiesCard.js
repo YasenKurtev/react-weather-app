@@ -29,20 +29,36 @@ let MyCitiesCard = ({ city, units, removeCity, index }) => {
 
     return (
         <StyledMyCitiesCard>
-            <p>{dailyData.name}</p>
-            <div className="weather-info">
-                <img src={localTime.split(":")[0] < sunset.split(":")[0] + 1
-                    && localTime.split(":")[0] > sunrise.split(":")[0]
-                    ? dayIcons[dailyData.weather[0].id]
-                    : nightIcons[dailyData.weather[0].id]}
-                    alt="logo">
-                </img>
-                <p>{unitsConverter(dailyData.main.temp, units)}°</p>
+            <div className="city-container">
+                <div className="city-name-container">
+                    <p className="city-name">{dailyData.name}</p>
+                    <p className="local-time"><i>{localTime}</i></p>
+                </div>
+                <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>
             </div>
-            <div className="add-button" onClick={() => removeCity(dailyData.name)}>
-                <i class="fa-solid fa-trash"></i>
-                <p>Remove</p>
+            <div className="info-container">
+                <div className="weather-info-container">
+                    <img src={localTime.split(":")[0] < sunset.split(":")[0] + 1
+                        && localTime.split(":")[0] > sunrise.split(":")[0]
+                        ? dayIcons[dailyData.weather[0].id]
+                        : nightIcons[dailyData.weather[0].id]}
+                        alt="logo">
+                    </img>
+                    <p className="condition"><i>{dailyData.weather[0].main}</i></p>
+                </div>
+                <div className="buttons-container">
+                    <div className="btn" onClick={() => removeCity(dailyData.name)}>
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <p>Details</p>
+                    </div>
+                    <div className="btn" onClick={() => removeCity(dailyData.name)}>
+                        <i class="fa-solid fa-trash"></i>
+                        <p>Remove</p>
+                    </div>
+                </div>
+
             </div>
+
         </StyledMyCitiesCard>
     )
 }
