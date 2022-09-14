@@ -14,7 +14,7 @@ export let StyledModal = styled.div`
 
 .modal-container{
     padding: 10px;
-    max-width: 800px;
+    max-width: 400px;
     width: 100%;
     position: fixed;
     top: 50%;
@@ -31,7 +31,8 @@ export let StyledModal = styled.div`
 .myCities-cards{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -41,7 +42,9 @@ export let StyledModal = styled.div`
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    margin-top: 5px;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 3px solid ${props => props.theme.textColor};
 }
 
 p{
@@ -58,7 +61,7 @@ i{
 
 .close-btn{
     position: fixed;
-    right: 20px;
+    right: 10px;
     background-color: transparent;
     border: 0;
     cursor: pointer;
