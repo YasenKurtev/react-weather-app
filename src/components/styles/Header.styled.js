@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export let StyledHeader = styled.header`
-    background-color: ${props => props.theme.backgroundColor};
-    color: ${props => props.theme.textColor};
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -10,11 +8,55 @@ export let StyledHeader = styled.header`
     padding: 10px 30px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    background-color: ${props => props.theme.backgroundColor};
+    color: ${props => props.theme.textColor};
 
-    label, input{
-        display: block;
+    .title-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
     }
 
+    img{
+        width: 60px;
+    }
+
+    .location-cities-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location-cities-btn{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        color: ${props => props.theme.textColor};
+        font-size: 15px;
+        font-weight: 600;
+        padding: 6px;
+        border:0;
+        background-color: transparent;
+    }
+
+    .location-cities-btn i{
+        font-size: 18px;
+    }
+
+    .location-cities-btn p{
+        margin: 0;
+    }
+
+    .location-cities-btn:hover{
+        color: ${props => props.theme.selectedIconBackgroundColor};
+    }
+
+    form{
+        display: flex;
+        width: 30%;
+    }
+    
     input{
         width: 100%;
         height: 30px;
@@ -30,22 +72,6 @@ export let StyledHeader = styled.header`
         color: rgba(44, 62, 80, 0.3);
     }
 
-    form{
-        display:flex;
-        width: 30%;
-    }
-
-    .search-btn{
-        cursor: pointer;
-        background-color: white;
-        border: 0;
-        border-left: 2px solid grey;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        width: 15%;
-        transition: transform 0.2s;
-    }
-
     .clear-btn{
         cursor: pointer;
         background-color: white;
@@ -59,6 +85,17 @@ export let StyledHeader = styled.header`
         color: #e74c3c;
     }
 
+    .search-btn{
+        cursor: pointer;
+        background-color: white;
+        border: 0;
+        width: 15%;
+        transition: transform 0.2s;
+        border-left: 2px solid grey;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
     .search-btn i:hover{
         transform: scale(1.2);
         color: #2ecc71;
@@ -69,92 +106,38 @@ export let StyledHeader = styled.header`
         color: grey;
     }
 
-    .logo{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 15px;
-    }
-
-    img{
-        width: 60px;
-    }
-
-    .theme-selector{
-        display:flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .theme-selector p{
-        font-weight: 600;
-        margin: 0;
-    }
-
-    .theme-buttons{
-        display:flex;
-        justify-content: space-around;
-    }
-
-    .theme-btn{
-        background-color: #abb2b9;
-        cursor: pointer;
-        border: 0;
-        padding: 6px;
-        border-radius: 50px;
-        transition: transform 0.2s;
-    }
-
-    .theme-btn:hover{
-        transform: scale(1.2);
-        background-color: white;
-    }
-
-    .location-cities{
+    .units-selector-container{
         display: flex;
         flex-direction: column;
     }
 
-    .location-btn{
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        cursor: pointer;
-        color: ${props => props.theme.textColor};
-        font-size: 15px;
-        font-weight: 600;
-        padding: 6px;
-        border:0;
-        background-color: transparent;
-    }
-
-    .location-btn i{
-        font-size: 18px;
-    }
-
-    .location-btn p{
-        margin: 0;
-    }
-
-    .location-btn:hover{
-        color: ${props => props.theme.selectedIconBackgroundColor};
-    }
-
-    .units-buttons{
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
-    }
-
-    .units-selector{
-        display:flex;
-        flex-direction: column;
-    }
-
-    .units-selector p{
+    .units-selector-container p{
         margin: 0;
         text-align: center;
         font-weight: 600;
+    }
+
+    .units-buttons-container{
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+
+    .theme-selector-container{
+        display:flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .theme-selector-container p{
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .theme-buttons-container{
+        display:flex;
+        justify-content: space-around;
     }
 
     /* HIDE RADIO */

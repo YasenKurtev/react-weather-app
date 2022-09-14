@@ -42,15 +42,15 @@ let Header = ({ props }) => {
     return (
 
         <StyledHeader>
-            <div className="logo">
+            <div className="title-container">
                 <img src="/images/few-clouds.png" alt="logo"></img>
                 <h1>WeatherApp</h1>
             </div>
-            <div className="location-cities">
-                <button className="location-btn" onClick={getLocation}>
+            <div className="location-cities-container">
+                <button className="location-cities-btn" onClick={getLocation}>
                     <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
                 </button>
-                <button className="location-btn" onClick={() => setOpenModal(true)}>
+                <button className="location-cities-btn" onClick={() => setOpenModal(true)}>
                     <i class="fa-solid fa-bars"></i> <p>My cities</p>
                 </button>
                 <Modal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity} setData={props.setData}/>
@@ -64,9 +64,9 @@ let Header = ({ props }) => {
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
-            <div className="units-selector">
+            <div className="units-selector-container">
                 <p>Units</p>
-                <div className="units-buttons">
+                <div className="units-buttons-container">
                     <label>
                         <input type="radio" name="test" value="small" checked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
                         <p>C°</p>
@@ -78,10 +78,9 @@ let Header = ({ props }) => {
                     </label>
                 </div>
             </div>
-            <div className="theme-selector">
+            <div className="theme-selector-container">
                 <p>Dark mode</p>
-                <div className="theme-buttons">
-
+                <div className="theme-buttons-container">
                     <label>
                         <input type="radio" name="theme" value="small" checked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
                         <i className="fa-solid fa-sun"></i>
