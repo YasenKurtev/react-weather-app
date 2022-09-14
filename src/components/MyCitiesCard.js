@@ -9,8 +9,13 @@ import { StyledLoading } from "./styles/Loading.styled";
 import { StyledLoadingMini } from "./styles/LoadingMini.styled";
 import { StyledMyCitiesCard } from "./styles/MyCitiesCard.styled"
 
-let MyCitiesCard = ({ city, units, removeCity, index }) => {
+let MyCitiesCard = ({ city, units, removeCity, index, setData, setOpenModal }) => {
     let [dailyData, isLoadingDaily] = useFetchDailyWeather(city);
+
+    let detailsHandler = () => {
+        setData(dailyData.name);
+        setOpenModal(false);
+    }
 
     if (isLoadingDaily) {
         if (index === 0) {
@@ -47,7 +52,7 @@ let MyCitiesCard = ({ city, units, removeCity, index }) => {
                     <p className="condition"><i>{dailyData.weather[0].main}</i></p>
                 </div>
                 <div className="buttons-container">
-                    <div className="btn" onClick={() => removeCity(dailyData.name)}>
+                    <div className="btn" onClick={() => detailsHandler()}>
                         <i class="fa-solid fa-earth-americas"></i>
                         <p>Details</p>
                     </div>

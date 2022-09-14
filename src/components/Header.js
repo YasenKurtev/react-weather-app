@@ -53,7 +53,7 @@ let Header = ({ props }) => {
                 <button className="location-btn" onClick={() => setOpenModal(true)}>
                     <i class="fa-solid fa-bars"></i> <p>My cities</p>
                 </button>
-                <Modal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity}/>
+                <Modal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity} setData={props.setData}/>
             </div>
             <form onSubmit={onSearchSubmit}>
                 <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
