@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export let StyledTodayCard = styled.div`
 color: ${props => props.theme.textColor};
-width: 30%;
+width: 35%;
 background-color: ${props => props.theme.backgroundColor};
 border-radius: 10px;
 padding: 10px;
@@ -76,7 +76,7 @@ img{
 }
 
 .default-city-div p{
-    padding: 0;
+    padding-bottom: 5px;
 }
 
 .default-city-div i{
@@ -108,17 +108,23 @@ img{
     border-radius: 5px;
 }
 
-@media (max-width: 576px){
+@media (min-width: 320px) and (max-width: 575px){
     width: 100%;
+    height: 10.7rem;
     padding: 10px 0;
 }
 
-@media (max-width: 768px){
+@media (min-width: 576px) and (max-width: 767px){
+    width: 100%;
+    height: 10.7rem;
+    padding: 10px 0;
 }
 
-@media (max-width: 992px){
+@media (min-width: 768px) and (max-width: 991px){
+    padding: 10px 0;
 }
 
-@media (max-width: 1200px){
+@media (min-width: 992px) and (max-width: 1199px){
+    padding: 10px 0;
 }
 `

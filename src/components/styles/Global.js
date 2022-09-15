@@ -9,19 +9,21 @@ body, html{
     min-height: 100%;
     font-size: 30px;
 
-    @media (max-width: 576px){
+    @media (min-width: 320px) and (max-width: 575px){
+        font-size 20px;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px){
         font-size 20px;
     }
     
-    @media (max-width: 768px){
-        font-size 20px;
-    }
-    
-    @media (max-width: 992px){
+    @media (min-width: 768px) and (max-width: 991px){
         font-size 22px;
     }
     
-    @media (max-width: 1200px){
+    @media (min-width: 992px) and (max-width: 1199px){
+        font-size 22px;
+    }
 }
 
 
