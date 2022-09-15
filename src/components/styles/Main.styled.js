@@ -111,6 +111,10 @@ export let StyledMain = styled.main`
             gap: 10px;
             padding-top: 10px;
         }
+
+        .weather-details{
+            padding-top: 10px;
+        }
     }
 
     @media (max-width: 768px){

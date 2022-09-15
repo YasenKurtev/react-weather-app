@@ -71,10 +71,10 @@ let Main = ({ props }) => {
                 </TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
-            {/* <section className="weather-details">
+            <section className="weather-details">
                 <Details dailyData={dailyData} units={props.units}></Details>
             </section>
-            <section className="daily-forecast">
+            {/* <section className="daily-forecast">
                 <div className="daily-forecast-container">
                     <p className="daily-title">24-hour forecast</p>
                     <div className="daily-time-container">

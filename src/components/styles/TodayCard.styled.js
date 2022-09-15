@@ -76,7 +76,7 @@ img{
 }
 
 .default-city-div p{
-    padding-bottom: 5px;
+    padding: 0;
 }
 
 .default-city-div i{
