@@ -11,6 +11,19 @@ export let StyledHeader = styled.header`
     background-color: ${props => props.theme.backgroundColor};
     color: ${props => props.theme.textColor};
 
+    .first-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 40%;
+    }
+
+    .second-container{
+        display: flex;
+        justify-content: space-between;
+        width: 18%;
+    }
+
     .title-container{
         display: flex;
         justify-content: space-between;
@@ -19,7 +32,11 @@ export let StyledHeader = styled.header`
     }
 
     img{
-        width: 60px;
+        width: 2rem;
+    }
+
+    h1{
+        font-size: 1.1rem;
     }
 
     .location-cities-container{
@@ -33,7 +50,7 @@ export let StyledHeader = styled.header`
         gap: 5px;
         cursor: pointer;
         color: ${props => props.theme.textColor};
-        font-size: 15px;
+        font-size: 0.5rem;
         font-weight: 600;
         padding: 6px;
         border:0;
@@ -41,7 +58,7 @@ export let StyledHeader = styled.header`
     }
 
     .location-cities-btn i{
-        font-size: 18px;
+        font-size: 0.6rem;
     }
 
     .location-cities-btn p{
@@ -59,8 +76,8 @@ export let StyledHeader = styled.header`
     
     input{
         width: 100%;
-        height: 30px;
-        font-size: 16px;
+        height: 1rem;
+        font-size: 0.6rem;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         border: 2px solid transparent;
@@ -102,7 +119,7 @@ export let StyledHeader = styled.header`
     }
 
     form i{
-        font-size: 20px;
+        font-size: 0.7rem;
         color: grey;
     }
 
@@ -112,6 +129,7 @@ export let StyledHeader = styled.header`
     }
 
     .units-selector-container p{
+        font-size: 0.6rem;
         margin: 0;
         text-align: center;
         font-weight: 600;
@@ -131,6 +149,7 @@ export let StyledHeader = styled.header`
     }
 
     .theme-selector-container p{
+        font-size: 0.6rem;
         font-weight: 600;
         margin: 0;
     }
@@ -150,7 +169,7 @@ export let StyledHeader = styled.header`
 
     /* IMAGE STYLES */
     [type=radio] + i {
-        font-size: 25px;
+        font-size: 0.8rem;
         cursor: pointer;
         padding: 3px;
         color: ${props => props.theme.iconColor};
@@ -170,7 +189,7 @@ export let StyledHeader = styled.header`
 
     /* IMAGE STYLES */
     [type=radio] + p {
-        font-size: 25px;
+        font-size: 0.8rem;
         cursor: pointer;
         padding: 3px;
         color: ${props => props.theme.unitsColor};
@@ -186,7 +205,50 @@ export let StyledHeader = styled.header`
         color: ${props => props.theme.selectedUnitsColor};
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 576px){
         flex-direction: column;
+        gap:10px;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 10px;
+        margin: 0;
+
+        .first-container{
+            width: 90%;
+        }
+        .second-container{
+            width: 70%;
+        }
+        form{
+            width: 90%;
+        }
+        .units-selector-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+        .theme-selector-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .theme-buttons-container{
+            display:flex;
+            gap: 5px;
+        }
+    }
+
+    @media (max-width: 768px){
+        width: 100%;
+    }
+
+    @media (max-width: 992px){
+        justify-content: space-evenly;
+        padding: 10px 0;
+    }
+
+    @media (max-width: 1200px){
+        width: 100%;
     }
 `

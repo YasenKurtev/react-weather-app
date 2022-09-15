@@ -7,7 +7,24 @@ body, html{
     background-image: ${props => props.theme.bodyBackgroundColor};
     font-family: 'Poppins', sans-serif;
     min-height: 100%;
+    font-size: 30px;
+
+    @media (max-width: 576px){
+        font-size 20px;
+    }
+    
+    @media (max-width: 768px){
+        font-size 20px;
+    }
+    
+    @media (max-width: 992px){
+        font-size 22px;
+    }
+    
+    @media (max-width: 1200px){
 }
+
+
 `
 
 export default GlobalStyles
