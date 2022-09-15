@@ -42,7 +42,7 @@ i{
 @media (min-width: 320px) and (max-width: 575px){
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 7px;
     width: 100%;
     padding: 10px 0;
 
@@ -50,7 +50,7 @@ i{
         display: flex;
         width: 100%;
         justify-content: center;
-        gap: 10px;
+        gap: 40px;
     }
 
     .stats{

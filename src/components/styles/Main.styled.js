@@ -41,7 +41,7 @@ export let StyledMain = styled.main`
 
     .weekly-title{
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-weight: 600;
     }
 
@@ -68,7 +68,7 @@ export let StyledMain = styled.main`
 
     .daily-time{
         margin: 0;
-        font-size: 0.6rem;;
+        font-size: 0.6rem;
         font-weight: 600;
         border-bottom: 2px solid ${props => props.theme.textColor};
     }
@@ -138,10 +138,16 @@ export let StyledMain = styled.main`
         }
 
         .weekly-forecast-container{
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
             flex-direction: column;
+            gap: 5px;
+            align-items: center;
         }
 
         .weekly-container{
+            padding-top:10px;
             flex-direction: column;
         }
     }

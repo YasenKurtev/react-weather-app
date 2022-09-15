@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export let StyledWeeklyCard = styled.div`
-color: ${props => props.theme.textColor};
+    color: ${props => props.theme.textColor};
     width: 18%;
     background-color: ${props => props.theme.backgroundColor};
     border-radius: 10px;
@@ -18,15 +18,15 @@ color: ${props => props.theme.textColor};
     }
 
     p:nth-child(1){
-        font-size: 20px;
+        font-size: 0.8rem;
     }
 
     p:nth-child(2){
-        font-size: 30px;
+        font-size: 1rem;
     }
 
     img{
-        width: 50px;
+        width: 1.7rem;
     }
 
     .weather-info{
@@ -38,5 +38,29 @@ color: ${props => props.theme.textColor};
         padding: 4px 1px;
         background-color: ${props => props.theme.cardsBackgroundColor};
         border-radius: 10px;
+    }
+
+    @media (min-width: 320px) and (max-width: 575px){
+        flex-direction: row;
+        justify-content: space-between;
+        width: 96%;
+        padding: 5px;
+        padding-left: 10px;
+
+        .weather-info{
+            width: 90px;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px){
+        flex-direction: row;
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px){
+        padding: 10px 0;
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px){
+        padding: 10px 0;
     }
 `
