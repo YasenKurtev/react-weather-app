@@ -16,17 +16,18 @@ position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5px;
 }
 
 .temp{
-    font-size: 50px;
+    font-size: 1.8rem;
     font-weight: 600;
     margin: 0;
 }
 
 .condition{
     margin:0;
-    font-size: 20px;
+    font-size: 0.8rem;
 }
 
 .low-high{
@@ -36,22 +37,23 @@ position: relative;
 
 .low-high p{
     margin: 0;
+    font-size: 0.5rem;
 }
 
 h1{
-    font-size: 40px;
+    font-size: 1.2rem;
     margin:0;
 }
 
 img{
-    width: 100px;
+    width: 3.3rem;
 }
 
 .default-city-btn{
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.5rem;
     font-weight: 600;
     color: ${props => props.theme.defaultCityColor};
 }
@@ -62,14 +64,23 @@ img{
 
 .default-city{
     margin: 0;
-    font-size: 14px;
+    font-size: 0.5rem;
     font-weight: 600;
     color: ${props => props.theme.defaultCityColor};
 }
 
 .default-city-div{
     display: flex;
+    align-items: center;
     gap: 5px;
+}
+
+.default-city-div p{
+    padding: 0;
+}
+
+.default-city-div i{
+    font-size: 0.5rem;
 }
 
 .add-button{
@@ -83,17 +94,31 @@ img{
 
 .add-button p{
     margin: 0;
-    font-size: 13px;
+    font-size: 0.5rem;
     font-weight: 600;
 }
 
 .add-button i{
-    font-size: 13px;
+    font-size: 0.4rem;
 }
 
 .add-button:hover{
     background-color: ${props => props.theme.selectedIconBackgroundColor};
     cursor: pointer;
     border-radius: 5px;
+}
+
+@media (max-width: 576px){
+    width: 100%;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px){
+}
+
+@media (max-width: 992px){
+}
+
+@media (max-width: 1200px){
 }
 `

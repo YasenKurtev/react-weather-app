@@ -22,7 +22,7 @@ function App() {
             <GlobalStyles theme={theme === 'light' ? themeLight : themeDark} />
             <Container>
                 <Header props={{ data, setData, theme, changeTheme, units, changeUnits, myCities, removeCity }} />
-                {/* <Main props={{ data, setData, units, myCities, addCity, removeCity }} /> */}
+                <Main props={{ data, setData, units, myCities, addCity, removeCity }} />
                 {/* <Footer /> */}
             </Container>
         </ThemeProvider>

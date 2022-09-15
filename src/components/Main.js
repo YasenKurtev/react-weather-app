@@ -71,7 +71,7 @@ let Main = ({ props }) => {
                 </TodayCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
-            <section className="weather-details">
+            {/* <section className="weather-details">
                 <Details dailyData={dailyData} units={props.units}></Details>
             </section>
             <section className="daily-forecast">
@@ -107,7 +107,7 @@ let Main = ({ props }) => {
                             units={props.units}>
                         </MiniCard>)}
                 </div>
-            </section>
+            </section> */}
         </StyledMain>
     )
 }

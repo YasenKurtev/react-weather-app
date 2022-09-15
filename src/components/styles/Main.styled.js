@@ -104,4 +104,21 @@ export let StyledMain = styled.main`
         font-size: 70px;
 
     }
+
+    @media (max-width: 576px){
+        .today-map{
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 10px;
+        }
+    }
+
+    @media (max-width: 768px){
+    }
+
+    @media (max-width: 992px){
+    }
+
+    @media (max-width: 1200px){
+    }
     `
