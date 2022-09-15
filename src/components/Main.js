@@ -74,7 +74,7 @@ let Main = ({ props }) => {
             <section className="weather-details">
                 <Details dailyData={dailyData} units={props.units}></Details>
             </section>
-            {/* <section className="daily-forecast">
+            <section className="daily-forecast">
                 <div className="daily-forecast-container">
                     <p className="daily-title">24-hour forecast</p>
                     <div className="daily-time-container">
@@ -92,7 +92,7 @@ let Main = ({ props }) => {
                         </DailyCard>)}
                 </div>
             </section>
-            <section className="weekly-forecast">
+            {/* <section className="weekly-forecast">
                 <div className="weekly-forecast-container">
                     <p className="weekly-title">5-day forecast</p>
                     <div className="weekly-day-container">
