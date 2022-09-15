@@ -9,7 +9,7 @@ export default function getLocalDate(offset) {
     let result = new Date(city);
     let dayOfWeek = days[result.getDay() - 1];
     let dayOfMonth = result.getDate();
-    let month = months[result.getMonth()];
+    let month = months[result.getMonth()].slice(0, 3);
     let year = result.getFullYear();
     let formatResult = `${dayOfWeek}, ${dayOfMonth} ${month} ${year}`;
 

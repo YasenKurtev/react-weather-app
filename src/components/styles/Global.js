@@ -8,6 +8,7 @@ body, html{
     font-family: 'Poppins', sans-serif;
     min-height: 100%;
     font-size: 30px;
+    overflow-x: hidden;
 
     @media (min-width: 320px) and (max-width: 575px){
         font-size 20px;

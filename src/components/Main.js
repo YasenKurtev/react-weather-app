@@ -92,7 +92,7 @@ let Main = ({ props }) => {
                         </DailyCard>)}
                 </div>
             </section>
-            {/* <section className="weekly-forecast">
+            <section className="weekly-forecast">
                 <div className="weekly-forecast-container">
                     <p className="weekly-title">5-day forecast</p>
                     <div className="weekly-day-container">
@@ -107,7 +107,7 @@ let Main = ({ props }) => {
                             units={props.units}>
                         </MiniCard>)}
                 </div>
-            </section> */}
+            </section>
         </StyledMain>
     )
 }

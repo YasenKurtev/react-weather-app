@@ -41,19 +41,12 @@ export let StyledDailyCard = styled.div`
     }
 
     @media (min-width: 320px) and (max-width: 575px){
-        flex-direction: row;
-        justify-content: space-around;
         width: 100%;
         padding: 5px 0;
-
-        .weather-info{
-            width:20%;
-        }
     }
     
     @media (min-width: 576px) and (max-width: 767px){
         width: 100%;
-        height: 10.7rem;
         padding: 10px 0;
     }
     

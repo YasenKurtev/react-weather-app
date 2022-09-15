@@ -30,7 +30,7 @@ export let StyledMain = styled.main`
 
     .weekly-day{
         margin: 0;
-        font-size: 17px;
+        font-size: 0.6rem;
         font-weight: 600;
         border-bottom: 2px solid ${props => props.theme.textColor};
     }
@@ -41,7 +41,7 @@ export let StyledMain = styled.main`
 
     .weekly-title{
         margin: 0;
-        font-size: 25px;
+        font-size: 0.8rem;
         font-weight: 600;
     }
 
@@ -129,13 +129,20 @@ export let StyledMain = styled.main`
         .daily-container{
             padding-top:10px;
             display: flex;
-            flex-direction: column;
             gap: 10px;
+            overflow: scroll;
         }
 
-        .daily-container p{
-            width: 30%;
-            text-align: start;
+        .daily-container p:nth-child(1){
+            width: 70px;
+        }
+
+        .weekly-forecast-container{
+            flex-direction: column;
+        }
+
+        .weekly-container{
+            flex-direction: column;
         }
     }
 

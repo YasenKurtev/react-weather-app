@@ -40,7 +40,8 @@ i{
 }
 
 @media (min-width: 320px) and (max-width: 575px){
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 5px;
     width: 100%;
     padding: 10px 0;
@@ -48,8 +49,8 @@ i{
     .details-card{
         display: flex;
         width: 100%;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 
     .stats{
@@ -58,7 +59,7 @@ i{
     }
 
     .details-title{
-        width: 30%;
+        width: 20%;
         justify-content: flex-start;
         align-items: center;
         padding-bottom: 0;

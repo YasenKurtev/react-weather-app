@@ -11,6 +11,8 @@ let Container = styled.div`
 
     @media (min-width: 320px) and (max-width: 575px){
         width: 100%;
+        max-width: 94%;
+        padding: 0 10px;
     }
 
     @media (min-width: 576px) and (max-width: 767px){
