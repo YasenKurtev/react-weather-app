@@ -11,14 +11,14 @@ export let StyledFooter = styled.footer`
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-top: 20px;
-    height: 3.3vh;
+    font-weight: 600;
 
     .dev{
-        font-size: 18px;
+        font-size: 0.7rem;
     }
 
     .contact{
-        font-size: 18px;
+        font-size: 0.7rem;
         margin: 0;
     }
 
@@ -32,7 +32,7 @@ export let StyledFooter = styled.footer`
     }
 
     .social-item i{
-        font-size: 25px;
+        font-size: 0.9rem;
         padding: 5px;
         color: ${props => props.theme.iconsColor};
     }
@@ -47,4 +47,28 @@ export let StyledFooter = styled.footer`
         align-items: center;
         justify-content: space-between;
         gap: 10px;
+    }
+
+    @media (min-width: 320px) and (max-width: 575px){
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 0;
+        padding-bottom: 10px;
+
+        .weather-info{
+            width: 90px;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px){
+        flex-direction: row;
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px){
+        padding: 10px 0;
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px){
+        padding: 10px 0;
+    }
 `

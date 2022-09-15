@@ -6,7 +6,7 @@ let GlobalStyles = createGlobalStyle`
 body, html{
     background-image: ${props => props.theme.bodyBackgroundColor};
     font-family: 'Poppins', sans-serif;
-    min-height: 100%;
+    
     font-size: 30px;
     overflow-x: hidden;
 

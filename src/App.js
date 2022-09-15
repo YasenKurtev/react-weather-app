@@ -23,7 +23,7 @@ function App() {
             <Container>
                 <Header props={{ data, setData, theme, changeTheme, units, changeUnits, myCities, removeCity }} />
                 <Main props={{ data, setData, units, myCities, addCity, removeCity }} />
-                {/* <Footer /> */}
+                <Footer />
             </Container>
         </ThemeProvider>
     );
