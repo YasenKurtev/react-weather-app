@@ -37,6 +37,7 @@ export let StyledHeader = styled.header`
 
     h1{
         font-size: 1.3rem;
+        margin: 20px 0;
     }
 
     .location-cities-container{
@@ -210,7 +211,7 @@ export let StyledHeader = styled.header`
             background-color: ${props => props.theme.selectedIconBackgroundColor};
     }
 
-    @media (max-width: 576px){
+    @media (min-width: 320px) and (max-width: 575px){
         flex-direction: column;
         gap:10px;
         width: 100%;
@@ -221,10 +222,9 @@ export let StyledHeader = styled.header`
         .first-container{
             flex-direction: column;
             width: 90%;
-            gap: 10px;
         }
         .second-container{
-            width: 70%;
+            width: 88%;
         }
 
         .second-container p{
@@ -233,7 +233,6 @@ export let StyledHeader = styled.header`
 
         .title-container h1{
             font-size: 1.4rem;
-            margin: 0;
         }
 
         form{
@@ -256,7 +255,7 @@ export let StyledHeader = styled.header`
         }
 
         .location-cities-container{
-            width: 80%;
+            width: 100%;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
@@ -267,16 +266,119 @@ export let StyledHeader = styled.header`
         }
     }
 
-    @media (max-width: 768px){
+    @media (min-width: 576px) and (max-width: 767px){
         width: 100%;
+        padding: 0;
+        padding-bottom: 10px;
+        margin: 0;
+        justify-content: space-around;
+
+        .title-container h1{
+            font-size: 1.4rem;
+        }
+
+        .first-container{
+            flex-direction: column;
+            width: 40%;
+            padding-bottom: 10px;
+        }
+
+        .second-container{
+            width: 15%;
+            flex-direction: column;
+            align-items: center;
+            gap:10px;
+            padding-top: 10px;
+        }
+
+        .second-container p{
+            font-size: 0.7rem;
+        }
+
+        .first-container p{
+            font-size: 0.7rem;
+        }
+
+        form{
+            width: 40%;
+        }
+
+        .location-cities-container{
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
     }
 
-    @media (max-width: 992px){
-        justify-content: space-evenly;
-        padding: 10px 0;
+    @media (min-width: 768px) and (max-width: 991px){
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: space-around;
+
+        .title-container h1{
+            font-size: 1.4rem;
+        }
+
+        .first-container{
+            flex-direction: column;
+            width: 40%;
+            padding-bottom: 10px;
+        }
+
+        .second-container{
+            width: 20%;
+            justify-content: space-around;
+            align-items: center;
+            gap:10px;
+        }
+
+        .second-container p{
+            font-size: 0.7rem;
+        }
+
+        .first-container p{
+            font-size: 0.7rem;
+        }
+
+        form{
+            width: 30%;
+        }
+
+        .location-cities-container{
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
     }
 
-    @media (max-width: 1200px){
+    @media (min-width: 992px) and (max-width: 1199px){
         width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: space-around;
+
+        .title-container h1{
+            font-size: 1.4rem;
+        }
+
+        .second-container p{
+            font-size: 0.7rem;
+        }
+
+        .first-container p{
+            font-size: 0.7rem;
+        }
+
+        .first-container{
+            justify-content: space-around;
+        }
+
+        .second-container{
+            justify-content: space-around;
+        }
     }
 `

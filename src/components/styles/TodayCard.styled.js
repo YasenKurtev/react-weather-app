@@ -131,7 +131,7 @@ img{
 }
 
 @media (min-width: 576px) and (max-width: 767px){
-    width: 100%;
+    width: 50%;
     padding: 10px 0;
 }
 

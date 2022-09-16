@@ -30,7 +30,7 @@ export let StyledMap = styled.div`
     }
 
     @media (min-width: 576px) and (max-width: 767px){
-        width: 100%;
+        width: 50%;
         height: 10.7rem;
         padding: 10px 0;
 
