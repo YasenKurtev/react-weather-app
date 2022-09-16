@@ -41,17 +41,15 @@ export let StyledDailyCard = styled.div`
     }
 
     @media (min-width: 320px) and (max-width: 575px){
-        width: 100%;
-        padding: 5px 0;
-
-        .weather-info p{
-            
-        }
+        width: 70px;
+        gap: 10px;
+        padding: 7px 2px;
     }
     
     @media (min-width: 576px) and (max-width: 767px){
-        width: 100%;
-        padding: 10px 0;
+        width: 90px;
+        gap: 10px;
+        padding: 7px 2px;
     }
     
     @media (min-width: 768px) and (max-width: 991px){

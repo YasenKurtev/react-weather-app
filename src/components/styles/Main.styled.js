@@ -134,7 +134,7 @@ export let StyledMain = styled.main`
         }
 
         .daily-container p:nth-child(1){
-            width: 70px;
+            width: 90px;
         }
 
         .weekly-forecast-container{
@@ -169,6 +169,13 @@ export let StyledMain = styled.main`
     }
 
     @media (min-width: 576px) and (max-width: 767px){
+        .daily-container{
+            overflow: scroll;
+        }
+
+        .daily-container p:nth-child(1){
+            width: 100px;
+        }
     }
 
     @media (min-width: 768px) and (max-width: 991px){
