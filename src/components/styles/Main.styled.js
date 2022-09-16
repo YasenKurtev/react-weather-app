@@ -173,8 +173,28 @@ export let StyledMain = styled.main`
             overflow: scroll;
         }
 
+        .weekly-container{
+            overflow: scroll;
+        }
+
         .daily-container p:nth-child(1){
             width: 100px;
+        }
+
+        .daily-title{
+            font-size: 1rem;
+        }
+
+        .weekly-title{
+            font-size: 1rem;
+        }
+
+        .daily-time{
+            font-size: 0.67rem;
+        }
+
+        .weekly-day{
+            font-size: 0.67rem;
         }
     }
 
