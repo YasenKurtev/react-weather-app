@@ -73,6 +73,7 @@ img{
     display: flex;
     align-items: center;
     gap: 5px;
+    padding-top: 10px;
 }
 
 .default-city-div p{

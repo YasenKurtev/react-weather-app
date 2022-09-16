@@ -126,6 +126,7 @@ export let StyledHeader = styled.header`
     .units-selector-container{
         display: flex;
         flex-direction: column;
+        gap: 8px;
     }
 
     .units-selector-container p{
@@ -138,9 +139,13 @@ export let StyledHeader = styled.header`
     .units-buttons-container{
         display: flex;
         justify-content: space-between;
-        gap: 5px;
+        gap: 10px;
     }
 
+    .units-buttons-container label p{
+        width: 0.8rem;
+        border-radius: 50px;
+    }
 
     .theme-selector-container{
         display:flex;
@@ -189,7 +194,7 @@ export let StyledHeader = styled.header`
 
     /* IMAGE STYLES */
     [type=radio] + p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         cursor: pointer;
         padding: 3px;
         color: ${props => props.theme.unitsColor};
@@ -202,7 +207,7 @@ export let StyledHeader = styled.header`
 
     /* CHECKED STYLES */
         [type=radio]:checked + p {
-        color: ${props => props.theme.selectedUnitsColor};
+            background-color: ${props => props.theme.selectedIconBackgroundColor};
     }
 
     @media (max-width: 576px){
