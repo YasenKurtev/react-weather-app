@@ -48,7 +48,7 @@ export let StyledWeeklyCard = styled.div`
         padding-left: 10px;
 
         .weather-info{
-            width: 80%;
+            width: 100px;
         }
     }
 

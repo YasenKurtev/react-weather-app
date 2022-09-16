@@ -81,7 +81,7 @@ img{
 }
 
 .default-city-div i{
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 }
 
 .add-button{
@@ -95,12 +95,12 @@ img{
 
 .add-button p{
     margin: 0;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-weight: 600;
 }
 
 .add-button i{
-    font-size: 0.4rem;
+    font-size: 0.6rem;
 }
 
 .add-button:hover{
