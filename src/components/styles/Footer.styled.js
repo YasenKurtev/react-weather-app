@@ -61,14 +61,14 @@ export let StyledFooter = styled.footer`
     }
 
     @media (min-width: 576px) and (max-width: 767px){
-        flex-direction: row;
+        padding: 10px 20px;
     }
     
     @media (min-width: 768px) and (max-width: 991px){
-        padding: 10px 0;
+        padding: 10px 20px;
     }
     
     @media (min-width: 992px) and (max-width: 1199px){
-        padding: 10px 0;
+        padding: 10px 20px;
     }
 `
