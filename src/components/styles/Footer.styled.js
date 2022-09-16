@@ -32,7 +32,7 @@ export let StyledFooter = styled.footer`
     }
 
     .social-item i{
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         padding: 5px;
         color: ${props => props.theme.iconsColor};
     }

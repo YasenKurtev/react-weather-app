@@ -50,7 +50,7 @@ i{
         display: flex;
         width: 100%;
         justify-content: center;
-        gap: 40px;
+        gap: 50px;
     }
 
     .stats{
@@ -59,10 +59,14 @@ i{
     }
 
     .details-title{
-        width: 20%;
+        width: 25%;
         justify-content: flex-start;
         align-items: center;
         padding-bottom: 0;
+    }
+
+    p{
+        font-size: 0.7rem;
     }
 }
 

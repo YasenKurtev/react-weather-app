@@ -15,7 +15,7 @@ export let StyledHeader = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 40%;
+        width: 43%;
     }
 
     .second-container{
@@ -36,7 +36,7 @@ export let StyledHeader = styled.header`
     }
 
     h1{
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .location-cities-container{
@@ -50,7 +50,7 @@ export let StyledHeader = styled.header`
         gap: 5px;
         cursor: pointer;
         color: ${props => props.theme.textColor};
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         font-weight: 600;
         padding: 6px;
         border:0;
@@ -214,11 +214,23 @@ export let StyledHeader = styled.header`
         margin: 0;
 
         .first-container{
+            flex-direction: column;
             width: 90%;
+            gap: 10px;
         }
         .second-container{
             width: 70%;
         }
+
+        .second-container p{
+            font-size: 0.7rem;
+        }
+
+        .title-container h1{
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
         form{
             width: 90%;
         }
@@ -236,6 +248,17 @@ export let StyledHeader = styled.header`
         .theme-buttons-container{
             display:flex;
             gap: 5px;
+        }
+
+        .location-cities-container{
+            width: 80%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .location-cities-btn{
+            font-size: 0.7rem;
         }
     }
 

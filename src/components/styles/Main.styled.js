@@ -117,7 +117,7 @@ export let StyledMain = styled.main`
         }
 
         .daily-forecast-container{
-            padding-top: 10px;
+            padding-top: 15px;
             padding-left: 10px;
             padding-right: 10px;
             display: flex;
@@ -127,7 +127,7 @@ export let StyledMain = styled.main`
         }
 
         .daily-container{
-            padding-top:10px;
+            padding-top:15px;
             display: flex;
             gap: 10px;
             overflow: scroll;
@@ -138,7 +138,7 @@ export let StyledMain = styled.main`
         }
 
         .weekly-forecast-container{
-            padding-top: 10px;
+            padding-top: 15px;
             padding-left: 10px;
             padding-right: 10px;
             flex-direction: column;
@@ -147,8 +147,24 @@ export let StyledMain = styled.main`
         }
 
         .weekly-container{
-            padding-top:10px;
+            padding-top:15px;
             flex-direction: column;
+        }
+
+        .daily-title{
+            font-size: 1rem;
+        }
+
+        .weekly-title{
+            font-size: 1rem;
+        }
+
+        .daily-time{
+            font-size: 0.67rem;
+        }
+
+        .weekly-day{
+            font-size: 0.67rem;
         }
     }
 

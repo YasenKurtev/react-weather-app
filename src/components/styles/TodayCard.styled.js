@@ -27,7 +27,7 @@ position: relative;
 
 .condition{
     margin:0;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .low-high{
@@ -37,11 +37,11 @@ position: relative;
 
 .low-high p{
     margin: 0;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 
 h1{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin:0;
 }
 
@@ -110,13 +110,27 @@ img{
 
 @media (min-width: 320px) and (max-width: 575px){
     width: 100%;
-    height: 10.7rem;
     padding: 10px 0;
+
+    .add-button p{
+        font-size: 0.7rem;
+    }
+
+    .add-button i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div{
+        align-items: flex-start;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px){
     width: 100%;
-    height: 10.7rem;
     padding: 10px 0;
 }
 
