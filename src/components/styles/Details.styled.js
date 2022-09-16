@@ -6,7 +6,7 @@ export let StyledDetails = styled.div`
     display:flex;
     justify-content: space-around;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 0;
 
 p{
     margin: 0;
@@ -24,6 +24,7 @@ i{
     border-radius: 10px;
     text-align: center;
     padding: 2px;
+    padding-top: 4px;
     margin-top: 5px;
 }
 
@@ -40,8 +41,7 @@ i{
 }
 
 @media (min-width: 320px) and (max-width: 575px){
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 7px;
     width: 100%;
     padding: 10px 0;
@@ -54,12 +54,12 @@ i{
     }
 
     .stats{
-        width: 20%;
+        width: 25%;
         margin: 0;
     }
 
     .details-title{
-        width: 25%;
+        width: 30%;
         justify-content: flex-start;
         align-items: center;
         padding-bottom: 0;
@@ -72,15 +72,28 @@ i{
 
 @media (min-width: 576px) and (max-width: 767px){
     width: 100%;
-    height: 10.7rem;
     padding: 10px 0;
+
+    p{
+        font-size: 0.7rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px){
+    width: 100%;
     padding: 10px 0;
+
+    p{
+        font-size: 0.7rem;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
+    width: 100%;
     padding: 10px 0;
+
+    p{
+        font-size: 0.7rem;
+    }
 }
 `
