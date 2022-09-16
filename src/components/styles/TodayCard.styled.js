@@ -133,13 +133,63 @@ img{
 @media (min-width: 576px) and (max-width: 767px){
     width: 50%;
     padding: 10px 0;
+
+    .add-button p{
+        font-size: 0.7rem;
+    }
+
+    .add-button i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div{
+        align-items: flex-start;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px){
+    width: 40%;
     padding: 10px 0;
+
+    .add-button p{
+        font-size: 0.7rem;
+    }
+
+    .add-button i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div{
+        align-items: flex-start;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
+    width: 35%;
     padding: 10px 0;
+
+    .add-button p{
+        font-size: 0.7rem;
+    }
+
+    .add-button i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div i{
+        font-size: 0.7rem;
+    }
+
+    .default-city-div{
+        align-items: flex-start;
+    }
 }
 `

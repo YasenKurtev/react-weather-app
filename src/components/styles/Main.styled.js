@@ -105,7 +105,7 @@ export let StyledMain = styled.main`
 
     }
 
-    @media (max-width: 576px){
+    @media (min-width: 320px) and (max-width: 575px){
         .today-map{
             flex-direction: column;
             gap: 10px;
@@ -168,12 +168,12 @@ export let StyledMain = styled.main`
         }
     }
 
-    @media (max-width: 768px){
+    @media (min-width: 576px) and (max-width: 767px){
     }
 
-    @media (max-width: 992px){
+    @media (min-width: 768px) and (max-width: 991px){
     }
 
-    @media (max-width: 1200px){
+    @media (min-width: 992px) and (max-width: 1199px){
     }
     `

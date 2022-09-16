@@ -12,59 +12,59 @@ export let StyledMap = styled.div`
     }
 
     #map{
-        height: 10.3rem;
+        height: 327px;
         border-radius: 10px;
     }
 
     @media (min-width: 320px) and (max-width: 575px){
         width: 100%;
-        height: 10.7rem;
+        height: 259px;
         padding: 10px 0;
 
         #map{
             display: flex;
             padding-left: 3.5%;
             width: 90%;
-            height: 10.7rem;
+            height: 258px;
         }
     }
 
     @media (min-width: 576px) and (max-width: 767px){
         width: 50%;
-        height: 10.7rem;
+        height: 239px;
         padding: 10px 0;
 
         #map{
             display: flex;
             padding-left: 3.5%;
             width: 90%;
-            height: 10.7rem;
+            height: 238px;
         }
     }
     
     @media (min-width: 768px) and (max-width: 991px){
-        width: 65%;
-        height: 10.7rem;
+        width: 75%;
+        height: 258.6px;
         padding: 10px 0;
 
         #map{
             display: flex;
             padding-left: 3.5%;
             width: 90%;
-            height: 10.7rem;
+            height: 257.6px;
         }
     }
     
     @media (min-width: 992px) and (max-width: 1199px){
-        width: 65%;
-        height: 10.7rem;
+        width: 75%;
+        height: 258.6px;
         padding: 10px 0;
 
         #map{
             display: flex;
             padding-left: 3.5%;
             width: 90%;
-            height: 10.7rem;
+            height: 258.6px;
         }
     }
 `
