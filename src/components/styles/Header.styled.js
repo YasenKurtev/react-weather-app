@@ -15,7 +15,7 @@ export let StyledHeader = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 43%;
+        width: 45%;
     }
 
     .second-container{
@@ -299,17 +299,17 @@ export let StyledHeader = styled.header`
         width: 100%;
         padding: 0;
         margin: 0;
-        justify-content: space-around;
+        justify-content: space-between;
 
         .first-container{
             flex-direction: column;
-            width: 40%;
+            width: 35%;
             padding-bottom: 10px;
         }
 
         .second-container{
-            width: 20%;
-            justify-content: space-around;
+            width: 25%;
+            justify-content: space-evenly;
             align-items: center;
             gap:10px;
         }
@@ -332,7 +332,7 @@ export let StyledHeader = styled.header`
         width: 100%;
         padding: 0;
         margin: 0;
-        justify-content: space-around;
+        justify-content: space-between;
 
         
 
