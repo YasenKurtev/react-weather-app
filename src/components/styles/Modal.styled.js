@@ -20,15 +20,16 @@ export let StyledModal = styled.div`
         flex-direction: column;
         align-items: center;
         width: 100%;
-        max-width: 400px;
+        max-width: 13.5rem;
         padding: 10px;
         box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
         border-radius: 10px;
         background-image: ${props => props.theme.bodyBackgroundColor};
     }
 
-    .title-container{
+    .modal-title-container{
         display: flex;
+        justify-contetnt: flex-start;
         align-items: center;
         gap: 10px;
         width: 100%;
@@ -39,13 +40,13 @@ export let StyledModal = styled.div`
 
     p{
         margin: 0;
-        font-size: 25px;
+        font-size: 0.9rem;
         font-weight: 600;
         color: ${props => props.theme.textColor};
     }
 
     i{
-        font-size: 25px;
+        font-size: 0.9rem;
         color: ${props => props.theme.iconColor};
     }
 
@@ -81,7 +82,7 @@ export let StyledModal = styled.div`
     }
 
     .no-cities{
-        font-size: 20px;
+        font-size: 0.7rem;
         font-weight: 600;
         margin: 0;
         padding: 40px 0;

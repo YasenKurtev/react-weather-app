@@ -59,10 +59,11 @@ export let StyledHeader = styled.header`
     }
 
     .location-cities-btn i{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     .location-cities-btn p{
+        font-size: 0.7rem;
         margin: 0;
     }
 
@@ -131,7 +132,7 @@ export let StyledHeader = styled.header`
     }
 
     .units-selector-container p{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         margin: 0;
         text-align: center;
         font-weight: 600;
@@ -155,7 +156,7 @@ export let StyledHeader = styled.header`
     }
 
     .theme-selector-container p{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         font-weight: 600;
         margin: 0;
     }
@@ -227,14 +228,6 @@ export let StyledHeader = styled.header`
             width: 88%;
         }
 
-        .second-container p{
-            font-size: 0.7rem;
-        }
-
-        .title-container h1{
-            font-size: 1.4rem;
-        }
-
         form{
             width: 90%;
         }
@@ -273,10 +266,6 @@ export let StyledHeader = styled.header`
         margin: 0;
         justify-content: space-around;
 
-        .title-container h1{
-            font-size: 1.4rem;
-        }
-
         .first-container{
             flex-direction: column;
             width: 40%;
@@ -291,13 +280,7 @@ export let StyledHeader = styled.header`
             padding-top: 10px;
         }
 
-        .second-container p{
-            font-size: 0.7rem;
-        }
-
-        .first-container p{
-            font-size: 0.7rem;
-        }
+        
 
         form{
             width: 40%;
@@ -318,10 +301,6 @@ export let StyledHeader = styled.header`
         margin: 0;
         justify-content: space-around;
 
-        .title-container h1{
-            font-size: 1.4rem;
-        }
-
         .first-container{
             flex-direction: column;
             width: 40%;
@@ -335,13 +314,7 @@ export let StyledHeader = styled.header`
             gap:10px;
         }
 
-        .second-container p{
-            font-size: 0.7rem;
-        }
-
-        .first-container p{
-            font-size: 0.7rem;
-        }
+        
 
         form{
             width: 30%;
@@ -361,17 +334,11 @@ export let StyledHeader = styled.header`
         margin: 0;
         justify-content: space-around;
 
-        .title-container h1{
-            font-size: 1.4rem;
-        }
+        
 
-        .second-container p{
-            font-size: 0.7rem;
-        }
+        
 
-        .first-container p{
-            font-size: 0.7rem;
-        }
+        
 
         .first-container{
             justify-content: space-around;

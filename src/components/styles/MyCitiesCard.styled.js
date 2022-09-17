@@ -22,16 +22,16 @@ export let StyledMyCitiesCard = styled.div`
     }
     
     .city-name{
-        font-size: 25px;
+        font-size: 0.9rem;
         font-weight: 600;
     }
 
     .local-time i{
-        font-size: 18px;
+        font-size: 0.6rem;
     }
 
     .temp{
-        font-size: 40px;
+        font-size: 1.3rem;
         font-weight: 600;
     }
 
@@ -48,11 +48,11 @@ export let StyledMyCitiesCard = styled.div`
     }
 
     .weather-info img{
-        width: 50px;
+        width: 1.7rem;
     }
 
     .condition i{
-        font-size: 20px;
+        font-size: 0.7rem;
     }
 
     .buttons-container{
@@ -70,7 +70,7 @@ export let StyledMyCitiesCard = styled.div`
     
     .btn p{
         margin: 0;
-        font-size: 13px;
+        font-size: 0.5rem;
         font-weight: 600;
     }
 
@@ -79,12 +79,34 @@ export let StyledMyCitiesCard = styled.div`
     }
     
     .btn i{
-        font-size: 13px;
+        font-size: 0.5rem;
     }
     
     .btn:hover{
         background-color: ${props => props.theme.selectedIconBackgroundColor};
         cursor: pointer;
         border-radius: 5px;
-    }    
+    }
+
+    @media (min-width: 320px) and (max-width: 575px){
+        
+    }
+
+    @media (min-width: 576px) and (max-width: 767px){
+        
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px){
+        .temp{
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px){
+        .temp{
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    }
 `
