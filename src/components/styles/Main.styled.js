@@ -196,6 +196,25 @@ export let StyledMain = styled.main`
         .weekly-day{
             font-size: 0.67rem;
         }
+
+        .daily-forecast-container{
+            padding-top: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .weekly-forecast-container{
+            padding-top: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
     }
 
     @media (min-width: 768px) and (max-width: 991px){

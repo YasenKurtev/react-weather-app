@@ -18,7 +18,7 @@ export let StyledMap = styled.div`
 
     @media (min-width: 320px) and (max-width: 575px){
         width: 100%;
-        height: 259px;
+        height: 258.6px;
         padding: 10px 0;
 
         #map{
@@ -31,40 +31,40 @@ export let StyledMap = styled.div`
 
     @media (min-width: 576px) and (max-width: 767px){
         width: 50%;
-        height: 239px;
+        height: 258.6px;
         padding: 10px 0;
 
         #map{
             display: flex;
             padding-left: 3.5%;
             width: 90%;
-            height: 238px;
+            height: 258px;
         }
     }
     
     @media (min-width: 768px) and (max-width: 991px){
-        width: 75%;
-        height: 258.6px;
+        width: 60%;
+        height: 277.2px;
         padding: 10px 0;
 
         #map{
             display: flex;
             padding-left: 3.5%;
             width: 90%;
-            height: 257.6px;
+            height: 277px;
         }
     }
     
     @media (min-width: 992px) and (max-width: 1199px){
-        width: 75%;
-        height: 258.6px;
+        width: 63%;
+        height: 296.8px;
         padding: 10px 0;
 
         #map{
             display: flex;
             padding-left: 3.5%;
             width: 90%;
-            height: 258.6px;
+            height: 296px;
         }
     }
 `

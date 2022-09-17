@@ -11,7 +11,7 @@ body, html{
     overflow-x: hidden;
 
     @media (min-width: 320px) and (max-width: 575px){
-        font-size 22px;
+        font-size 20px;
     }
 
     @media (min-width: 576px) and (max-width: 767px){

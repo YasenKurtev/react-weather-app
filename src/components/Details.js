@@ -8,7 +8,7 @@ let Details = ({ dailyData, units }) => {
             <div className="details-card">
                 <div className="details-title">
                     <i class="fa-solid fa-temperature-half"></i>
-                    <p>Feels like</p>
+                    <p>Feels</p>
                 </div>
                 <p className="stats">{unitsConverter(dailyData.main.temp, units)}°</p>
             </div>

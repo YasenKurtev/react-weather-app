@@ -330,8 +330,7 @@ export let StyledHeader = styled.header`
 
     @media (min-width: 992px) and (max-width: 1199px){
         width: 100%;
-        padding: 0;
-        margin: 0;
+        padding: 10px 0;
         justify-content: space-between;
 
         
