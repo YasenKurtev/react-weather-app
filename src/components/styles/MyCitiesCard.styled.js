@@ -4,7 +4,7 @@ export let StyledMyCitiesCard = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 95%;
+    width: 385px;
     color: ${props => props.theme.textColor};
     background-color: ${props => props.theme.backgroundColor};
     border-radius: 10px;
@@ -22,16 +22,16 @@ export let StyledMyCitiesCard = styled.div`
     }
     
     .city-name{
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: 600;
     }
 
     .local-time i{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     .temp{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
 
@@ -52,7 +52,7 @@ export let StyledMyCitiesCard = styled.div`
     }
 
     .condition i{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     .buttons-container{
@@ -70,7 +70,7 @@ export let StyledMyCitiesCard = styled.div`
     
     .btn p{
         margin: 0;
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         font-weight: 600;
     }
 
@@ -79,7 +79,7 @@ export let StyledMyCitiesCard = styled.div`
     }
     
     .btn i{
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     
     .btn:hover{
@@ -89,24 +89,20 @@ export let StyledMyCitiesCard = styled.div`
     }
 
     @media (min-width: 320px) and (max-width: 575px){
-        
+        width: 250px;
     }
 
     @media (min-width: 576px) and (max-width: 767px){
-        
+        width: 277px;
     }
     
     @media (min-width: 768px) and (max-width: 991px){
-        .temp{
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
+        width: 304px;
     }
     
     @media (min-width: 992px) and (max-width: 1199px){
-        .temp{
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
+        width: 331px;
+
+        
     }
 `
