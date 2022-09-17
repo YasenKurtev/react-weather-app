@@ -9,7 +9,7 @@ export let StyledDailyCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 
     p{
         margin: 0;
@@ -42,21 +42,35 @@ export let StyledDailyCard = styled.div`
 
     @media (min-width: 320px) and (max-width: 575px){
         width: 70px;
-        gap: 10px;
-        padding: 7px 2px;
+        padding: 10px 0 5px 0;
+
+        .weather-info{
+            width: 85%;
+        }
     }
     
     @media (min-width: 576px) and (max-width: 767px){
         width: 90px;
-        gap: 10px;
-        padding: 7px 2px;
+        padding: 10px 0 6px 0;
+
+        .weather-info{
+            width: 85%;
+        }
     }
     
     @media (min-width: 768px) and (max-width: 991px){
-        padding: 10px 0;
+        padding: 10px 5px;
+
+        .weather-info{
+            width: 85%;
+        }
     }
     
     @media (min-width: 992px) and (max-width: 1199px){
-        padding: 10px 0;
+        padding: 10px 5px;
+
+        .weather-info{
+            width: 85%;
+        }
     }
 `

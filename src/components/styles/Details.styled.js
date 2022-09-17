@@ -25,7 +25,7 @@ i{
     text-align: center;
     padding: 2px;
     padding-top: 4px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .details-card{
@@ -37,7 +37,6 @@ i{
     display: flex;
     gap: 5px;
     justify-content: center;
-    padding-bottom: 8px;
 }
 
 @media (min-width: 320px) and (max-width: 575px){
