@@ -71,12 +71,12 @@ let Header = ({ props }) => {
                     <p>Units</p>
                     <div className="units-buttons-container">
                         <label>
-                            <input type="radio" name="units" value="small" checked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
+                            <input type="radio" name="units" aria-label="celsius" value="small" checked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
                             <p>C°</p>
                         </label>
 
                         <label>
-                            <input type="radio" name="units" value="big" checked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
+                            <input type="radio" name="units" aria-label="fahrenheit" value="big" checked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
                             <p>F°</p>
                         </label>
                     </div>

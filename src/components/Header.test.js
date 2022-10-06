@@ -23,3 +23,18 @@ test('Renders Header component', () => {
     let themeButtons = screen.getByText('Dark mode');
     expect(themeButtons).toBeInTheDocument();
 });
+
+test('units buttons functionality', () => {
+    render(<App><Header /></App>);
+
+    let units = localStorage.getItem('units');
+
+    let celsiusButton = screen.getByRole('radio', { name: 'celsius' });
+    let fahrenheitButton = screen.getByRole('radio', { name: 'fahrenheit' });
+
+    if (units === 'celsius') {
+        expect(celsiusButton.checked).toBe(true);
+    } else if (units === 'fahrenheit') {
+        expect(fahrenheitButton.checked).toBe(true);
+    }
+});
