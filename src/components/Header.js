@@ -52,7 +52,7 @@ let Header = ({ props }) => {
                         <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
                     </button>
                     <button className="location-cities-btn" onClick={() => setOpenModal(true)}>
-                        <i class="fa-solid fa-bars"></i> <p>My cities</p>
+                        <i className="fa-solid fa-bars"></i> <p>My cities</p>
                     </button>
                     <Modal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity} setData={props.setData} />
                 </div>
@@ -60,7 +60,7 @@ let Header = ({ props }) => {
             <form onSubmit={onSearchSubmit}>
                 <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
                 <button className="clear-btn" type="reset" onClick={onSearchReset}>
-                    <i class="fa-solid fa-x"></i>
+                    <i className="fa-solid fa-x"></i>
                 </button>
                 <button className="search-btn" type="submit">
                     <i className="fa-solid fa-magnifying-glass"></i>
