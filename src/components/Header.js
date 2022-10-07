@@ -59,10 +59,10 @@ let Header = ({ props }) => {
             </div>
             <form onSubmit={onSearchSubmit}>
                 <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
-                <button className="clear-btn" type="reset" onClick={onSearchReset}>
+                <button className="clear-btn" type="reset" aria-label="clear" onClick={onSearchReset}>
                     <i className="fa-solid fa-x"></i>
                 </button>
-                <button className="search-btn" type="submit">
+                <button className="search-btn" type="submit" aria-label="search">
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>

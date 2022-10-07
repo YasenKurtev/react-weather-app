@@ -1,5 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import Header from './Header.js';
+import TodayCard from './TodayCard.js';
+import Main from './Main.js'
 import App from '../App.js';
 import userEvent from '@testing-library/user-event';
 
@@ -60,3 +62,18 @@ describe('theme buttons functionality', () => {
         expect(localStorage.getItem('theme')).toBe('dark');
     });
 });
+
+test('clear button functionality', () => {
+    render(<App><Header /></App>);
+
+    fireEvent.change(screen.getByPlaceholderText('Search for a city...'), { target: { value: 'Plovdiv' } });
+    userEvent.click(screen.getByRole('button', { name: 'clear' }));
+    expect(screen.getByPlaceholderText('Search for a city...').value).toBe('');
+});
+
+test('search button functionality', () => {
+    render(<App><Header /></App>);
+
+    fireEvent.change(screen.getByPlaceholderText('Search for a city...'), { target: { value: 'Plovdiv' } });
+    expect(screen.getByPlaceholderText('Search for a city...').value).toBe('Plovdiv');
+})
