@@ -85,12 +85,12 @@ let Header = ({ props }) => {
                     <p>Dark mode</p>
                     <div className="theme-buttons-container">
                         <label>
-                            <input type="radio" name="theme" value="small" checked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
+                            <input type="radio" name="theme" aria-label="light" value="small" checked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
                             <i className="fa-solid fa-sun"></i>
                         </label>
 
                         <label>
-                            <input type="radio" name="theme" value="big" checked={props.theme === 'dark' ? true : false} onClick={() => props.changeTheme('dark')} />
+                            <input type="radio" name="theme" aria-label="dark" value="big" checked={props.theme === 'dark' ? true : false} onClick={() => props.changeTheme('dark')} />
                             <i className="fas fa-moon"></i>
                         </label>
                     </div>

@@ -41,5 +41,22 @@ describe('units buttons functionality', () => {
 
         expect(localStorage.getItem('units')).toBe('fahrenheit');
     });
-})
+});
 
+describe('theme buttons functionality', () => {
+    test('light button functionality', () => {
+        render(<App><Header /></App>);
+
+        userEvent.click(screen.getByRole('radio', { name: 'light' }));
+
+        expect(localStorage.getItem('theme')).toBe('light');
+    });
+
+    test('dark button functionality', () => {
+        render(<App><Header /></App>);
+
+        userEvent.click(screen.getByRole('radio', { name: 'dark' }));
+
+        expect(localStorage.getItem('theme')).toBe('dark');
+    });
+});
