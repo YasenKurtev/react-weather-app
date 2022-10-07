@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Header from './Header.js';
 import App from '../App.js';
+import userEvent from '@testing-library/user-event';
 
 test('Renders Header component', () => {
     render(<App><Header /></App>);
@@ -24,17 +25,21 @@ test('Renders Header component', () => {
     expect(themeButtons).toBeInTheDocument();
 });
 
-test('units buttons functionality', () => {
-    render(<App><Header /></App>);
+describe('units buttons functionality', () => {
+    test('celsius button functionality', () => {
+        render(<App><Header /></App>);
 
-    let units = localStorage.getItem('units');
+        userEvent.click(screen.getByRole('radio', { name: 'celsius' }));
 
-    let celsiusButton = screen.getByRole('radio', { name: 'celsius' });
-    let fahrenheitButton = screen.getByRole('radio', { name: 'fahrenheit' });
+        expect(localStorage.getItem('units')).toBe('celsius');
+    });
 
-    if (units === 'celsius') {
-        expect(celsiusButton.checked).toBe(true);
-    } else if (units === 'fahrenheit') {
-        expect(fahrenheitButton.checked).toBe(true);
-    }
-});
+    test('fahrenheit button functionality', () => {
+        render(<App><Header /></App>);
+
+        userEvent.click(screen.getByRole('radio', { name: 'fahrenheit' }));
+
+        expect(localStorage.getItem('units')).toBe('fahrenheit');
+    });
+})
+
