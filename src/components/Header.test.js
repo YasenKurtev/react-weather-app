@@ -1,7 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import Header from './Header.js';
-import TodayCard from './TodayCard.js';
-import Main from './Main.js'
 import App from '../App.js';
 import userEvent from '@testing-library/user-event';
 
@@ -76,4 +74,4 @@ test('search button functionality', () => {
 
     fireEvent.change(screen.getByPlaceholderText('Search for a city...'), { target: { value: 'Plovdiv' } });
     expect(screen.getByPlaceholderText('Search for a city...').value).toBe('Plovdiv');
-})
+});

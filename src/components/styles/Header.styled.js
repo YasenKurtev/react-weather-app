@@ -152,6 +152,7 @@ export let StyledHeader = styled.header`
     .theme-selector-container{
         display:flex;
         flex-direction: column;
+        align-items: center;
         gap: 5px;
     }
 
@@ -163,7 +164,8 @@ export let StyledHeader = styled.header`
 
     .theme-buttons-container{
         display:flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        gap: 10px;
     }
 
     /* HIDE RADIO */
