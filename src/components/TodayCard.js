@@ -37,7 +37,7 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                 </div>
                 : <div className="default-city-div">
                     <i class="fa-solid fa-hand-pointer"></i>
-                    <button className="default-city-btn" onClick={() => changeDefaultCity(dailyData.name)}><i>Set as default city</i></button>
+                    <p className="default-city-btn" onClick={() => changeDefaultCity(dailyData.name)}><i>Set as default city</i></p>
                 </div>}
         </StyledTodayCard>
     )

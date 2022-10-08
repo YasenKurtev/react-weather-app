@@ -51,9 +51,10 @@ img{
 
 .default-city-btn{
     border: 0;
+    margin: 0;
     background-color: transparent;
     cursor: pointer;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-weight: 600;
     color: ${props => props.theme.defaultCityColor};
 }
@@ -64,7 +65,7 @@ img{
 
 .default-city{
     margin: 0;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-weight: 600;
     color: ${props => props.theme.defaultCityColor};
 }
