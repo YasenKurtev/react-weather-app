@@ -36,7 +36,7 @@ export let StyledHeader = styled.header`
     }
 
     h1{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         margin: 20px 0;
     }
 
@@ -246,7 +246,7 @@ export let StyledHeader = styled.header`
         }
         .theme-buttons-container{
             display:flex;
-            gap: 5px;
+            gap: 10px;
         }
 
         .location-cities-container{

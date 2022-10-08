@@ -12,7 +12,7 @@ export let StyledMap = styled.div`
     }
 
     #map{
-        height: 327px;
+        height: 330px;
         border-radius: 10px;
     }
 
