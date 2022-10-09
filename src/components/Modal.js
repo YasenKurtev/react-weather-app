@@ -25,7 +25,6 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity, setData }) => {
                             </div>
                             : myCities.map((x, i) => <MyCitiesCard key={x} index={i} city={x} units={units} removeCity={removeCity} setData={setData} setOpenModal={setOpenModal}></MyCitiesCard>)}
                     </div>
-
                 </div>
             </div>
         </StyledModal>

@@ -2,6 +2,7 @@ import { StyledTodayCard } from "./styles/TodayCard.styled";
 import unitsConverter from "../utils/unitsConverter";
 import { dayIcons, nightIcons } from "../utils/images"
 import { useState } from "react";
+import ErrorModal from "./styles/ErrorModal";
 
 let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
     let [openModal, setOpenModal] = useState(false);
@@ -23,6 +24,7 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                     <i class="fa-solid fa-plus"></i>
                     <p>Add</p>
                 </div>}
+                <ErrorModal open={openModal} setOpenModal={setOpenModal}></ErrorModal>
             <div className="weather-info">
                 <h1>{dailyData.name}</h1>
                 <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>

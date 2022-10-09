@@ -1,11 +1,10 @@
-import MyCitiesCard from "./MyCitiesCard";
-import { StyledModal } from "./styles/Modal.styled"
+import { StyledErrorModal } from "./ErrorModal.styled";
 
-let ErrorModal = ({ open, setOpenModal, units, myCities, removeCity, setData }) => {
+let ErrorModal = ({ open, setOpenModal }) => {
 
     if (!open) return null;
     return (
-        <StyledModal>
+        <StyledErrorModal>
             <div className="overlay" onClick={() => setOpenModal(false)}>
                 <div className="modal-container" onClick={(e) => e.stopPropagation()}>
                     <p className="error-message"><i>Maximum amount of stored cities reached!</i></p>
@@ -15,7 +14,7 @@ let ErrorModal = ({ open, setOpenModal, units, myCities, removeCity, setData }) 
                     </button>
                 </div>
             </div>
-        </StyledModal>
+        </StyledErrorModal>
     )
 }
 
