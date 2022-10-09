@@ -47,7 +47,7 @@ export let StyledMyCitiesCard = styled.div`
         gap: 10px;
     }
 
-    .weather-info img{
+    .weather-info-container img{
         width: 1.7rem;
     }
 
