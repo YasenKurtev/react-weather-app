@@ -23,7 +23,7 @@ export let StyledMap = styled.div`
 
         #map{
             display: flex;
-            padding-left: 3.5%;
+            padding-left: 3.4%;
             width: 90%;
             height: 258px;
         }
@@ -36,7 +36,7 @@ export let StyledMap = styled.div`
 
         #map{
             display: flex;
-            padding-left: 3.5%;
+            padding-left: 3.4%;
             width: 90%;
             height: 258px;
         }
@@ -49,7 +49,7 @@ export let StyledMap = styled.div`
 
         #map{
             display: flex;
-            padding-left: 3.5%;
+            padding-left: 3.4%;
             width: 90%;
             height: 277px;
         }
@@ -62,7 +62,7 @@ export let StyledMap = styled.div`
 
         #map{
             display: flex;
-            padding-left: 3.5%;
+            padding-left: 3.4%;
             width: 90%;
             height: 296px;
         }
