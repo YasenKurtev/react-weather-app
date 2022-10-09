@@ -1,8 +1,10 @@
 import { StyledTodayCard } from "./styles/TodayCard.styled";
 import unitsConverter from "../utils/unitsConverter";
 import { dayIcons, nightIcons } from "../utils/images"
+import { useState } from "react";
 
 let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
+    let [openModal, setOpenModal] = useState(false);
 
     return (
         <StyledTodayCard>
@@ -17,7 +19,7 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                     <i class="fa-solid fa-trash"></i>
                     <p>Remove</p>
                 </div>
-                : <div className="add-button" onClick={() => addCity(dailyData.name)}>
+                : <div className="add-button" onClick={myCities.length < 3 ? () => addCity(dailyData.name) : () => setOpenModal(true)}>
                     <i class="fa-solid fa-plus"></i>
                     <p>Add</p>
                 </div>}
