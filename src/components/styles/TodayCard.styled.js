@@ -110,6 +110,10 @@ img{
     border-radius: 5px;
 }
 
+.error-cities-container{
+    margin: -3.5px;
+}
+
 @media (min-width: 320px) and (max-width: 575px){
     width: 100%;
     padding: 10px 0;
