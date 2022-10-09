@@ -18,39 +18,46 @@ export let StyledErrorModal = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
         width: 100%;
-        max-width: 13.5rem;
+        max-width: 21rem;
         padding: 10px;
         box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
         border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
-    p{
+    .message-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .message-container p i{
         margin: 0;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
-        color: ${props => props.theme.textColor};
-    }
-
-    i{
-        font-size: 0.9rem;
-        color: ${props => props.theme.iconColor};
+        color: #e74c3c;
     }
 
     .close-btn{
-        position: fixed;
-        right: 10px;
         background-color: transparent;
-        border: 0;
+        border: 3px solid #f9fafa;
+        border-radius: 10px;
+        padding: 2px 4px;
         cursor: pointer;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #f9fafa;
     }
 
     .close-btn i{
-        color: ${props => props.theme.iconColor};
+        color: #f9fafa;
     }
 
     .close-btn:hover{
         color: ${props => props.theme.selectedUnitsColor};
+        background-color: #e74c3c;
     }
 `

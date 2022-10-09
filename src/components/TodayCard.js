@@ -24,7 +24,9 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                     <i class="fa-solid fa-plus"></i>
                     <p>Add</p>
                 </div>}
+            <div>
                 <ErrorModal open={openModal} setOpenModal={setOpenModal}></ErrorModal>
+            </div>
             <div className="weather-info">
                 <h1>{dailyData.name}</h1>
                 <p className="temp">{unitsConverter(dailyData.main.temp, units)}°</p>
