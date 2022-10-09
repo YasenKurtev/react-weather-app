@@ -18,9 +18,9 @@ export let StyledErrorModal = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
         width: 100%;
-        max-width: 21rem;
+        max-width: 18.5rem;
         padding: 10px;
         box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
         border-radius: 10px;
@@ -31,7 +31,7 @@ export let StyledErrorModal = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 5px;
+        text-align: center;
     }
 
     .message-container p i{
@@ -41,9 +41,13 @@ export let StyledErrorModal = styled.div`
         color: #e74c3c;
     }
 
+    .error-message{
+        margin-top: -5px;
+    }
+
     .close-btn{
         background-color: transparent;
-        border: 3px solid #f9fafa;
+        border: 2px solid #f9fafa;
         border-radius: 10px;
         padding: 2px 4px;
         cursor: pointer;
@@ -57,7 +61,28 @@ export let StyledErrorModal = styled.div`
     }
 
     .close-btn:hover{
-        color: ${props => props.theme.selectedUnitsColor};
         background-color: #e74c3c;
+    }
+
+    @media (min-width: 320px) and (max-width: 575px){
+        .modal-container{
+            width: 80%;
+        }
+
+        .error-message{
+            margin-top: -10px;
+        }
+    }
+    
+    @media (min-width: 576px) and (max-width: 767px){
+        
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px){
+        
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px){
+        
     }
 `
