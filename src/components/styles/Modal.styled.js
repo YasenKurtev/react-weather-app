@@ -45,25 +45,26 @@ export let StyledModal = styled.div`
         color: ${props => props.theme.textColor};
     }
 
-    i{
+    .modal-title-container i{
         font-size: 0.9rem;
-        color: ${props => props.theme.iconColor};
+        color: ${props => props.theme.iconsColor};
     }
 
     .close-btn{
         position: fixed;
         right: 10px;
         background-color: transparent;
+        border-radius: 10px;
         border: 0;
         cursor: pointer;
     }
 
     .close-btn i{
-        color: ${props => props.theme.iconColor};
+        padding: 2px;
     }
 
     .close-btn:hover{
-        color: ${props => props.theme.selectedUnitsColor};
+        background-color: ${props => props.theme.selectedUnitsColor};
     }
 
     .myCities-cards-container{

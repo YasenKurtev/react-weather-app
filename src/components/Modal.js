@@ -11,7 +11,7 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity, setData }) => {
             <div className="overlay" onClick={() => setOpenModal(false)}>
                 <div className="modal-container" onClick={(e) => e.stopPropagation()}>
                     <div className="modal-title-container">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars" id="ico"></i>
                         <p className="title"><i>My Cities</i></p>
                         <button className="close-btn" onClick={() => setOpenModal(false)}>
                             <i class="fa-solid fa-x"></i>

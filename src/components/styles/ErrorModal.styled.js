@@ -20,7 +20,7 @@ export let StyledErrorModal = styled.div`
         align-items: center;
         gap: 15px;
         width: 100%;
-        max-width: 18.5rem;
+        max-width: 13.5rem;
         padding: 10px;
         box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
         border-radius: 10px;
@@ -65,10 +65,6 @@ export let StyledErrorModal = styled.div`
     }
 
     @media (min-width: 320px) and (max-width: 575px){
-        .modal-container{
-            width: 80%;
-        }
-
         .error-message{
             margin-top: -10px;
         }
