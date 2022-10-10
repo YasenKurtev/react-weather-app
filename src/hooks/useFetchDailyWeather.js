@@ -8,7 +8,7 @@ export default function useFetchDailyWeather(cityName, lat, lon) {
 
     useEffect(() => {
         if (cityName !== null) {
-            fetch(`${MAIN_URL}/weather?q=${cityName}&app=${WEATHER_ACCESS_KEY}`)
+            fetch(`${MAIN_URL}/weather?q=${cityName}&appid=${WEATHER_ACCESS_KEY}`)
                 .then(res => {
                     if (res.ok) {
                         setError(false);
