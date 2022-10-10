@@ -1,5 +1,5 @@
 /* OPEN WEATHER KEY */
-let WEATHER_ACCESS_KEY = "8ca8713a66b757b38dc415819a683352";
+let WEATHER_ACCESS_KEY = process.env.REACT_APP_API_KEY_APPID;
 
 /* OPEN WEATHER API */
 let MAIN_URL = `https://api.openweathermap.org/data/2.5`;
