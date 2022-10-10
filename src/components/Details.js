@@ -1,6 +1,6 @@
-import timeConverter from "../utils/timeConverter"
-import unitsConverter from "../utils/unitsConverter"
-import { StyledDetails } from "./styles/Details.styled"
+import timeConverter from "../utils/timeConverter";
+import unitsConverter from "../utils/unitsConverter";
+import { StyledDetails } from "./styles/Details.styled";
 
 let Details = ({ dailyData, units }) => {
     return (
@@ -58,4 +58,4 @@ let Details = ({ dailyData, units }) => {
     )
 }
 
-export default Details
+export default Details;

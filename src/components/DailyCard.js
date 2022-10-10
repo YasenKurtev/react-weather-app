@@ -1,13 +1,15 @@
-import unitsConverter from "../utils/unitsConverter"
-import { StyledDailyCard } from "./styles/DailyCard.styled"
-import { dayIcons, nightIcons } from "../utils/images"
+import unitsConverter from "../utils/unitsConverter";
+import { StyledDailyCard } from "./styles/DailyCard.styled";
+import { dayIcons, nightIcons } from "../utils/images";
 
 let DailyCard = ({ data, units, sunrise, sunset }) => {
 
     return (
         <StyledDailyCard>
+            {/* Extract time */}
             <p>{data.dt_txt.split(' ')[1].slice(0, 5)}</p>
             <div className="weather-info">
+                {/* Set day or night icon, depending on time */}
                 <img src={data.dt_txt.split(' ')[1].slice(0, 5).split(":")[0] < sunset.split(":")[0] + 1
                     && data.dt_txt.split(' ')[1].slice(0, 5).split(":")[0] > sunrise.split(":")[0]
                     ? dayIcons[data.weather[0].id]
@@ -20,4 +22,4 @@ let DailyCard = ({ data, units, sunrise, sunset }) => {
     )
 }
 
-export default DailyCard
+export default DailyCard;

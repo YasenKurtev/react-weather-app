@@ -3,9 +3,12 @@ import Modal from "./Modal";
 import { StyledHeader } from "./styles/Header.styled";
 
 let Header = ({ props }) => {
+    //Search input state
     let [searchInput, setSearchInput] = useState('');
+    //My Cities modal state
     let [openModal, setOpenModal] = useState(false);
 
+    //On city search submit, set search data to search input value and clear search input
     let onSearchSubmit = (e) => {
         e.preventDefault();
         if (searchInput.length !== 0) {
@@ -14,15 +17,18 @@ let Header = ({ props }) => {
         }
     }
 
+    //Clear search input
     let onSearchReset = (e) => {
         e.preventDefault();
         setSearchInput(state => state = '');
     }
 
+    //Set search input on every input change
     let onChangeHandler = (e) => {
         setSearchInput(state => state = e.target.value);
     }
 
+    //Get location
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -31,6 +37,7 @@ let Header = ({ props }) => {
         }
     }
 
+    //Set search data to location latitude and longitude
     function showPosition(position) {
         props.setData({ lat: position.coords.latitude, lon: position.coords.longitude });
     }
@@ -43,7 +50,6 @@ let Header = ({ props }) => {
         <>
             <Modal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity} setData={props.setData} />
             <StyledHeader>
-
                 <div className="first-container">
                     <div className="title-container">
                         <img src="/images/few-clouds.png" alt="logo"></img>
@@ -56,10 +62,8 @@ let Header = ({ props }) => {
                         <button className="location-cities-btn" onClick={() => setOpenModal(true)}>
                             <i className="fa-solid fa-bars"></i> <p>My cities</p>
                         </button>
-
                     </div>
                 </div>
-
                 <form onSubmit={onSearchSubmit}>
                     <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
                     <button className="clear-btn" type="reset" aria-label="clear" onClick={onSearchReset}>
@@ -77,7 +81,6 @@ let Header = ({ props }) => {
                                 <input type="radio" name="units" aria-label="celsius" value="small" defaultChecked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
                                 <p>C°</p>
                             </label>
-
                             <label>
                                 <input type="radio" name="units" aria-label="fahrenheit" value="big" defaultChecked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
                                 <p>F°</p>
@@ -101,8 +104,7 @@ let Header = ({ props }) => {
                 </div>
             </StyledHeader>
         </>
-
     )
 }
 
-export default Header
+export default Header;

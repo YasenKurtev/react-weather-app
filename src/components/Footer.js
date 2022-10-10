@@ -1,4 +1,4 @@
-import { StyledFooter } from "./styles/Footer.styled"
+import { StyledFooter } from "./styles/Footer.styled";
 
 let Footer = () => {
     return (
@@ -25,4 +25,4 @@ let Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;

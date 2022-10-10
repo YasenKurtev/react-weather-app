@@ -1,7 +1,6 @@
 import { StyledErrorModal } from "./styles/ErrorModal.styled";
 
 let ErrorModal = ({ open, setOpenModal }) => {
-
     if (!open) return null;
     return (
         <StyledErrorModal>

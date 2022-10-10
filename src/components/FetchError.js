@@ -1,4 +1,4 @@
-import { StyledFetchError } from "./styles/FetchError.styled"
+import { StyledFetchError } from "./styles/FetchError.styled";
 
 let FetchError = () => {
     return (
@@ -10,4 +10,4 @@ let FetchError = () => {
     )
 }
 
-export default FetchError
+export default FetchError;
