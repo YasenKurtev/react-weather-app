@@ -1,4 +1,4 @@
-import { StyledErrorModal } from "./ErrorModal.styled";
+import { StyledErrorModal } from "./styles/ErrorModal.styled";
 
 let ErrorModal = ({ open, setOpenModal }) => {
 

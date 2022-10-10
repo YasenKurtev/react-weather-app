@@ -12,6 +12,7 @@ import getLocalTime from "../utils/getLocalTime"
 import timeConverter from "../utils/timeConverter"
 import getLocalDate from "../utils/getLocalDate"
 import Loading from "./Loading"
+import FetchError from "./FetchError"
 
 let Main = ({ props }) => {
     let [defaultCity, changeDefaultCity] = useDefaultCity();
@@ -43,10 +44,7 @@ let Main = ({ props }) => {
     if (dailyError || weeklyError) {
         return (
             <StyledMain>
-                <div className="error-container">
-                    <i class="fa-solid fa-xmark"></i>
-                    <p className="error-message">Failed to fetch weather data, please try again!</p>
-                </div>
+                <FetchError></FetchError>
             </StyledMain>
         )
     }

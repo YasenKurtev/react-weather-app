@@ -2,7 +2,7 @@ import { StyledTodayCard } from "./styles/TodayCard.styled";
 import unitsConverter from "../utils/unitsConverter";
 import { dayIcons, nightIcons } from "../utils/images"
 import { useState } from "react";
-import ErrorModal from "./styles/ErrorModal";
+import ErrorModal from "./ErrorModal";
 
 let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
     let [openModal, setOpenModal] = useState(false);
