@@ -82,6 +82,10 @@ export let StyledModal = styled.div`
         gap: 10px;
     }
 
+    .empty-list-container i{
+        color: ${props => props.theme.iconsColor};
+    }
+
     .no-cities{
         font-size: 0.7rem;
         font-weight: 600;

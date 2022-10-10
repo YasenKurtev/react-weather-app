@@ -74,12 +74,12 @@ let Header = ({ props }) => {
                         <p>Units</p>
                         <div className="units-buttons-container">
                             <label>
-                                <input type="radio" name="units" aria-label="celsius" value="small" checked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
+                                <input type="radio" name="units" aria-label="celsius" value="small" defaultChecked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
                                 <p>C°</p>
                             </label>
 
                             <label>
-                                <input type="radio" name="units" aria-label="fahrenheit" value="big" checked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
+                                <input type="radio" name="units" aria-label="fahrenheit" value="big" defaultChecked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
                                 <p>F°</p>
                             </label>
                         </div>
@@ -88,12 +88,12 @@ let Header = ({ props }) => {
                         <p>Dark mode</p>
                         <div className="theme-buttons-container">
                             <label>
-                                <input type="radio" name="theme" aria-label="light" value="small" checked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
+                                <input type="radio" name="theme" aria-label="light" value="small" defaultChecked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
                                 <i className="fa-solid fa-sun"></i>
                             </label>
 
                             <label>
-                                <input type="radio" name="theme" aria-label="dark" value="big" checked={props.theme === 'dark' ? true : false} onClick={() => props.changeTheme('dark')} />
+                                <input type="radio" name="theme" aria-label="dark" value="big" defaultChecked={props.theme === 'dark' ? true : false} onClick={() => props.changeTheme('dark')} />
                                 <i className="fas fa-moon"></i>
                             </label>
                         </div>

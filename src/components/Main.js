@@ -1,7 +1,7 @@
 import { StyledMain } from "./styles/Main.styled"
 import TodayCard from "./TodayCard"
 import Map from "./Map"
-import MiniCard from "./WeeklyCard"
+import WeeklyCard from "./WeeklyCard"
 import Details from "./Details"
 import DailyCard from "./DailyCard"
 import { StyledLoading } from "./styles/Loading.styled"
@@ -83,8 +83,9 @@ let Main = ({ props }) => {
                     </div>
                 </div>
                 <div className="daily-container">
-                    {weeklyData.list.slice(1, 10).map(x =>
+                    {weeklyData.list.slice(1, 10).map((x, i) =>
                         <DailyCard
+                            key={i}
                             data={x}
                             units={props.units}
                             sunrise={timeConverter(dailyData.sys.sunrise, dailyData.timezone)}
@@ -101,11 +102,12 @@ let Main = ({ props }) => {
                     </div>
                 </div>
                 <div className="weekly-container">
-                    {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map(x =>
-                        <MiniCard
+                    {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map((x, i) =>
+                        <WeeklyCard
+                            key={i}
                             data={x}
                             units={props.units}>
-                        </MiniCard>)}
+                        </WeeklyCard>)}
                 </div>
             </section>
         </StyledMain>
