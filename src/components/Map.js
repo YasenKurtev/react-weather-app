@@ -2,7 +2,7 @@ import { StyledMap } from "./styles/Map.styled"
 import mapboxgl from "mapbox-gl";
 import { useRef, useEffect } from 'react';
 
-mapboxgl.accessToken = "pk.eyJ1IjoieWFzZW4xMCIsImEiOiJjbDdqbDFvMzIwdGNhM3ZycDhwMjYyZ2ZuIn0.flthnfiYxf8XRCrTEOVAbw"
+mapboxgl.accessToken = process.env.REACT_APP_MAP_KEY_APPID;
 
 let Map = ({ coordinates }) => {
 
