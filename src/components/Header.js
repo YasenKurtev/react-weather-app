@@ -52,7 +52,7 @@ let Header = ({ props }) => {
             <StyledHeader>
                 <div className="first-container">
                     <div className="title-container">
-                        <img src="/images/few-clouds.png" alt="logo"></img>
+                        <img src="images/few-clouds.png" alt="logo"></img>
                         <h1>WeatherApp</h1>
                     </div>
                     <div className="location-cities-container">
