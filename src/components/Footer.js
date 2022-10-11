@@ -11,6 +11,9 @@ let Footer = () => {
                         <a className="social-link" href="https://github.com/YasenKurtev"><i className="fa-brands fa-github"></i></a>
                     </li>
                     <li className="social-item">
+                        <a className="social-link" href="https://www.linkedin.com/in/yasen-kurtev-11b71b252/"><i className="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li className="social-item">
                         <a className="social-link" href="mailto:yasenkurtev1@gmail.com"><i className="fa-solid fa-envelope"></i></a>
                     </li>
                     <li className="social-item">

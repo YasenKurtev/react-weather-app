@@ -25,15 +25,19 @@ export let StyledFooter = styled.footer`
     ul{
         list-style: none;
         display: flex;
-        justify-content: space-between;
-        gap: 10px;
+        gap: 5px;
         margin: 0;
         padding: 0;
     }
 
+    .social-item a{
+        text-align: center;
+    }
+
     .social-item i{
         font-size: 1.2rem;
-        padding: 5px;
+        width: 1.2rem;
+        padding: 6px;
         color: ${props => props.theme.iconsColor};
     }
 
@@ -47,6 +51,7 @@ export let StyledFooter = styled.footer`
         align-items: center;
         justify-content: space-between;
         gap: 10px;
+        padding-left: 7px;
     }
 
     @media (min-width: 320px) and (max-width: 575px){

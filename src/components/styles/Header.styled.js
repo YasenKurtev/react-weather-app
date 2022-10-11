@@ -226,6 +226,7 @@ export let StyledHeader = styled.header`
             flex-direction: column;
             width: 90%;
         }
+
         .second-container{
             width: 88%;
         }
@@ -233,17 +234,20 @@ export let StyledHeader = styled.header`
         form{
             width: 90%;
         }
+
         .units-selector-container{
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 5px;
         }
+
         .theme-selector-container{
             display: flex;
             flex-direction: row;
             align-items: center;
         }
+        
         .theme-buttons-container{
             display:flex;
             gap: 10px;
