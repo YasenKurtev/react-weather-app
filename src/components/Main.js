@@ -15,22 +15,27 @@ import Loading from "./Loading"
 import FetchError from "./FetchError"
 
 let Main = ({ props }) => {
+    //Get default city
     let [defaultCity, changeDefaultCity] = useDefaultCity();
     let city = defaultCity;
     let coords = { lat: 0, lon: 0 };
 
+    //If there is searched input, set search criteria to the searched input
     if (typeof props.data === 'string') {
         city = props.data;
     }
 
+    //If there is searched location, set search criteria to the searched coordinates
     if (typeof props.data === 'object') {
         coords = props.data;
         city = null;
     }
 
+    //Fetch daily and weekly weather data, depending on search criteria
     let [dailyData, isLoadingDaily, dailyError] = useFetchDailyWeather(city, coords.lat, coords.lon);
     let [weeklyData, isLoadingWeekly, weeklyError] = useFetchWeeklyWeather(city, coords.lat, coords.lon);
 
+    //Display loading spinner
     if (isLoadingDaily || isLoadingWeekly) {
         return (
             <StyledMain>
@@ -41,6 +46,7 @@ let Main = ({ props }) => {
         )
     }
 
+    //Display error message
     if (dailyError || weeklyError) {
         return (
             <StyledMain>
@@ -49,6 +55,7 @@ let Main = ({ props }) => {
         )
     }
 
+    //Get searched city local time and date
     let localTime = getLocalTime(dailyData.timezone);
     let localDate = getLocalDate(dailyData.timezone);
 
@@ -76,10 +83,11 @@ let Main = ({ props }) => {
                 <div className="daily-forecast-container">
                     <p className="daily-title">24-hour forecast</p>
                     <div className="daily-time-container">
-                        <i class="fa-regular fa-clock"></i>
+                        <i className="fa-regular fa-clock"></i>
                         <p className="daily-time"><i>Local time in {dailyData.name}:</i> {localTime}</p>
                     </div>
                 </div>
+                {/* Render daily weather for different times of the day */}
                 <div className="daily-container">
                     {weeklyData.list.slice(1, 10).map((x, i) =>
                         <DailyCard
@@ -95,10 +103,11 @@ let Main = ({ props }) => {
                 <div className="weekly-forecast-container">
                     <p className="weekly-title">5-day forecast</p>
                     <div className="weekly-day-container">
-                        <i class="fa-regular fa-calendar"></i>
+                        <i className="fa-regular fa-calendar"></i>
                         <p className="weekly-day"><i>Current date in {dailyData.name}:</i> {localDate}</p>
                     </div>
                 </div>
+                {/* Render weekly weather for different days of the week */}
                 <div className="weekly-container">
                     {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map((x, i) =>
                         <WeeklyCard
@@ -112,4 +121,4 @@ let Main = ({ props }) => {
     )
 }
 
-export default Main
+export default Main;

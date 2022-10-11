@@ -7,4 +7,4 @@ let LoadingMini = () => {
     )
 }
 
-export default LoadingMini
+export default LoadingMini;

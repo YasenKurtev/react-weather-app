@@ -5,7 +5,7 @@ import { StyledHeader } from "./styles/Header.styled";
 let Header = ({ props }) => {
     //Search input state
     let [searchInput, setSearchInput] = useState('');
-    //My Cities modal state
+    //My cities modal state
     let [openModal, setOpenModal] = useState(false);
 
     //On city search submit, set search data to search input value and clear search input

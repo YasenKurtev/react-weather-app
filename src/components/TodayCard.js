@@ -5,23 +5,26 @@ import { useState } from "react";
 import ErrorModal from "./ErrorModal";
 
 let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
+    //My cities limit error modal state
     let [openModal, setOpenModal] = useState(false);
 
     return (
         <StyledTodayCard>
+            {/* Set day or night icon, depending on time */}
             <img src={localTime.split(":")[0] < sunset.split(":")[0] + 1
                 && localTime.split(":")[0] > sunrise.split(":")[0]
                 ? dayIcons[dailyData.weather[0].id]
                 : nightIcons[dailyData.weather[0].id]}
                 alt="logo">
             </img>
+            {/* Set add or remove button, depending on if the current city is in the My cities list */}
             {myCities.includes(dailyData.name)
                 ? <div className="add-button" onClick={() => removeCity(dailyData.name)}>
-                    <i class="fa-solid fa-trash"></i>
+                    <i className="fa-solid fa-trash"></i>
                     <p>Remove</p>
                 </div>
                 : <div className="add-button" onClick={myCities.length < 3 ? () => addCity(dailyData.name) : () => setOpenModal(true)}>
-                    <i class="fa-solid fa-plus"></i>
+                    <i className="fa-solid fa-plus"></i>
                     <p>Add</p>
                 </div>}
             <div className="error-cities-container">
@@ -36,17 +39,18 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                 <p>L: {unitsConverter(dailyData.main.temp_min, units)}°</p>
                 <p>H: {unitsConverter(dailyData.main.temp_max, units)}°</p>
             </div>
+            {/* Set default city button, depending on if the current city is the default city */}
             {defaultCity === dailyData.name
                 ? <div className="default-city-div">
                     <i className="fa-solid fa-house"></i>
                     <p className="default-city"><i>This is your default city</i></p>
                 </div>
                 : <div className="default-city-div">
-                    <i class="fa-solid fa-hand-pointer"></i>
+                    <i className="fa-solid fa-hand-pointer"></i>
                     <p className="default-city-btn" onClick={() => changeDefaultCity(dailyData.name)}><i>Set as default city</i></p>
                 </div>}
         </StyledTodayCard>
     )
 }
 
-export default TodayCard
+export default TodayCard;

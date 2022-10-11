@@ -4,6 +4,7 @@ import { StyledWeeklyCard } from "./styles/WeeklyCard.styled"
 import { dayIcons } from "../utils/images"
 
 let WeeklyCard = ({ data, units }) => {
+    //Get day of week
     let currentDate = new Date(`${data.dt_txt}`);
     let dayOfWeek = days[currentDate.getDay() - 1];
 
@@ -18,4 +19,4 @@ let WeeklyCard = ({ data, units }) => {
     )
 }
 
-export default WeeklyCard
+export default WeeklyCard;

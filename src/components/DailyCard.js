@@ -6,7 +6,7 @@ let DailyCard = ({ data, units, sunrise, sunset }) => {
 
     return (
         <StyledDailyCard>
-            {/* Extract time */}
+            {/* Extract time of day */}
             <p>{data.dt_txt.split(' ')[1].slice(0, 5)}</p>
             <div className="weather-info">
                 {/* Set day or night icon, depending on time */}

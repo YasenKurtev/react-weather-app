@@ -6,6 +6,7 @@ mapboxgl.accessToken = "pk.eyJ1IjoieWFzZW4xMCIsImEiOiJjbDdqbDFvMzIwdGNhM3ZycDhwM
 
 let Map = ({ coordinates }) => {
 
+    //Initialize map for current city
     let script = document.createElement('script');
     script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB_RAPuOtRKWJy2mC4Za7tn-gtzlXAjJro&callback=initMap";
     script.async = true;
@@ -14,7 +15,7 @@ let Map = ({ coordinates }) => {
     let coords = { lng: coordinates.lon, lat: coordinates.lat };
 
     useEffect(() => {
-        if (map.current) return; // initialize map only once
+        if (map.current) return; //Initialize map only once
         map.current = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
@@ -30,4 +31,4 @@ let Map = ({ coordinates }) => {
     )
 }
 
-export default Map
+export default Map;
