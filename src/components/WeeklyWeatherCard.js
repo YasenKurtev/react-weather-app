@@ -6,7 +6,7 @@ import { dayIcons } from "../utils/images"
 let WeeklyWeatherCard = ({ data, units }) => {
     //Get day of week
     let currentDate = new Date(`${data.dt_txt}`);
-    let dayOfWeek = days[currentDate.getDay() - 1];
+    let dayOfWeek = days[currentDate.getDay()];
 
     return (
         <StyledWeeklyWeatherCard>
