@@ -17,6 +17,13 @@ export let StyledMain = styled.main`
         padding-top:20px;
         display: flex;
         gap: 10px;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-x: scroll; 
+    }
+
+    .weekly-container::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
     }
 
     .weekly-forecast-container{
@@ -49,6 +56,13 @@ export let StyledMain = styled.main`
         padding-top:20px;
         display: flex;
         gap: 10px;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-x: scroll; 
+    }
+
+    .daily-container::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
     }
 
     .daily-forecast-container{
@@ -129,7 +143,6 @@ export let StyledMain = styled.main`
             padding-top:15px;
             display: flex;
             gap: 10px;
-            overflow: scroll;
         }
 
         .daily-container p:nth-child(1){
@@ -168,14 +181,6 @@ export let StyledMain = styled.main`
     }
 
     @media (min-width: 576px) and (max-width: 767px){
-        .daily-container{
-            overflow: scroll;
-        }
-
-        .weekly-container{
-            overflow: scroll;
-        }
-
         .daily-container p:nth-child(1){
             width: 100px;
         }
