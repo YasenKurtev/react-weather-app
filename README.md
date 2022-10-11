@@ -46,8 +46,36 @@ REACT_APP_MAP_KEY_APPID='your-Mapbox-key'
 ```
 
 ## Screenshots
+#### Dark mode
+<img src="screenshots/dark-mode.png" alt="dark-mode-screenshot">
 
-![image](https://user-images.githubusercontent.com/83857426/195072374-742aafd7-fb8e-4025-a1b9-98dca6b4a440.png)
+#### Light mode
+<img src="screenshots/light-mode.png" alt="light-mode-screenshot">
+
+#### My cities list
+<img src="screenshots/my-cities-list-view.png" alt="light-mode-screenshot">
+
+#### Mobile view
+<p float="left">
+  <img src="screenshots/mobile-view-1.png" alt="light-mode-screenshot" width="33%">
+  <img src="screenshots/mobile-view-2.png" alt="light-mode-screenshot" width="33%">
+  <img src="screenshots/mobile-view-3.png" alt="light-mode-screenshot" width="33%">
+</p>
+
+#### Loading view, Fetch Error view, My cities loading view, Max stored cities view
+<p float="left">
+  <img src="screenshots/loading-view.png" alt="light-mode-screenshot" width="49.5%">
+  <img src="screenshots/error-view.png" alt="light-mode-screenshot" width="49.5%">
+</p>
+<p float="left">
+  <img src="screenshots/my-cities-loading-view.png" alt="light-mode-screenshot" width="49.5%">
+  <img src="screenshots/max-cities-error-view.png" alt="light-mode-screenshot" width="49.5%">
+</p>
+
+
+
+
+
 
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
