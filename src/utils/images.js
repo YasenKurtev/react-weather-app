@@ -1,3 +1,5 @@
+//Day and night icons with weather codes returned from the weather API
+
 export let dayIcons = {
     800: "/images/sunny.png",
     801: "/images/few-clouds.png",

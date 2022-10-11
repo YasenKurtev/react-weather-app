@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from "./Modal";
+import MyCitiesModal from "./MyCitiesModal";
 import { StyledHeader } from "./styles/Header.styled";
 
 let Header = ({ props }) => {
@@ -48,7 +48,7 @@ let Header = ({ props }) => {
 
     return (
         <>
-            <Modal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity} setData={props.setData} />
+            <MyCitiesModal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity} setData={props.setData} />
             <StyledHeader>
                 <div className="first-container">
                     <div className="title-container">

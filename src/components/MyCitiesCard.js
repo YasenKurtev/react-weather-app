@@ -3,9 +3,7 @@ import getLocalTime from "../utils/getLocalTime";
 import { dayIcons, nightIcons } from "../utils/images"
 import timeConverter from "../utils/timeConverter";
 import unitsConverter from "../utils/unitsConverter";
-import Loading from "./Loading";
 import LoadingMini from "./LoadingMini";
-import { StyledLoading } from "./styles/Loading.styled";
 import { StyledLoadingMini } from "./styles/LoadingMini.styled";
 import { StyledMyCitiesCard } from "./styles/MyCitiesCard.styled"
 

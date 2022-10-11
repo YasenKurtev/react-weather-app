@@ -11,9 +11,9 @@ export let StyledLoadingMini = styled.div`
         display: inline-block;
         width: 80px;
         height: 80px;
-        }
+    }
         
-        .lds-dual-ring:after {
+    .lds-dual-ring:after {
         content: " ";
         display: block;
         width: 50px;
@@ -23,8 +23,9 @@ export let StyledLoadingMini = styled.div`
         border: 6px solid ${props => props.theme.textColor};
         border-color: ${props => props.theme.textColor} transparent ${props => props.theme.textColor} transparent;
         animation: lds-dual-ring 1.2s linear infinite;
-        }
-        @keyframes lds-dual-ring {
+    }
+
+    @keyframes lds-dual-ring {
         0% {
             transform: rotate(0deg);
         }

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export let StyledModal = styled.div`
+export let StyledMyCitiesModal = styled.div`
     .overlay{
         position: fixed;
         left: 0;

@@ -1,9 +1,9 @@
 import { StyledMain } from "./styles/Main.styled"
-import TodayCard from "./TodayCard"
+import TodayWeatherCard from "./TodayWeatherCard"
 import Map from "./Map"
-import WeeklyCard from "./WeeklyCard"
-import Details from "./Details"
-import DailyCard from "./DailyCard"
+import WeeklyWeatherCard from "./WeeklyWeatherCard"
+import WeatherDetailsCard from "./WeatherDetailsCard"
+import HourlyWeatherCard from "./HourlyWeatherCard"
 import { StyledLoading } from "./styles/Loading.styled"
 import useDefaultCity from '../hooks/useDefaultCityHook';
 import useFetchDailyWeather from "../hooks/useFetchDailyWeather"
@@ -62,7 +62,7 @@ let Main = ({ props }) => {
     return (
         <StyledMain>
             <section className="today-map">
-                <TodayCard
+                <TodayWeatherCard
                     dailyData={dailyData}
                     defaultCity={defaultCity}
                     changeDefaultCity={changeDefaultCity}
@@ -73,11 +73,11 @@ let Main = ({ props }) => {
                     myCities={props.myCities}
                     addCity={props.addCity}
                     removeCity={props.removeCity}>
-                </TodayCard>
+                </TodayWeatherCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
             <section className="weather-details">
-                <Details dailyData={dailyData} units={props.units}></Details>
+                <WeatherDetailsCard dailyData={dailyData} units={props.units}></WeatherDetailsCard>
             </section>
             <section className="daily-forecast">
                 <div className="daily-forecast-container">
@@ -90,13 +90,13 @@ let Main = ({ props }) => {
                 {/* Render daily weather for different times of the day */}
                 <div className="daily-container">
                     {weeklyData.list.slice(1, 10).map((x, i) =>
-                        <DailyCard
+                        <HourlyWeatherCard
                             key={i}
                             data={x}
                             units={props.units}
                             sunrise={timeConverter(dailyData.sys.sunrise, dailyData.timezone)}
                             sunset={timeConverter(dailyData.sys.sunset, dailyData.timezone)}>
-                        </DailyCard>)}
+                        </HourlyWeatherCard>)}
                 </div>
             </section>
             <section className="weekly-forecast">
@@ -110,11 +110,11 @@ let Main = ({ props }) => {
                 {/* Render weekly weather for different days of the week */}
                 <div className="weekly-container">
                     {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "12").map((x, i) =>
-                        <WeeklyCard
+                        <WeeklyWeatherCard
                             key={i}
                             data={x}
                             units={props.units}>
-                        </WeeklyCard>)}
+                        </WeeklyWeatherCard>)}
                 </div>
             </section>
         </StyledMain>

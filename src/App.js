@@ -12,9 +12,13 @@ import useUnits from './hooks/useUnitsHook';
 import useMyCities from './hooks/useMyCitiesHook';
 
 function App() {
+    //Search data state
     let [data, setData] = useState();
+    //Get theme
     let [theme, changeTheme] = useTheme();
+    //Get units
     let [units, changeUnits] = useUnits();
+    //Get My cities
     let [myCities, addCity, removeCity] = useMyCities();
 
     return (

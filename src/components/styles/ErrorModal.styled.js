@@ -63,22 +63,4 @@ export let StyledErrorModal = styled.div`
     .close-btn:hover{
         background-color: #e74c3c;
     }
-
-    @media (min-width: 320px) and (max-width: 575px){
-        .error-message{
-            margin-top: -10px;
-        }
-    }
-    
-    @media (min-width: 576px) and (max-width: 767px){
-        
-    }
-    
-    @media (min-width: 768px) and (max-width: 991px){
-        
-    }
-    
-    @media (min-width: 992px) and (max-width: 1199px){
-        
-    }
 `

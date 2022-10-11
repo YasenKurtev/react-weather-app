@@ -1,15 +1,15 @@
-import { StyledTodayCard } from "./styles/TodayCard.styled";
+import { StyledTodayWeatherCard } from "./styles/TodayWeatherCard.styled";
 import unitsConverter from "../utils/unitsConverter";
 import { dayIcons, nightIcons } from "../utils/images"
 import { useState } from "react";
 import ErrorModal from "./ErrorModal";
 
-let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
+let TodayWeatherCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
     //My cities limit error modal state
     let [openModal, setOpenModal] = useState(false);
 
     return (
-        <StyledTodayCard>
+        <StyledTodayWeatherCard>
             {/* Set day or night icon, depending on time */}
             <img src={localTime.split(":")[0] < sunset.split(":")[0] + 1
                 && localTime.split(":")[0] > sunrise.split(":")[0]
@@ -49,8 +49,8 @@ let TodayCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, 
                     <i className="fa-solid fa-hand-pointer"></i>
                     <p className="default-city-btn" onClick={() => changeDefaultCity(dailyData.name)}><i>Set as default city</i></p>
                 </div>}
-        </StyledTodayCard>
+        </StyledTodayWeatherCard>
     )
 }
 
-export default TodayCard;
+export default TodayWeatherCard;

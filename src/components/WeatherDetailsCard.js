@@ -1,10 +1,10 @@
 import timeConverter from "../utils/timeConverter";
 import unitsConverter from "../utils/unitsConverter";
-import { StyledDetails } from "./styles/Details.styled";
+import { StyledWeatherDetailsCard } from "./styles/WeatherDetailsCard.styled";
 
-let Details = ({ dailyData, units }) => {
+let WeatherDetailsCard = ({ dailyData, units }) => {
     return (
-        <StyledDetails>
+        <StyledWeatherDetailsCard>
             <div className="details-card">
                 <div className="details-title">
                     <i className="fa-solid fa-temperature-half"></i>
@@ -54,8 +54,8 @@ let Details = ({ dailyData, units }) => {
                 </div>
                 <p className="stats">{timeConverter(dailyData.sys.sunset, dailyData.timezone)}</p>
             </div>
-        </StyledDetails>
+        </StyledWeatherDetailsCard>
     )
 }
 
-export default Details;
+export default WeatherDetailsCard;

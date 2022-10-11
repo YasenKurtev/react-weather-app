@@ -102,7 +102,5 @@ export let StyledMyCitiesCard = styled.div`
     
     @media (min-width: 992px) and (max-width: 1199px){
         width: 331px;
-
-        
     }
 `

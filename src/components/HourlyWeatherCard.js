@@ -1,11 +1,11 @@
 import unitsConverter from "../utils/unitsConverter";
-import { StyledDailyCard } from "./styles/DailyCard.styled";
 import { dayIcons, nightIcons } from "../utils/images";
+import { StyledHourlyWeatherCard } from "./styles/HourlyWeatherCard.styled";
 
-let DailyCard = ({ data, units, sunrise, sunset }) => {
+let HourlyWeatherCard = ({ data, units, sunrise, sunset }) => {
 
     return (
-        <StyledDailyCard>
+        <StyledHourlyWeatherCard>
             {/* Extract time of day */}
             <p>{data.dt_txt.split(' ')[1].slice(0, 5)}</p>
             <div className="weather-info">
@@ -18,8 +18,8 @@ let DailyCard = ({ data, units, sunrise, sunset }) => {
                 </img>
                 <p>{unitsConverter(data.main.temp, units)}°</p>
             </div>
-        </StyledDailyCard>
+        </StyledHourlyWeatherCard>
     )
 }
 
-export default DailyCard;
+export default HourlyWeatherCard;

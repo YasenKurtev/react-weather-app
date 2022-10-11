@@ -1,13 +1,11 @@
-import { useEffect } from "react";
-import useMyCities from "../hooks/useMyCitiesHook";
 import MyCitiesCard from "./MyCitiesCard";
-import { StyledModal } from "./styles/Modal.styled"
+import { StyledMyCitiesModal } from "./styles/MyCitiesModal.styled"
 
-let Modal = ({ open, setOpenModal, units, myCities, removeCity, setData }) => {
+let MyCitiesModal = ({ open, setOpenModal, units, myCities, removeCity, setData }) => {
     //Show or hide modal
     if (!open) return null;
     return (
-        <StyledModal>
+        <StyledMyCitiesModal>
             <div className="overlay" onClick={() => setOpenModal(false)}>
                 <div className="modal-container" onClick={(e) => e.stopPropagation()}>
                     <div className="modal-title-container">
@@ -28,8 +26,8 @@ let Modal = ({ open, setOpenModal, units, myCities, removeCity, setData }) => {
                     </div>
                 </div>
             </div>
-        </StyledModal>
+        </StyledMyCitiesModal>
     )
 }
 
-export default Modal;
+export default MyCitiesModal;

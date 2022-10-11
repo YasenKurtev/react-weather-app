@@ -102,7 +102,6 @@ export let StyledMain = styled.main`
 
     .error-container i{
         font-size: 70px;
-
     }
 
     @media (min-width: 320px) and (max-width: 575px){
@@ -216,10 +215,4 @@ export let StyledMain = styled.main`
             align-items: center;
         }
     }
-
-    @media (min-width: 768px) and (max-width: 991px){
-    }
-
-    @media (min-width: 992px) and (max-width: 1199px){
-    }
-    `
+`

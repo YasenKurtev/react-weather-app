@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export let StyledDailyCard = styled.div`
+export let StyledHourlyWeatherCard = styled.div`
     color: ${props => props.theme.textColor};
     width: 12%;
     background-color: ${props => props.theme.backgroundColor};

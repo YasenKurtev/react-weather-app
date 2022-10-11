@@ -282,8 +282,6 @@ export let StyledHeader = styled.header`
             padding-top: 10px;
         }
 
-        
-
         form{
             width: 40%;
         }
@@ -294,7 +292,6 @@ export let StyledHeader = styled.header`
             align-items: center;
             justify-content: space-around;
         }
-
     }
 
     @media (min-width: 768px) and (max-width: 991px){
@@ -316,8 +313,6 @@ export let StyledHeader = styled.header`
             gap:10px;
         }
 
-        
-
         form{
             width: 30%;
         }
@@ -334,12 +329,6 @@ export let StyledHeader = styled.header`
         width: 100%;
         padding: 10px 0;
         justify-content: space-between;
-
-        
-
-        
-
-        
 
         .first-container{
             justify-content: space-around;

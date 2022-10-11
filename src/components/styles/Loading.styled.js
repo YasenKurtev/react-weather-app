@@ -19,6 +19,7 @@ export let StyledLoading = styled.div`
         width: 2.7rem;
         height: 2.7rem;
     }
+
     .lds-dual-ring:after {
         content: " ";
         display: block;
@@ -30,15 +31,13 @@ export let StyledLoading = styled.div`
         border-color: ${props => props.theme.textColor} transparent ${props => props.theme.textColor} transparent;
         animation: lds-dual-ring 1.2s linear infinite;
     }
+
     @keyframes lds-dual-ring {
         0% {
-        transform: rotate(0deg);
+            transform: rotate(0deg);
         }
         100% {
-        transform: rotate(360deg);
+            transform: rotate(360deg);
         }
     }
-
-    
-}
 `

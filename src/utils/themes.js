@@ -1,3 +1,5 @@
+//Light and dark theme colors
+
 export let themeLight = {
     backgroundColor: 'rgb(255, 255, 255, 0.3)',
     textColor: '#2c3e50',
@@ -21,5 +23,3 @@ export let themeDark = {
     unitsColor: '#f9fafa',
     selectedUnitsColor: 'rgb( 133, 89, 136 )'
 }
-
-//231, 90, 90
