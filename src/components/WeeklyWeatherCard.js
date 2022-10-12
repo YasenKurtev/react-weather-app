@@ -9,7 +9,20 @@ let WeeklyWeatherCard = ({ data, units }) => {
 
     return (
         <StyledWeeklyWeatherCard>
-            <p className="day-of-week">{days[currentDate.getDay()]}</p>
+            <p className="day-of-week">
+                {currentDate.getDay() === 0
+                    ? 'Monday'
+                    : currentDate.getDay() === 1
+                        ? 'Tuesday'
+                        : currentDate.getDay() === 2
+                            ? 'Wednesday'
+                            : currentDate.getDay() === 3
+                                ? 'Thursday'
+                                : currentDate.getDay() === 4
+                                    ? 'Friday'
+                                    : currentDate.getDay() === 5
+                                        ? 'Saturday'
+                                        : 'Sunday'}</p>
             <div className="weather-info">
                 <img src={dayIcons[data.weather[0].id]} alt="logo"></img>
                 <p className="temp">{unitsConverter(data.main.temp, units)}°</p>
