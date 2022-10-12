@@ -58,9 +58,9 @@ REACT_APP_MAP_KEY_APPID='your-Mapbox-key'
 
 #### Mobile view
 <p float="left">
-  <img src="screenshots/mobile-view-1.png" alt="light-mode-screenshot" width="33%">
-  <img src="screenshots/mobile-view-2.png" alt="light-mode-screenshot" width="33%">
-  <img src="screenshots/mobile-view-3.png" alt="light-mode-screenshot" width="33%">
+  <img src="screenshots/mobile-view-1.png" alt="light-mode-screenshot" width="32.8%">
+  <img src="screenshots/mobile-view-2.png" alt="light-mode-screenshot" width="32.8%">
+  <img src="screenshots/mobile-view-3.png" alt="light-mode-screenshot" width="32.8%">
 </p>
 
 #### Loading view, Fetch error view, My cities loading view, Max stored cities error view
