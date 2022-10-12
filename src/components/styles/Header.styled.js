@@ -74,7 +74,7 @@ export let StyledHeader = styled.header`
     form{
         display: flex;
         width: 30%;
-        height: 2rem;
+        height: 1.3rem;
     }
     
     input[type=text]{
