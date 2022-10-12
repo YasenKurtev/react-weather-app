@@ -17,7 +17,9 @@ export let StyledWeeklyWeatherCard = styled.div`
     }
 
     .day{
+        position: relative;
         font-size: 0.8rem;
+        z-index: 1;
     }
 
     .temp{
