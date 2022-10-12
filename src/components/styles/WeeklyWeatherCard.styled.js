@@ -40,8 +40,8 @@ export let StyledWeeklyWeatherCard = styled.div`
     }
 
     @media (min-width: 320px) and (max-width: 575px){
-        flex-direction: row;
-        justify-content: right;
+        flex-direction: column;
+        justify-content: space-between;
         width: 95%;
         padding: 5px;
         padding-left: 10px;

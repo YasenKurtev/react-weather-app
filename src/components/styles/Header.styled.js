@@ -78,10 +78,9 @@ export let StyledHeader = styled.header`
     
     input[type=text]{
         -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        -webkit-border-radius:0;
         width: 100%;
-        height: 1rem;
+        height: 2rem;
         font-size: 0.6rem;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -95,6 +94,7 @@ export let StyledHeader = styled.header`
     }
 
     .clear-btn{
+        -webkit-appearance: none;
         cursor: pointer;
         background-color: white;
         border: 0;
@@ -108,6 +108,7 @@ export let StyledHeader = styled.header`
     }
 
     .search-btn{
+        -webkit-appearance: none;
         cursor: pointer;
         background-color: white;
         border: 0;
