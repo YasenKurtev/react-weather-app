@@ -18,7 +18,7 @@ export let StyledWeeklyWeatherCard = styled.div`
         font-size: 1rem;
     }
 
-    span{
+    .day-of-week{
         margin: 0;
         text-align: center;
         font-weight: 600;
