@@ -15,10 +15,14 @@ export let StyledWeeklyWeatherCard = styled.div`
         margin: 0;
         text-align: center;
         font-weight: 600;
+        font-size: 1rem;
     }
 
-    .temp{
-        font-size: 1rem;
+    span{
+        margin: 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.8rem;
     }
 
     img{
