@@ -74,13 +74,13 @@ export let StyledHeader = styled.header`
     form{
         display: flex;
         width: 30%;
+        height: 2rem;
     }
     
     input[type=text]{
         -webkit-appearance: none;
         -webkit-border-radius:0;
         width: 100%;
-        height: 2rem;
         font-size: 0.6rem;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
