@@ -1,4 +1,4 @@
-import { days, months } from "./daysOfWeek";
+import { days, months } from "./daysAndMonths";
 
 export default function getLocalDate(offset) {
     let date = new Date();

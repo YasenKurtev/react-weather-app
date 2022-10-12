@@ -1,4 +1,4 @@
-import { days } from "../utils/daysOfWeek";
+import { days } from "../utils/daysAndMonths";
 import unitsConverter from "../utils/unitsConverter";
 import { StyledWeeklyWeatherCard } from "./styles/WeeklyWeatherCard.styled"
 import { dayIcons } from "../utils/images"
@@ -10,7 +10,7 @@ let WeeklyWeatherCard = ({ data, units }) => {
 
     return (
         <StyledWeeklyWeatherCard>
-            <p className="day-of-week">Saturday</p>
+            <p className="day-of-week">{dayOfWeek}</p>
             <div className="weather-info">
                 <img src={dayIcons[data.weather[0].id]} alt="logo"></img>
                 <p className="temp">{unitsConverter(data.main.temp, units)}°</p>
