@@ -77,6 +77,7 @@ export let StyledHeader = styled.header`
     }
     
     input{
+        -webkit-appearance: none;
         width: 100%;
         height: 1rem;
         font-size: 0.6rem;

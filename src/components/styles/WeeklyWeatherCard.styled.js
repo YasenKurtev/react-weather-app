@@ -13,15 +13,14 @@ export let StyledWeeklyWeatherCard = styled.div`
 
     p{
         margin: 0;
-        text-align: center;
         font-weight: 600;
     }
 
-    p:nth-child(1){
+    .day{
         font-size: 0.8rem;
     }
 
-    p:nth-child(2){
+    .temp{
         font-size: 1rem;
     }
 
