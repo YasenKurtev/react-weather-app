@@ -20,7 +20,7 @@ export let StyledWeeklyWeatherCard = styled.div`
     p:nth-child(1){
         font-size: 0.8rem;
         position: absolute;
-        left: 20px;
+        right: 20px;
     }
 
     p:nth-child(2){
