@@ -20,7 +20,7 @@ export let StyledHeader = styled.header`
 
     .second-container{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 18%;
     }
 
@@ -306,7 +306,7 @@ export let StyledHeader = styled.header`
         width: 100%;
         padding: 0;
         margin: 0;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .first-container{
             flex-direction: column;
@@ -336,7 +336,7 @@ export let StyledHeader = styled.header`
     @media (min-width: 992px) and (max-width: 1199px){
         width: 100%;
         padding: 10px 0;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .first-container{
             justify-content: space-around;

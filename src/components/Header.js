@@ -88,7 +88,7 @@ let Header = ({ props }) => {
                         </div>
                     </div>
                     <div className="theme-selector-container">
-                        <p>Dark mode</p>
+                        <p>Theme</p>
                         <div className="theme-buttons-container">
                             <label>
                                 <input type="radio" name="theme" aria-label="light" value="small" defaultChecked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
