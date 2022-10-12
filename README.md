@@ -27,7 +27,8 @@ A weather app for displaying daily and weekly weather for a current city.
 
 ## 🌐 Live Demo
 
-Demo Link
+You can view a live demo of the app here:<br/>
+--> <a href="https://yasenkurtev.github.io/react-weather-app/">React Weather App</a><br/>
 
 ## 🛠️ App setup
 
@@ -57,12 +58,12 @@ REACT_APP_MAP_KEY_APPID='your-Mapbox-key'
 
 #### Mobile view
 <p float="left">
-  <img src="screenshots/mobile-view-1.png" alt="light-mode-screenshot" width="33%">
-  <img src="screenshots/mobile-view-2.png" alt="light-mode-screenshot" width="33%">
-  <img src="screenshots/mobile-view-3.png" alt="light-mode-screenshot" width="33%">
+  <img src="screenshots/mobile-view-1.png" alt="light-mode-screenshot" width="32%">
+  <img src="screenshots/mobile-view-2.png" alt="light-mode-screenshot" width="32%">
+  <img src="screenshots/mobile-view-3.png" alt="light-mode-screenshot" width="32%">
 </p>
 
-#### Loading view, Fetch Error view, My cities loading view, Max stored cities view
+#### Loading view, Fetch error view, My cities loading view, Max stored cities error view
 <p float="left">
   <img src="screenshots/loading-view.png" alt="light-mode-screenshot" width="49.5%">
   <img src="screenshots/error-view.png" alt="light-mode-screenshot" width="49.5%">
@@ -71,27 +72,3 @@ REACT_APP_MAP_KEY_APPID='your-Mapbox-key'
   <img src="screenshots/my-cities-loading-view.png" alt="light-mode-screenshot" width="49.5%">
   <img src="screenshots/max-cities-error-view.png" alt="light-mode-screenshot" width="49.5%">
 </p>
-
-
-
-
-
-
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
