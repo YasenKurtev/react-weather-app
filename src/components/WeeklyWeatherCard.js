@@ -10,9 +10,7 @@ let WeeklyWeatherCard = ({ data, units }) => {
 
     return (
         <StyledWeeklyWeatherCard>
-            <div className="day-container">
-                <p className="day">{dayOfWeek}</p>
-            </div>
+            <p className="day">{dayOfWeek}</p>
             <div className="weather-info">
                 <img src={dayIcons[data.weather[0].id]} alt="logo"></img>
                 <p className="temp">{unitsConverter(data.main.temp, units)}°</p>

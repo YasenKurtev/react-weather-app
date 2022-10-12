@@ -11,20 +11,20 @@ export let StyledWeeklyWeatherCard = styled.div`
     align-items: center;
     gap: 10px;
 
-    .day-container{
-        display: flex;
+    p{
+        margin: 0;
+        text-align: center;
+        font-weight: 600;
     }
 
-    .day{
+    p:nth-child(1){
         font-size: 0.8rem;
-        margin: 0;
-        font-weight: 600;
+        position: absolute;
+        left: 20px;
     }
 
-    .temp{
+    p:nth-child(2){
         font-size: 1rem;
-        margin: 0;
-        font-weight: 600;
     }
 
     img{
