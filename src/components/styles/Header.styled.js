@@ -76,12 +76,12 @@ export let StyledHeader = styled.header`
         width: 30%;
     }
     
-    input[type=search]{
-        -webkit-appearance: none !important;
-        -moz-appearance: none !important;
-        appearance: none !important;
+    input[type=text]{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         width: 100%;
-        height: 1.2rem;
+        height: 1rem;
         font-size: 0.6rem;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;

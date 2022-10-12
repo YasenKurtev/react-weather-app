@@ -16,11 +16,6 @@ export let StyledWeeklyWeatherCard = styled.div`
         font-weight: 600;
     }
 
-    .day-container{
-        position: relative;
-        z-index: 1;
-    }
-
     .day{
         font-size: 0.8rem;
     }
@@ -46,7 +41,7 @@ export let StyledWeeklyWeatherCard = styled.div`
 
     @media (min-width: 320px) and (max-width: 575px){
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: right;
         width: 95%;
         padding: 5px;
         padding-left: 10px;

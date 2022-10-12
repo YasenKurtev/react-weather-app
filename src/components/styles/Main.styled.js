@@ -19,7 +19,7 @@ export let StyledMain = styled.main`
         gap: 10px;
         -ms-overflow-style: none; /* for Internet Explorer, Edge */
         scrollbar-width: none; /* for Firefox */
-        overflow-x: scroll; 
+        overflow-x: scroll;
     }
 
     .weekly-container::-webkit-scrollbar {
