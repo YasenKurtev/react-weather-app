@@ -17,13 +17,7 @@ export let StyledWeeklyWeatherCard = styled.div`
         font-weight: 600;
     }
 
-    p:nth-child(1){
-        font-size: 0.8rem;
-        position: absolute;
-        right: 20px;
-    }
-
-    p:nth-child(2){
+    .temp{
         font-size: 1rem;
     }
 
