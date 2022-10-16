@@ -1,6 +1,6 @@
 # 🌦️ React Weather App
 
-A weather app for displaying daily and weekly weather for a current city.
+A weather app which displays daily and weekly weather for a current city.
 
 ## 💻 Used technologies and libraries
 
@@ -9,21 +9,23 @@ A weather app for displaying daily and weekly weather for a current city.
 - CSS
 - Styled Components
 - Font Awesome Icons
-- OpenWeatherMap API
+- Open Weather Map API
 - Mapbox GL JS
 
 ## ⚙️ Functionality
 
 - Search city by name
 - Search city by location / Geolocation API
-- Light and Dark mode
-- Celsius and Fahrenheit units
+- Toggle between light and dark theme
+- Toggle between celsius and fahrenheit temperature units
 - Store favorite cities (you can store up to 3 cities)
 - Set default city
 - View city on the map
 - Daily weather forecast
 - Hourly weather forecast
 - 5-day weather forecast
+
+The app uses local storage to save user preferences, such as theme, units, favorite cities and default city.
 
 ## 🌐 Live Demo
 
@@ -48,27 +50,32 @@ REACT_APP_MAP_KEY_APPID='your-Mapbox-key'
 
 ## Screenshots
 #### Dark theme
-<img src="screenshots/dark-mode.png" alt="dark-mode-screenshot">
+<img src="screenshots/dark-mode.png" alt="dark-theme-screenshot">
 
 #### Light theme
-<img src="screenshots/light-mode.png" alt="light-mode-screenshot">
+<img src="screenshots/light-mode.png" alt="light-theme-screenshot">
 
 #### My cities list
-<img src="screenshots/my-cities-list-view.png" alt="light-mode-screenshot">
+<img src="screenshots/my-cities-list-view.png" alt="my-cities-list-screenshot">
 
 #### Mobile view
 <p float="left">
-  <img src="screenshots/mobile-view-1.png" alt="light-mode-screenshot" width="32.9%">
-  <img src="screenshots/mobile-view-2.png" alt="light-mode-screenshot" width="32.9%">
-  <img src="screenshots/mobile-view-3.png" alt="light-mode-screenshot" width="32.9%">
+  <img src="screenshots/mobile-view-1.png" alt="mobile-view-screenshot" width="32.9%">
+  <img src="screenshots/mobile-view-2.png" alt="mobile-view-screenshot" width="32.9%">
+  <img src="screenshots/mobile-view-3.png" alt="mobile-view-screenshot" width="32.9%">
 </p>
 
 #### Loading view, Fetch error view, My cities loading view, Max stored cities error view
 <p float="left">
-  <img src="screenshots/loading-view.png" alt="light-mode-screenshot" width="49.5%">
-  <img src="screenshots/error-view.png" alt="light-mode-screenshot" width="49.5%">
+  <img src="screenshots/loading-view.png" alt="loading-view-screenshot" width="49.5%">
+  <img src="screenshots/error-view.png" alt="error-view-screenshot" width="49.5%">
 </p>
 <p float="left">
-  <img src="screenshots/my-cities-loading-view.png" alt="light-mode-screenshot" width="49.5%">
-  <img src="screenshots/max-cities-error-view.png" alt="light-mode-screenshot" width="49.5%">
+  <img src="screenshots/my-cities-loading-view.png" alt="my-cities-loading-view-screenshot" width="49.5%">
+  <img src="screenshots/max-cities-error-view.png" alt="max-cities-error-view-screenshot" width="49.5%">
 </p>
+
+## 📬 Feedback
+Thank you for viewing my project!<br/>
+If you have any questions, comments or you come across some bugs, please contact me through the contact info in my profile.<br/>
+Any feedback is highly appreciated! 🙂
