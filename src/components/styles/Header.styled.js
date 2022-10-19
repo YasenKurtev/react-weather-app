@@ -184,33 +184,33 @@ export let StyledHeader = styled.header`
     [type=radio] + i {
         font-size: 0.8rem;
         cursor: pointer;
-        padding: 3px;
+        padding: 4px;
         color: ${props => props.theme.iconColor};
-        transition: transform 0.2s;
     }
 
     [type=radio] + i:hover {
-        transform: scale(1.2);
+        background-color: ${props => props.theme.selectedIconBackgroundColor};
+        border-radius: 50px;
+        padding: 4px;
     }
 
     /* CHECKED STYLES */
         [type=radio]:checked + i {
         background-color: ${props => props.theme.selectedIconBackgroundColor};
         border-radius: 50px;
-        padding: 3px;
+        padding: 4px;
     }
 
     /* IMAGE STYLES */
     [type=radio] + p {
         font-size: 0.7rem;
         cursor: pointer;
-        padding: 3px;
+        padding: 4px;
         color: ${props => props.theme.unitsColor};
-        transition: transform 0.2s;
     }
 
     [type=radio] + p:hover {
-        transform: scale(1.2);
+        background-color: ${props => props.theme.selectedIconBackgroundColor};
     }
 
     /* CHECKED STYLES */
