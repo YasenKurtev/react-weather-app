@@ -99,11 +99,9 @@ export let StyledHeader = styled.header`
         background-color: white;
         border: 0;
         width: 15%;
-        transition: transform 0.2s;
     }
 
     .clear-btn i:hover{
-        transform: scale(1.2);
         color: #e74c3c;
     }
 
@@ -113,14 +111,12 @@ export let StyledHeader = styled.header`
         background-color: white;
         border: 0;
         width: 15%;
-        transition: transform 0.2s;
         border-left: 2px solid grey;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
 
     .search-btn i:hover{
-        transform: scale(1.2);
         color: #2ecc71;
     }
 
