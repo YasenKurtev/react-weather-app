@@ -229,6 +229,7 @@ export let StyledHeader = styled.header`
 
         .second-container{
             width: 88%;
+            justify-content: space-between;
         }
 
         form{
