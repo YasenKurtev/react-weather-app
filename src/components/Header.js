@@ -5,16 +5,22 @@ import { StyledHeader } from "./styles/Header.styled";
 let Header = ({ props }) => {
     //Search input state
     let [searchInput, setSearchInput] = useState('');
+    //Search error state
+    let [error, setError] = useState(false);
     //My cities modal state
     let [openModal, setOpenModal] = useState(false);
 
     //On city search submit, set search data to search input value and clear search input
     let onSearchSubmit = (e) => {
         e.preventDefault();
-        if (searchInput.length !== 0) {
-            props.setData(searchInput);
-            setSearchInput(state => state = '');
+
+        if (searchInput.length === 0) {
+            setError(true);
+            return;
         }
+
+        props.setData(searchInput);
+        setSearchInput(state => state = '');
     }
 
     //Clear search input
@@ -65,13 +71,16 @@ let Header = ({ props }) => {
                     </div>
                 </div>
                 <form onSubmit={onSearchSubmit}>
-                    <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
-                    <button className="clear-btn" type="reset" aria-label="clear" onClick={onSearchReset}>
-                        <i className="fa-solid fa-x"></i>
-                    </button>
-                    <button className="search-btn" type="submit" aria-label="search">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </button>
+                    <div className="input-buttons">
+                        <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
+                        <button className="clear-btn" type="reset" aria-label="clear" onClick={onSearchReset}>
+                            <i className="fa-solid fa-x"></i>
+                        </button>
+                        <button className="search-btn" type="submit" aria-label="search">
+                            <i className="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    {error && <p className="error">Please enter a city!</p>}
                 </form>
                 <div className="second-container">
                     <div className="units-selector-container">

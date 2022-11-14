@@ -73,8 +73,23 @@ export let StyledHeader = styled.header`
 
     form{
         display: flex;
+        flex-direction: column;
+        gap: 5px;
         width: 30%;
+    }
+
+    .input-buttons{
+        display: flex;
+        width: 100%;
         height: 1.3rem;
+    }
+
+    .error{
+        padding: 0;
+        margin: 0;
+        font-size: 0.5rem;
+        font-weight: 600;
+        color: #e74c3c;
     }
     
     input[type=text]{
