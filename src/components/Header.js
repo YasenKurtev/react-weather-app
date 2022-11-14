@@ -2,6 +2,8 @@ import { useState } from "react";
 import MyCitiesModal from "./MyCitiesModal";
 import { StyledHeader } from "./styles/Header.styled";
 
+let searchValueIsEmpty = (value) => value.trim() === '';
+
 let Header = ({ props }) => {
     //Search input state
     let [searchInput, setSearchInput] = useState('');
@@ -14,7 +16,7 @@ let Header = ({ props }) => {
     let onSearchSubmit = (e) => {
         e.preventDefault();
 
-        if (searchInput.length === 0) {
+        if (searchValueIsEmpty(searchInput)) {
             setError(true);
             return;
         }
@@ -31,6 +33,9 @@ let Header = ({ props }) => {
 
     //Set search input on every input change
     let onChangeHandler = (e) => {
+        if (!searchValueIsEmpty(e.target.value)) {
+            setError(false);
+        }
         setSearchInput(state => state = e.target.value);
     }
 

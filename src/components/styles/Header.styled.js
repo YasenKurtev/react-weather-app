@@ -74,6 +74,7 @@ export let StyledHeader = styled.header`
     form{
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 5px;
         width: 30%;
     }
@@ -86,9 +87,11 @@ export let StyledHeader = styled.header`
 
     .error{
         padding: 0;
+        padding-top: 10px;
         margin: 0;
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         font-weight: 600;
+        font-style: italic;
         color: #e74c3c;
     }
     
