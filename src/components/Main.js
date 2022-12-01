@@ -13,6 +13,7 @@ import timeConverter from "../utils/timeConverter"
 import getLocalDate from "../utils/getLocalDate"
 import Loading from "./Loading"
 import FetchError from "./FetchError"
+import NotificationModal from "./NotificationModal"
 
 let Main = ({ props }) => {
     //Get default city
@@ -61,6 +62,7 @@ let Main = ({ props }) => {
 
     return (
         <StyledMain>
+            <NotificationModal />
             <section className="today-map">
                 <TodayWeatherCard
                     dailyData={dailyData}
