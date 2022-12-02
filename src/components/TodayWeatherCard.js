@@ -4,7 +4,7 @@ import { dayIcons, nightIcons } from "../utils/images"
 import { useState } from "react";
 import ErrorModal from "./ErrorModal";
 
-let TodayWeatherCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity }) => {
+let TodayWeatherCard = ({ dailyData, defaultCity, changeDefaultCity, units, localTime, sunrise, sunset, myCities, addCity, removeCity, setNotificationType }) => {
     //My cities limit error modal state
     let [openModal, setOpenModal] = useState(false);
 
@@ -19,11 +19,11 @@ let TodayWeatherCard = ({ dailyData, defaultCity, changeDefaultCity, units, loca
             </img>
             {/* Set add or remove button, depending on if the current city is in the My cities list */}
             {myCities.includes(dailyData.name)
-                ? <div className="add-button" onClick={() => removeCity(dailyData.name)}>
+                ? <div className="add-button" onClick={() => {removeCity(dailyData.name); setNotificationType('remove')}}>
                     <i className="fa-solid fa-trash"></i>
                     <p>Remove</p>
                 </div>
-                : <div className="add-button" onClick={myCities.length < 3 ? () => addCity(dailyData.name) : () => setOpenModal(true)}>
+                : <div className="add-button" onClick={myCities.length < 3 ? () => { addCity(dailyData.name); setNotificationType('add') } : () => setOpenModal(true)}>
                     <i className="fa-solid fa-plus"></i>
                     <p>Add</p>
                 </div>}

@@ -14,8 +14,10 @@ import getLocalDate from "../utils/getLocalDate"
 import Loading from "./Loading"
 import FetchError from "./FetchError"
 import NotificationModal from "./NotificationModal"
+import { useState } from "react"
 
 let Main = ({ props }) => {
+    let [notificationType, setNotificationType] = useState('fetch');
     //Get default city
     let [defaultCity, changeDefaultCity] = useDefaultCity();
     let city = defaultCity;
@@ -51,6 +53,7 @@ let Main = ({ props }) => {
     if (dailyError || weeklyError) {
         return (
             <StyledMain>
+                <NotificationModal error={dailyError} />
                 <FetchError></FetchError>
             </StyledMain>
         )
@@ -62,7 +65,9 @@ let Main = ({ props }) => {
 
     return (
         <StyledMain>
-            <NotificationModal />
+            {notificationType === 'fetch' && <NotificationModal city={dailyData.name} />}
+            {notificationType === 'add' && <NotificationModal addedCity={dailyData.name} />}
+            {notificationType === 'remove' && <NotificationModal removedCity={dailyData.name} />}
             <section className="today-map">
                 <TodayWeatherCard
                     dailyData={dailyData}
@@ -74,7 +79,8 @@ let Main = ({ props }) => {
                     sunset={timeConverter(dailyData.sys.sunset, dailyData.timezone)}
                     myCities={props.myCities}
                     addCity={props.addCity}
-                    removeCity={props.removeCity}>
+                    removeCity={props.removeCity}
+                    setNotificationType={setNotificationType}>
                 </TodayWeatherCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>
