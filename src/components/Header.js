@@ -50,6 +50,7 @@ let Header = ({ props }) => {
     //Set search data to location latitude and longitude
     function showPosition(position) {
         props.setData({ lat: position.coords.latitude, lon: position.coords.longitude });
+        props.setNotification(notification => notification = { type: 'fetch', city: null });
     }
 
     function showError(error) {

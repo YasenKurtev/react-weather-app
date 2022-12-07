@@ -55,7 +55,7 @@ let MyCitiesCard = ({ city, units, removeCity, index, setData, setOpenModal, tog
                     <p className="condition"><i>{dailyData.weather[0].main}</i></p>
                 </div>
                 <div className="buttons-container">
-                    <div className="btn" onClick={() => { detailsHandler(); toggleNotification('fetch', dailyData.name) }}>
+                    <div className="btn" onClick={() => { detailsHandler(); toggleNotification('fetch', null) }}>
                         <i className="fa-solid fa-earth-americas"></i>
                         <p>Details</p>
                     </div>

@@ -18,7 +18,6 @@ import { useState } from "react"
 import MyCitiesModal from "./MyCitiesModal"
 
 let Main = ({ props }) => {
-    
     //Get default city
     let [defaultCity, changeDefaultCity] = useDefaultCity();
     let city = defaultCity;
@@ -64,11 +63,10 @@ let Main = ({ props }) => {
     let localTime = getLocalTime(dailyData.timezone);
     let localDate = getLocalDate(dailyData.timezone);
 
+    //Toggle notification data for notification modal
     let toggleNotification = (type, cityName) => {
         props.setNotification(notification => notification = { type: null, city: null });
-        setTimeout(() => {
-            props.setNotification(notification => notification = { type: type, city: cityName });
-        }, 1)
+        props.setNotification(notification => notification = { type: type, city: cityName });
     }
 
     return (
