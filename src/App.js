@@ -20,13 +20,16 @@ function App() {
     let [units, changeUnits] = useUnits();
     //Get My cities
     let [myCities, addCity, removeCity] = useMyCities();
+    //My cities modal state
+    let [openModal, setOpenModal] = useState(false);
+    let [notification, setNotification] = useState({ type: 'fetch', city: null });
 
     return (
         <ThemeProvider theme={theme === 'light' ? themeLight : themeDark}>
             <GlobalStyles theme={theme === 'light' ? themeLight : themeDark} />
             <Container>
-                <Header props={{ data, setData, theme, changeTheme, units, changeUnits, myCities, removeCity }} />
-                <Main props={{ data, setData, units, myCities, addCity, removeCity }} />
+                <Header props={{ data, setData, theme, changeTheme, units, changeUnits, myCities, removeCity, setOpenModal, setNotification }} />
+                <Main props={{ data, setData, units, myCities, addCity, removeCity, openModal, setOpenModal, notification, setNotification }} />
                 <Footer />
             </Container>
         </ThemeProvider>

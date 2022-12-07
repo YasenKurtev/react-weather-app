@@ -9,8 +9,6 @@ let Header = ({ props }) => {
     let [searchInput, setSearchInput] = useState('');
     //Search error state
     let [error, setError] = useState(false);
-    //My cities modal state
-    let [openModal, setOpenModal] = useState(false);
 
     //On city search submit, set search data to search input value and clear search input
     let onSearchSubmit = (e) => {
@@ -22,6 +20,7 @@ let Header = ({ props }) => {
         }
 
         props.setData(searchInput);
+        props.setNotification(notification => notification = { type: 'fetch', city: null });
         setSearchInput(state => state = '');
     }
 
@@ -58,66 +57,63 @@ let Header = ({ props }) => {
     }
 
     return (
-        <>
-            <MyCitiesModal open={openModal} setOpenModal={setOpenModal} units={props.units} myCities={props.myCities} removeCity={props.removeCity} setData={props.setData} />
-            <StyledHeader>
-                <div className="first-container">
-                    <div className="title-container">
-                        <img src="images/few-clouds.png" alt="logo"></img>
-                        <h1>WeatherApp</h1>
-                    </div>
-                    <div className="location-cities-container">
-                        <button className="location-cities-btn" onClick={getLocation}>
-                            <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
-                        </button>
-                        <button className="location-cities-btn" onClick={() => setOpenModal(true)}>
-                            <i className="fa-solid fa-bars"></i> <p>My cities</p>
-                        </button>
+        <StyledHeader>
+            <div className="first-container">
+                <div className="title-container">
+                    <img src="images/few-clouds.png" alt="logo"></img>
+                    <h1>WeatherApp</h1>
+                </div>
+                <div className="location-cities-container">
+                    <button className="location-cities-btn" onClick={getLocation}>
+                        <i className="fa-solid fa-location-dot"></i> <p>Get location</p>
+                    </button>
+                    <button className="location-cities-btn" onClick={() => props.setOpenModal(true)}>
+                        <i className="fa-solid fa-bars"></i> <p>My cities</p>
+                    </button>
+                </div>
+            </div>
+            <form onSubmit={onSearchSubmit}>
+                <div className="input-buttons">
+                    <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
+                    <button className="clear-btn" type="reset" aria-label="clear" onClick={onSearchReset}>
+                        <i className="fa-solid fa-x"></i>
+                    </button>
+                    <button className="search-btn" type="submit" aria-label="search">
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                {error && <p className="error">Please enter a city!</p>}
+            </form>
+            <div className="second-container">
+                <div className="units-selector-container">
+                    <p>Units</p>
+                    <div className="units-buttons-container">
+                        <label>
+                            <input type="radio" name="units" aria-label="celsius" value="small" defaultChecked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
+                            <p>C°</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="units" aria-label="fahrenheit" value="big" defaultChecked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
+                            <p>F°</p>
+                        </label>
                     </div>
                 </div>
-                <form onSubmit={onSearchSubmit}>
-                    <div className="input-buttons">
-                        <input type="text" id="search" placeholder="Search for a city..." autoComplete="off" value={searchInput} onChange={onChangeHandler}></input>
-                        <button className="clear-btn" type="reset" aria-label="clear" onClick={onSearchReset}>
-                            <i className="fa-solid fa-x"></i>
-                        </button>
-                        <button className="search-btn" type="submit" aria-label="search">
-                            <i className="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                    {error && <p className="error">Please enter a city!</p>}
-                </form>
-                <div className="second-container">
-                    <div className="units-selector-container">
-                        <p>Units</p>
-                        <div className="units-buttons-container">
-                            <label>
-                                <input type="radio" name="units" aria-label="celsius" value="small" defaultChecked={props.units === 'celsius' ? true : false} onClick={() => props.changeUnits('celsius')} />
-                                <p>C°</p>
-                            </label>
-                            <label>
-                                <input type="radio" name="units" aria-label="fahrenheit" value="big" defaultChecked={props.units === 'fahrenheit' ? true : false} onClick={() => props.changeUnits('fahrenheit')} />
-                                <p>F°</p>
-                            </label>
-                        </div>
-                    </div>
-                    <div className="theme-selector-container">
-                        <p>Theme</p>
-                        <div className="theme-buttons-container">
-                            <label>
-                                <input type="radio" name="theme" aria-label="light" value="small" defaultChecked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
-                                <i className="fa-solid fa-sun"></i>
-                            </label>
+                <div className="theme-selector-container">
+                    <p>Theme</p>
+                    <div className="theme-buttons-container">
+                        <label>
+                            <input type="radio" name="theme" aria-label="light" value="small" defaultChecked={props.theme === 'light' ? true : false} onClick={() => props.changeTheme('light')} />
+                            <i className="fa-solid fa-sun"></i>
+                        </label>
 
-                            <label>
-                                <input type="radio" name="theme" aria-label="dark" value="big" defaultChecked={props.theme === 'dark' ? true : false} onClick={() => props.changeTheme('dark')} />
-                                <i className="fas fa-moon"></i>
-                            </label>
-                        </div>
+                        <label>
+                            <input type="radio" name="theme" aria-label="dark" value="big" defaultChecked={props.theme === 'dark' ? true : false} onClick={() => props.changeTheme('dark')} />
+                            <i className="fas fa-moon"></i>
+                        </label>
                     </div>
                 </div>
-            </StyledHeader>
-        </>
+            </div>
+        </StyledHeader>
     )
 }
 

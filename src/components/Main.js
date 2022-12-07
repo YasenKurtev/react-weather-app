@@ -15,9 +15,10 @@ import Loading from "./Loading"
 import FetchError from "./FetchError"
 import NotificationModal from "./NotificationModal"
 import { useState } from "react"
+import MyCitiesModal from "./MyCitiesModal"
 
 let Main = ({ props }) => {
-    let [notificationType, setNotificationType] = useState('fetch');
+    
     //Get default city
     let [defaultCity, changeDefaultCity] = useDefaultCity();
     let city = defaultCity;
@@ -63,11 +64,28 @@ let Main = ({ props }) => {
     let localTime = getLocalTime(dailyData.timezone);
     let localDate = getLocalDate(dailyData.timezone);
 
+    let toggleNotification = (type, cityName) => {
+        props.setNotification(notification => notification = { type: null, city: null });
+        setTimeout(() => {
+            props.setNotification(notification => notification = { type: type, city: cityName });
+        }, 1)
+    }
+
     return (
         <StyledMain>
-            {notificationType === 'fetch' && <NotificationModal city={dailyData.name} />}
-            {notificationType === 'add' && <NotificationModal addedCity={dailyData.name} />}
-            {notificationType === 'remove' && <NotificationModal removedCity={dailyData.name} />}
+            {props.notification.type === 'fetch' && <NotificationModal city={dailyData.name} />}
+            {props.notification.type === 'add' && <NotificationModal addedCity={props.notification.city} />}
+            {props.notification.type === 'remove' && <NotificationModal removedCity={props.notification.city} />}
+            {props.notification.type === 'default' && <NotificationModal defaultCity={props.notification.city} />}
+            <MyCitiesModal
+                open={props.openModal}
+                setOpenModal={props.setOpenModal}
+                units={props.units}
+                myCities={props.myCities}
+                removeCity={props.removeCity}
+                setData={props.setData}
+                toggleNotification={toggleNotification}
+            />
             <section className="today-map">
                 <TodayWeatherCard
                     dailyData={dailyData}
@@ -80,7 +98,7 @@ let Main = ({ props }) => {
                     myCities={props.myCities}
                     addCity={props.addCity}
                     removeCity={props.removeCity}
-                    setNotificationType={setNotificationType}>
+                    toggleNotification={toggleNotification}>
                 </TodayWeatherCard>
                 <Map coordinates={dailyData.coord}></Map>
             </section>

@@ -1,7 +1,7 @@
 import MyCitiesCard from "./MyCitiesCard";
 import { StyledMyCitiesModal } from "./styles/MyCitiesModal.styled"
 
-let MyCitiesModal = ({ open, setOpenModal, units, myCities, removeCity, setData }) => {
+let MyCitiesModal = ({ open, setOpenModal, units, myCities, removeCity, setData, toggleNotification }) => {
     //Show or hide modal
     if (!open) return null;
     return (
@@ -22,7 +22,7 @@ let MyCitiesModal = ({ open, setOpenModal, units, myCities, removeCity, setData 
                                 <i className="fa-solid fa-ban"></i>
                                 <p className="no-cities"><i>No added cities</i></p>
                             </div>
-                            : myCities.map((x, i) => <MyCitiesCard key={x} index={i} city={x} units={units} removeCity={removeCity} setData={setData} setOpenModal={setOpenModal}></MyCitiesCard>)}
+                            : myCities.map((x, i) => <MyCitiesCard key={x} index={i} city={x} units={units} removeCity={removeCity} setData={setData} setOpenModal={setOpenModal} toggleNotification={toggleNotification}></MyCitiesCard>)}
                     </div>
                 </div>
             </div>

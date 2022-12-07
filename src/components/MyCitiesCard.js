@@ -7,7 +7,7 @@ import LoadingMini from "./LoadingMini";
 import { StyledLoadingMini } from "./styles/LoadingMini.styled";
 import { StyledMyCitiesCard } from "./styles/MyCitiesCard.styled"
 
-let MyCitiesCard = ({ city, units, removeCity, index, setData, setOpenModal }) => {
+let MyCitiesCard = ({ city, units, removeCity, index, setData, setOpenModal, toggleNotification }) => {
     //Fetch weather for current city
     let [dailyData, isLoadingDaily] = useFetchDailyWeather(city);
 
@@ -55,11 +55,11 @@ let MyCitiesCard = ({ city, units, removeCity, index, setData, setOpenModal }) =
                     <p className="condition"><i>{dailyData.weather[0].main}</i></p>
                 </div>
                 <div className="buttons-container">
-                    <div className="btn" onClick={() => detailsHandler()}>
+                    <div className="btn" onClick={() => { detailsHandler(); toggleNotification('fetch', dailyData.name) }}>
                         <i className="fa-solid fa-earth-americas"></i>
                         <p>Details</p>
                     </div>
-                    <div className="btn" onClick={() => removeCity(dailyData.name)}>
+                    <div className="btn" onClick={() => { removeCity(dailyData.name); toggleNotification('remove', dailyData.name) }}>
                         <i className="fa-solid fa-trash"></i>
                         <p>Remove</p>
                     </div>

@@ -7,6 +7,7 @@ let NotificationModal = (props) => {
             {props.error && <p>Failed to fetch weather data!</p>}
             {props.addedCity && <p>Successfully added {props.addedCity} to My Cities!</p>}
             {props.removedCity && <p>Successfully removed {props.removedCity} from My Cities!</p>}
+            {props.defaultCity && <p>Successfully changed your default city to {props.defaultCity}!</p>}
         </StyledNotificationModal>
     )
 }
