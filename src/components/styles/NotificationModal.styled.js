@@ -6,9 +6,7 @@ export let StyledNotificationModal = styled.div`
     top: 33px;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: green;
     width: 30%;
-    border-radius: 20px;
     animation: fadeIn 3s forwards;
 
     p{
@@ -17,6 +15,16 @@ export let StyledNotificationModal = styled.div`
         font-size: 20px;
         text-align: center;
         font-style: italic;
+    }
+
+    .success{
+        background-color: #2ecc71;
+        border-radius: 20px;
+    }
+
+    .error{
+        background-color: #e74c3c;
+        border-radius: 20px;
     }
 
     @keyframes fadeIn {
