@@ -6,26 +6,36 @@ export let StyledNotificationModal = styled.div`
     top: 33px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
     animation: fadeIn 3s forwards;
 
+    .notification-container-success{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 9px 5px 7px;
+        background-color: #2ecc71;
+        border-radius: 20px;
+    }
+
+    .notification-container-error{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 9px 5px 7px;
+        background-color: #e74c3c;
+        border-radius: 20px;
+    }
+
     p{
-        margin:0;
-        padding: 5px;
+        margin: 0;
         font-size: 0.7rem;
         text-align: center;
         font-weight: 600;
         font-style: italic;
     }
 
-    .success{
-        background-color: #2ecc71;
-        border-radius: 20px;
-    }
-
-    .error{
-        background-color: #e74c3c;
-        border-radius: 20px;
+    i{
+        font-size: 0.7rem;
     }
 
     @keyframes fadeIn {
