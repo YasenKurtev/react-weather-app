@@ -12,8 +12,9 @@ export let StyledNotificationModal = styled.div`
     p{
         margin:0;
         padding: 5px;
-        font-size: 20px;
+        font-size: 0.7rem;
         text-align: center;
+        font-weight: 600;
         font-style: italic;
     }
 
@@ -42,4 +43,20 @@ export let StyledNotificationModal = styled.div`
             visibility: hidden;
         }
       }
+
+    @media (min-width: 320px) and (max-width: 575px){
+        width: 90%;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px){
+        width: 90%;
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px){
+        width: 90%;
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px){
+        width: 90%;
+    }
 `
