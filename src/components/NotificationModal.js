@@ -1,13 +1,29 @@
 import { StyledNotificationModal } from "./styles/NotificationModal.styled"
 
 let NotificationModal = (props) => {
+    let notificationText;
+    let notificationClass;
+
+    if (props.city) {
+        notificationText = `Successfully fetched weather data for ${props.city}!`;
+        notificationClass = 'success';
+    } else if (props.error) {
+        notificationText = `Failed to fetch weather data!`;
+        notificationClass = 'error';
+    } else if (props.addedCity) {
+        notificationText = `Added ${props.addedCity} to My Cities!`;
+        notificationClass = 'success';
+    } else if (props.removedCity) {
+        notificationText = `Removed ${props.removedCity} from My Cities!`;
+        notificationClass = 'error';
+    } else if (props.defaultCity) {
+        notificationText = `Default city set to ${props.defaultCity}!`;
+        notificationClass = 'success';
+    }
+
     return (
         <StyledNotificationModal>
-            {props.city && <p className="success">Successfully fetched weather data for {props.city}!</p>}
-            {props.error && <p className="error">Failed to fetch weather data!</p>}
-            {props.addedCity && <p className="success">Added {props.addedCity} to My Cities!</p>}
-            {props.removedCity && <p className="error">Removed {props.removedCity} from My Cities!</p>}
-            {props.defaultCity && <p className="success">Default city set to {props.defaultCity}!</p>}
+            <p className={notificationClass}>{notificationText}</p>
         </StyledNotificationModal>
     )
 }
