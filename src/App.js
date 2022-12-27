@@ -22,6 +22,7 @@ function App() {
     let [myCities, addCity, removeCity] = useMyCities();
     //My cities modal state
     let [openModal, setOpenModal] = useState(false);
+    //Notification modal state
     let [notification, setNotification] = useState({ type: 'fetch', city: null });
 
     return (

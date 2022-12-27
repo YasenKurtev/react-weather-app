@@ -26,7 +26,9 @@ let Map = ({ coordinates }) => {
 
     return (
         <StyledMap>
-            <div id="map"></div>
+            <section className="map-box-container">
+                <div id="map"></div>
+            </section>
         </StyledMap>
     )
 }

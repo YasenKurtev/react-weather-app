@@ -5,66 +5,75 @@ export let StyledMap = styled.div`
     width: 70%;
     background-color: ${props => props.theme.backgroundColor};
     border-radius: 10px;
-    padding: 10px 10px 6px 10px;
+    overflow: hidden;
+    // padding: 10px 10px 6px 10px;
 
     .mapboxgl-control-container {
         display: none;
     }
 
     #map{
-        height: 330px;
+        height: 346px;
         border-radius: 10px;
     }
 
     @media (min-width: 320px) and (max-width: 575px){
         width: 100%;
         height: 258.6px;
-        padding: 10px 0;
+        // padding: 10px 0;
 
         #map{
             display: flex;
-            padding-left: 3.4%;
-            width: 90%;
+            width: 100%;
             height: 258px;
+
+            // padding-left: 3.4%;
+            // width: 90%;
         }
     }
 
     @media (min-width: 576px) and (max-width: 767px){
         width: 50%;
         height: 258.6px;
-        padding: 10px 0;
+        // padding: 10px 0;
 
         #map{
             display: flex;
-            padding-left: 3.4%;
-            width: 90%;
+            width: 100%;
             height: 258px;
+
+            // padding-left: 3.4%;
+            // width: 90%;
         }
     }
     
     @media (min-width: 768px) and (max-width: 991px){
         width: 60%;
         height: 277.2px;
-        padding: 10px 0;
+        // padding: 10px 0;
 
         #map{
             display: flex;
-            padding-left: 3.4%;
-            width: 90%;
+            width: 100%;
             height: 277px;
+
+            // padding-left: 3.4%;
+            // width: 90%;
         }
     }
     
     @media (min-width: 992px) and (max-width: 1199px){
         width: 63%;
         height: 296.8px;
-        padding: 10px 0;
+        // padding: 10px 0;
 
         #map{
             display: flex;
-            padding-left: 3.4%;
-            width: 90%;
+            width: 100%;
             height: 296px;
+            
+            // padding-left: 3.4%;
+            // width: 90%;
         }
     }
 `
