@@ -28,7 +28,7 @@ export let StyledNotificationModal = styled.div`
 
     p{
         margin: 0;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         text-align: center;
         font-weight: 600;
         font-style: italic;

@@ -11,7 +11,7 @@ let GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
 
         @media (min-width: 320px) and (max-width: 575px){
-            font-size 20px;
+            font-size 22px;
         }
 
         @media (min-width: 576px) and (max-width: 767px){

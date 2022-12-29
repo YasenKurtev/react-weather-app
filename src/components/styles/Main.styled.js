@@ -172,14 +172,6 @@ export let StyledMain = styled.main`
         .weekly-title{
             font-size: 1rem;
         }
-
-        .daily-time{
-            font-size: 0.67rem;
-        }
-
-        .weekly-day{
-            font-size: 0.67rem;
-        }
     }
 
     @media (min-width: 576px) and (max-width: 767px){
