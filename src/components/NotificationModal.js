@@ -32,6 +32,7 @@ let NotificationModal = (props) => {
             <div className={notificationClass}>
                 <i className={iconClass}></i>
                 <p>{notificationText}</p>
+                <i className={iconClass}></i>
             </div>
 
         </StyledNotificationModal>

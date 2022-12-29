@@ -5,12 +5,14 @@ export let StyledNotificationModal = styled.div`
     z-index: 1;
     top: 33px;
     left: 50%;
+    width: 35%;
     transform: translate(-50%, -50%);
     animation: fadeIn 3s forwards;
 
     .notification-container-success{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 5px;
         padding: 5px 9px 5px 7px;
         background-color: #2ecc71;
@@ -20,6 +22,7 @@ export let StyledNotificationModal = styled.div`
     .notification-container-error{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 5px;
         padding: 5px 9px 5px 7px;
         background-color: #e74c3c;
