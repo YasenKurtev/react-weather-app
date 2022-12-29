@@ -3,7 +3,7 @@ import styled from "styled-components";
 export let StyledWeatherDetailsCard = styled.div`
     background-color: ${props => props.theme.backgroundColor};
     color: ${props => props.theme.textColor};
-    display:flex;
+    display: flex;
     justify-content: space-around;
     border-radius: 10px;
     padding: 10px 0;
@@ -66,6 +66,10 @@ export let StyledWeatherDetailsCard = styled.div`
 
         p{
             font-size: 0.7rem;
+        }
+
+        i{
+            width: 17.5px;
         }
     }
 
