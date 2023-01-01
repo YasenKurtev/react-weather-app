@@ -92,6 +92,7 @@ export let StyledTodayWeatherCard = styled.div`
         align-items: center;
         gap: 5px;
         padding: 3px;
+        transition: 0.3s;
     }
     
     .add-button p{

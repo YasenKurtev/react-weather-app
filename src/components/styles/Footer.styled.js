@@ -38,11 +38,12 @@ export let StyledFooter = styled.footer`
         font-size: 1.2rem;
         width: 1.2rem;
         padding: 6px;
+        border-radius: 50px;
         color: ${props => props.theme.iconsColor};
+        transition: 0.3s;
     }
 
     .social-item i:hover{
-        border-radius: 50px;
         background-color: ${props => props.theme.selectedIconBackgroundColor};
     }
 

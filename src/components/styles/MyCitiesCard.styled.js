@@ -66,6 +66,9 @@ export let StyledMyCitiesCard = styled.div`
         align-items: center;
         gap: 5px;
         padding: 3px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
     }
     
     .btn p{
@@ -84,8 +87,6 @@ export let StyledMyCitiesCard = styled.div`
     
     .btn:hover{
         background-color: ${props => props.theme.selectedIconBackgroundColor};
-        cursor: pointer;
-        border-radius: 5px;
     }
 
     @media (min-width: 320px) and (max-width: 575px){

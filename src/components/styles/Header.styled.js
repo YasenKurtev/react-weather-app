@@ -50,12 +50,14 @@ export let StyledHeader = styled.header`
         align-items: center;
         gap: 5px;
         cursor: pointer;
+        width: fit-content;
         color: ${props => props.theme.textColor};
         font-size: 0.6rem;
         font-weight: 600;
         padding: 6px;
         border:0;
         background-color: transparent;
+        transition: color 0.3s;
     }
 
     .location-cities-btn i{
@@ -200,6 +202,7 @@ export let StyledHeader = styled.header`
         cursor: pointer;
         padding: 4px;
         color: ${props => props.theme.iconColor};
+        transition: 0.3s;
     }
 
     [type=radio] + i:hover {
@@ -221,6 +224,7 @@ export let StyledHeader = styled.header`
         cursor: pointer;
         padding: 4px;
         color: ${props => props.theme.unitsColor};
+        transition: 0.3s;
     }
 
     [type=radio] + p:hover {

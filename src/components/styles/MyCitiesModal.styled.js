@@ -57,6 +57,7 @@ export let StyledMyCitiesModal = styled.div`
         border-radius: 10px;
         border: 0;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .close-btn i{
