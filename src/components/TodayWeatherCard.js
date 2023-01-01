@@ -45,9 +45,9 @@ let TodayWeatherCard = ({ dailyData, defaultCity, changeDefaultCity, units, loca
                     <i className="fa-solid fa-house"></i>
                     <p className="default-city"><i>This is your default city</i></p>
                 </div>
-                : <div className="default-city-div">
+                : <div className="default-city-div" onClick={() => { changeDefaultCity(dailyData.name); toggleNotification('default', dailyData.name) }}>
                     <i className="fa-solid fa-hand-pointer"></i>
-                    <p className="default-city-btn" onClick={() => { changeDefaultCity(dailyData.name); toggleNotification('default', dailyData.name) }}><i>Set as default city</i></p>
+                    <p className="default-city-btn"><i>Set as default city</i></p>
                 </div>}
         </StyledTodayWeatherCard>
     )
