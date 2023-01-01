@@ -41,11 +41,11 @@ let TodayWeatherCard = ({ dailyData, defaultCity, changeDefaultCity, units, loca
             </div>
             {/* Set default city button, depending on if the current city is the default city */}
             {defaultCity === dailyData.name
-                ? <div className="default-city-div">
+                ? <div className="default-city-div-set">
                     <i className="fa-solid fa-house"></i>
                     <p className="default-city"><i>This is your default city</i></p>
                 </div>
-                : <div className="default-city-div" onClick={() => { changeDefaultCity(dailyData.name); toggleNotification('default', dailyData.name) }}>
+                : <div className="default-city-div-unset" onClick={() => { changeDefaultCity(dailyData.name); toggleNotification('default', dailyData.name) }}>
                     <i className="fa-solid fa-hand-pointer"></i>
                     <p className="default-city-btn"><i>Set as default city</i></p>
                 </div>}

@@ -65,7 +65,14 @@ export let StyledTodayWeatherCard = styled.div`
         color: ${props => props.theme.defaultCityColor};
     }
     
-    .default-city-div{
+    .default-city-div-set{
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+        padding-top: 10px;
+    }
+
+    .default-city-div-unset{
         display: flex;
         align-items: baseline;
         gap: 5px;
@@ -74,20 +81,30 @@ export let StyledTodayWeatherCard = styled.div`
         transition: 0.3s;
     }
 
-    .default-city-div:hover i{
+    .default-city-div-unset:hover i{
         color: ${props => props.theme.selectedIconBackgroundColor};
     }
 
-    .default-city-div:hover p{
+    .default-city-div-unset:hover p{
         color: ${props => props.theme.selectedIconBackgroundColor};
     }
     
-    .default-city-div p{
+    .default-city-div-set p{
         padding: 0;
         transition: 0.3s;
     }
     
-    .default-city-div i{
+    .default-city-div-set i{
+        font-size: 0.6rem;
+        transition: 0.3s;
+    }
+
+    .default-city-div-unset p{
+        padding: 0;
+        transition: 0.3s;
+    }
+    
+    .default-city-div-unset i{
         font-size: 0.6rem;
         transition: 0.3s;
     }
