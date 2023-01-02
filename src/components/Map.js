@@ -22,6 +22,12 @@ let Map = ({ coordinates }) => {
             center: [coords.lng, coords.lat],
             zoom: 11
         });
+
+        // Create a default Marker and add it to the map.
+        const marker = new mapboxgl.Marker()
+            .setLngLat([coords.lng, coords.lat])
+            .addTo(map.current);
+
     }, [coords.lat, coords.lng]);
 
     return (
