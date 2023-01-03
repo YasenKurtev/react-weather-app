@@ -24,7 +24,10 @@ let Map = ({ coordinates }) => {
         });
 
         // Create a default Marker and add it to the map.
-        const marker = new mapboxgl.Marker()
+        const marker = new mapboxgl.Marker({
+            anchor: 'bottom',
+            element: document.getElementsByClassName('marker')[0]
+        })
             .setLngLat([coords.lng, coords.lat])
             .addTo(map.current);
 
@@ -33,6 +36,7 @@ let Map = ({ coordinates }) => {
     return (
         <StyledMap>
             <section className="map-box-container">
+                <div className="marker"></div>
                 <div id="map"></div>
             </section>
         </StyledMap>

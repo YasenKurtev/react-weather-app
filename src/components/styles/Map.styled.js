@@ -17,6 +17,14 @@ export let StyledMap = styled.div`
         border-radius: 10px;
     }
 
+    .marker{
+        background-image: url('https://png2.cleanpng.com/sh/f47efe90d45fabd268e03674252ec487/L0KzQYm3VMA2N5D9iZH0aYP2gLBuTfdwd5hxfZ92YYCwfbLyhgIub5D0f95uLX3kgMS0gB9ueKZ5feQ2aXPyfsS0jfFxNZR0Rd9qcD3wccPyhgIuPZJoTqY9NnPoc4O6VMEvPGQ2SqUAOUm0RYO5WcQ0OGk5UagCMj7zfri=/kisspng-google-map-maker-google-maps-computer-icons-map-co-map-marker-5ac6446cec2341.4312359915229430849672.png');
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
     @media (min-width: 320px) and (max-width: 575px){
         width: 100%;
         height: 258.6px;
