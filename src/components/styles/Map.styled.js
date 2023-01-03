@@ -18,10 +18,10 @@ export let StyledMap = styled.div`
     }
 
     .marker{
-        background-image: url('https://png2.cleanpng.com/sh/f47efe90d45fabd268e03674252ec487/L0KzQYm3VMA2N5D9iZH0aYP2gLBuTfdwd5hxfZ92YYCwfbLyhgIub5D0f95uLX3kgMS0gB9ueKZ5feQ2aXPyfsS0jfFxNZR0Rd9qcD3wccPyhgIuPZJoTqY9NnPoc4O6VMEvPGQ2SqUAOUm0RYO5WcQ0OGk5UagCMj7zfri=/kisspng-google-map-maker-google-maps-computer-icons-map-co-map-marker-5ac6446cec2341.4312359915229430849672.png');
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Map_marker.svg/390px-Map_marker.svg.png");
         background-size: cover;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 45px;
         cursor: pointer;
     }
 
