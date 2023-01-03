@@ -98,7 +98,7 @@ let Main = ({ props }) => {
                     removeCity={props.removeCity}
                     toggleNotification={toggleNotification}>
                 </TodayWeatherCard>
-                <Map coordinates={dailyData.coord}></Map>
+                <Map coordinates={dailyData.coord} cityData={dailyData}></Map>
             </section>
             <section className="weather-details">
                 <WeatherDetailsCard dailyData={dailyData} units={props.units}></WeatherDetailsCard>

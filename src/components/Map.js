@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 
 mapboxgl.accessToken = process.env.REACT_APP_MAP_KEY_APPID;
 
-let Map = ({ coordinates }) => {
+let Map = ({ coordinates, cityData }) => {
 
     //Initialize map for current city
     let script = document.createElement('script');
@@ -23,12 +23,16 @@ let Map = ({ coordinates }) => {
             zoom: 11
         });
 
+        // create the popup
+        const popup = new mapboxgl.Popup({ offset: 25 }).setText(`${cityData.name}, ${cityData.sys.country}`);
+
         // Create a default Marker and add it to the map.
         const marker = new mapboxgl.Marker({
             anchor: 'bottom',
             element: document.getElementsByClassName('marker')[0]
         })
             .setLngLat([coords.lng, coords.lat])
+            .setPopup(popup)
             .addTo(map.current);
 
     }, [coords.lat, coords.lng]);

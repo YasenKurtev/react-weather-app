@@ -25,6 +25,13 @@ export let StyledMap = styled.div`
         cursor: pointer;
     }
 
+    .mapboxgl-popup-content{
+        color: black;
+        font-weight: 600;
+        font-size: 0.6rem;
+        padding: 10px 20px;
+    }
+
     @media (min-width: 320px) and (max-width: 575px){
         width: 100%;
         height: 258.6px;
