@@ -14,6 +14,7 @@ export let StyledMap = styled.div`
 
     #map{
         height: 346px;
+        border-radius: 5px;
     }
 
     .marker{
