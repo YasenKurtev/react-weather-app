@@ -28,6 +28,8 @@ export let StyledWeeklyWeatherCard = styled.div`
 
     img{
         width: 1.7rem;
+        padding-left: 7px;
+        margin-right: -10px;
     }
 
     .weather-info{
