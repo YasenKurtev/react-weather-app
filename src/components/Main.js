@@ -133,7 +133,7 @@ let Main = ({ props }) => {
                 </div>
                 {/* Render weekly weather for different days of the week */}
                 <div className="weekly-container">
-                    {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "21").map((x, i) =>
+                    {weeklyData.list.filter(x => x.dt_txt.split(' ')[1].slice(0, 2) === "15").map((x, i) =>
                         <WeeklyWeatherCard
                             key={i}
                             data={x}

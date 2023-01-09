@@ -22,6 +22,7 @@ export let StyledWeeklyWeatherCard = styled.div`
     }
 
     .temp{
+        width: 45.3667px;
         font-size: 1rem;
     }
 
@@ -34,7 +35,7 @@ export let StyledWeeklyWeatherCard = styled.div`
         justify-content: center;
         align-items: center;
         gap: 10px;
-        width: 150px;
+        width: fit-content;
         padding: 4px 1px;
         background-color: ${props => props.theme.cardsBackgroundColor};
         border-radius: 10px;
@@ -46,31 +47,16 @@ export let StyledWeeklyWeatherCard = styled.div`
         width: 95%;
         padding: 5px;
         padding-left: 10px;
-
-        .weather-info{
-            width: 100px;
-        }
     }
 
     @media (min-width: 576px) and (max-width: 767px){
-        .weather-info{
-            width: 100px;
-        }
     }
     
     @media (min-width: 768px) and (max-width: 991px){
         width: 20%;
-
-        .weather-info{
-            width: 110px;
-        }
     }
     
     @media (min-width: 992px) and (max-width: 1199px){
         width: 20%;
-
-        .weather-info{
-            width: 110px;
-        }
     }
 `
